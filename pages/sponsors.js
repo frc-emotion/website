@@ -1,11 +1,9 @@
-import header from "../styles/header.module.css";
+import PageHeader from "../components/PageHeader";
 
 export default function Sponsors() {
   return (
     <>
-      <div className={header.pageHeader}>
-        <h1>Sponsors</h1>
-      </div>
+      <PageHeader title="Sponsors" />
     </>
   );
 }
