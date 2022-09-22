@@ -23,7 +23,7 @@ export default function ContactForm() {
 
       <Form.Group className="mb-3">
         <Form.Label>Message</Form.Label>
-        <Form.Control type="textarea" name="message" id="message" />
+        <Form.Control as="textarea" rows={5} name="message" id="message" />
       </Form.Group>
 
       <Button variant="primary" type="submit">
