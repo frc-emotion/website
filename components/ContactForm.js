@@ -3,8 +3,8 @@ import Form from "react-bootstrap/Form";
 
 export default function ContactForm() {
   return (
-    <Form name="contact" action="/success" method="POST" data-netlify="true">
-      <Form.Control type="hidden" name="contact-form" value="ContactForm" />
+    <Form name="contact-form" action="/success" method="POST" data-netlify="true">
+      <Form.Control type="hidden" name="form-name" value="contact-form" />
 
       <Form.Group className="mb-3">
         <Form.Label>Full Name</Form.Label>

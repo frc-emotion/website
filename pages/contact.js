@@ -19,7 +19,7 @@ export default function Contact() {
         <h1>Contact Us</h1>
       </div>
       <Container>
-        <Row xs-1 sm-1 md-1 lg-2 xl-2>
+        <Row>
           <Col>
             <ContactForm />
           </Col>
