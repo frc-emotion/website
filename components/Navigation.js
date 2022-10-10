@@ -3,13 +3,7 @@ import Image from "next/future/image";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
-import {
-  FaFacebook,
-  FaInstagram,
-  FaTwitter,
-  FaGithub,
-  FaLinkedin,
-} from "react-icons/fa";
+import { FaFacebook, FaInstagram, FaYoutube, FaGithub } from "react-icons/fa";
 
 import styles from "../styles/navigation.module.css";
 
@@ -48,14 +42,11 @@ export default function Navigation() {
             <Nav.Link href="https://www.instagram.com/frcteam2658/">
               <FaInstagram />
             </Nav.Link>
-            <Nav.Link href="https://twitter.com/frcteam2658">
-              <FaTwitter />
+            <Nav.Link href="https://www.youtube.com/user/team2658">
+              <FaYoutube />
             </Nav.Link>
             <Nav.Link href="https://www.github.com/frc-emotion">
               <FaGithub />
-            </Nav.Link>
-            <Nav.Link href="https://www.linkedin.com/company/frc-team-2658/">
-              <FaLinkedin />
             </Nav.Link>
           </Nav>
         </Navbar.Collapse>
