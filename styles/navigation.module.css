@@ -1,0 +1,9 @@
+.social {
+  flex-direction: row;
+}
+
+@media only screen and (max-width: 960px) {
+  .social {
+    padding-right: 1em;
+  }
+}

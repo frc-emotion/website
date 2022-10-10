@@ -7,8 +7,8 @@ export default function ContactForm() {
       <Form.Control type="hidden" name="form-name" value="contact-form" />
 
       <Form.Group className="mb-3">
-        <Form.Label>Full Name</Form.Label>
-        <Form.Control type="text" name="name" id="name" />
+        <Form.Label>Full Name *</Form.Label>
+        <Form.Control type="text" name="name" id="name" required />
       </Form.Group>
 
       <Form.Group className="mb-3">
@@ -17,13 +17,13 @@ export default function ContactForm() {
       </Form.Group>
 
       <Form.Group className="mb-3">
-        <Form.Label>Email</Form.Label>
-        <Form.Control type="email" name="email" id="email" />
+        <Form.Label>Email *</Form.Label>
+        <Form.Control type="email" name="email" id="email" required />
       </Form.Group>
 
       <Form.Group className="mb-3">
-        <Form.Label>Message</Form.Label>
-        <Form.Control as="textarea" rows={5} name="message" id="message" />
+        <Form.Label>Message *</Form.Label>
+        <Form.Control as="textarea" rows={5} name="message" id="message" required />
       </Form.Group>
 
       <Button variant="primary" type="submit">

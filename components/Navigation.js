@@ -1,12 +1,27 @@
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
+import {
+  FaFacebook,
+  FaInstagram,
+  FaTwitter,
+  FaGithub,
+  FaLinkedin,
+} from "react-icons/fa";
+
+import styles from "../styles/navigation.module.css";
 
 export default function Navigation() {
   return (
-    <Navbar sticky="top" bg="light" variant="light" collapseOnSelect expand="md">
+    <Navbar
+      sticky="top"
+      bg="light"
+      variant="light"
+      collapseOnSelect
+      expand="md"
+    >
       <Container>
-        <Navbar.Brand href="#home">
+        <Navbar.Brand href="/">
           <img
             alt=""
             src="/logo.svg"
@@ -23,6 +38,23 @@ export default function Navigation() {
             <Nav.Link href="/about">About</Nav.Link>
             <Nav.Link href="/sponsors">Sponsors</Nav.Link>
             <Nav.Link href="/contact">Contact</Nav.Link>
+          </Nav>
+          <Nav className={styles.social}>
+            <Nav.Link href="https://www.facebook.com/frcteam2658/">
+              <FaFacebook />
+            </Nav.Link>
+            <Nav.Link href="https://www.instagram.com/frcteam2658/">
+              <FaInstagram />
+            </Nav.Link>
+            <Nav.Link href="https://twitter.com/frcteam2658">
+              <FaTwitter />
+            </Nav.Link>
+            <Nav.Link href="https://www.github.com/frc-emotion">
+              <FaGithub />
+            </Nav.Link>
+            <Nav.Link href="https://www.linkedin.com/company/frc-team-2658/">
+              <FaLinkedin />
+            </Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>

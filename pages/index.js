@@ -3,7 +3,7 @@ import PageHeader from "../components/PageHeader";
 
 export default function Home() {
   return (
-    <div>
+    <>
       <Head>
         <title>Home - FRC Team 2658</title>
         <meta
@@ -12,6 +12,6 @@ export default function Home() {
         />
       </Head>
       <PageHeader title="Home" />
-    </div>
+    </>
   );
 }

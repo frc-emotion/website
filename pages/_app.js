@@ -1,8 +1,8 @@
 import "../styles/globals.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 
-import Container from "react-bootstrap/Container";
 import Navigation from "../components/Navigation";
+import Footer from "../components/Footer";
 import Head from "next/head";
 
 export default function MyApp({ Component, pageProps }) {
@@ -13,8 +13,8 @@ export default function MyApp({ Component, pageProps }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Navigation />
-      
       <Component {...pageProps} />
+      <Footer />
     </>
   );
 }
