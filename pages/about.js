@@ -95,12 +95,12 @@ export default function About() {
               school students. We are dedicated to giving students an experience
               that will help them in our ever-eveolving world. We are a 100%
               student-run team, so students get the amazing opportunity to learn
-              from their older peers and teammates. We show students what it's
-              like to work on a project as a team, and how fun it is when the
-              robot you built is the one that wins. Since its establishment in
-              2007 by Jeff Bush and Richard Lin, the Σ-Motion team has designed
-              and built over 10 robots which it used in the FIRST Competitions
-              around the country.
+              from their older peers and teammates. We show students what
+              it&apos;s like to work on a project as a team, and how fun it is
+              when the robot you built is the one that wins. Since its
+              establishment in 2007 by Jeff Bush and Richard Lin, the Σ-Motion
+              team has designed and built over 10 robots which it used in the
+              FIRST Competitions around the country.
             </p>
           </Col>
         </Row>
@@ -150,42 +150,42 @@ export default function About() {
             <FaWrench className={styles.leadIcon} />
             <h3>Build Leads</h3>
             {buildLeads.map((lead) => (
-              <p>{lead}</p>
+              <p key={lead.id}>{lead}</p>
             ))}
           </Col>
           <Col>
             <FaPen className={styles.leadIcon} />
             <h3>Design Leads</h3>
             {designLeads.map((lead) => (
-              <p>{lead}</p>
+              <p key={lead.id}>{lead}</p>
             ))}
           </Col>
           <Col>
             <FaLightbulb className={styles.leadIcon} />
             <h3>Electrical Leads</h3>
             {electricalLeads.map((lead) => (
-              <p>{lead}</p>
+              <p key={lead.id}>{lead}</p>
             ))}
           </Col>
           <Col>
             <FaCode className={styles.leadIcon} />
             <h3>Software Leads</h3>
             {softwareLeads.map((lead) => (
-              <p>{lead}</p>
+              <p key={lead.id}>{lead}</p>
             ))}
           </Col>
           <Col>
             <FaPeopleCarry className={styles.leadIcon} />
             <h3>Marketing Leads</h3>
             {marketingLeads.map((lead) => (
-              <p>{lead}</p>
+              <p key={lead.id}>{lead}</p>
             ))}
           </Col>
         </Row>
-        <Row className={rowStyles.primaryRow} xs={1} sm={1} md={2} xl={3} >
+        <Row className={rowStyles.primaryRow} xs={1} sm={1} md={2} xl={3}>
           <h2 className={rowStyles.rowHeader}>Our Execs</h2>
           {execs.map((exec) => (
-            <Col>
+            <Col key={exec.id}>
               <h3>{exec.name}</h3>
               <p>{exec.role}</p>
             </Col>
@@ -194,7 +194,7 @@ export default function About() {
         <Row className={rowStyles.secondaryRow}>
           <h2 className={rowStyles.rowHeader}>Our Mentors</h2>
           {mentors.map((mentor) => (
-            <Col>
+            <Col key={mentor.id}>
               <h3>{mentor.name}</h3>
               {mentor.subteam ? <p>{mentor.subteam}</p> : <p>Mentor</p>}
             </Col>
@@ -203,26 +203,26 @@ export default function About() {
         <Row className={rowStyles.primaryRow}>
           <h2 className={rowStyles.rowHeader}>Our Advisors</h2>
           {advisors.map((advisor) => (
-            <Col>
+            <Col key={advisor.id}>
               <h3>{advisor}</h3>
               <p>Advisor</p>
             </Col>
           ))}
         </Row>
         <Row className={rowStyles.secondaryRow} xs={1} sm={1} md={2} xl={3}>
-          <h2 className={rowStyles.rowHeader}>The President's League</h2>
+          <h2 className={rowStyles.rowHeader}>The President&apos;s League</h2>
           {presidentsLeague.map((president) => (
-            <Col>
-              <h3 style={{color: "#F3EA1B"}}>{president.name}</h3>
+            <Col key={president.id}>
+              <h3 style={{ color: "#F3EA1B" }}>{president.name}</h3>
               <p>{president.year}</p>
             </Col>
           ))}
         </Row>
         <Row className={rowStyles.secondaryRow} xs={1} sm={1} md={2} xl={3}>
-          <h2 className={rowStyles.rowHeader}>The Vice President's Circle</h2>
+          <h2 className={rowStyles.rowHeader}>The Vice President&apos;s Circle</h2>
           {vicePresidentsCircle.map((vicePresident) => (
-            <Col>
-              <h3 style={{color: "#F3EA1B"}}>{vicePresident.name}</h3>
+            <Col key={vicePresident.id}>
+              <h3 style={{ color: "#F3EA1B" }}>{vicePresident.name}</h3>
               <p>{vicePresident.year}</p>
             </Col>
           ))}

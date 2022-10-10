@@ -1,3 +1,5 @@
+import Image from "next/future/image";
+
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
@@ -22,7 +24,7 @@ export default function Navigation() {
     >
       <Container>
         <Navbar.Brand href="/">
-          <img
+          <Image
             alt=""
             src="/logo.svg"
             width="30"
