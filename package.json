@@ -5,12 +5,17 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "export": "next build && next export",
     "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
     "bootstrap": "^5.2.1",
+    "imagemin-mozjpeg": "^10.0.0",
+    "imagemin-optipng": "^8.0.0",
+    "imagemin-svgo": "^10.0.1",
     "next": "12.3.0",
+    "next-optimized-images": "^2.6.2",
     "react": "18.2.0",
     "react-bootstrap": "^2.5.0",
     "react-dom": "18.2.0",
