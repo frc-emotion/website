@@ -36,16 +36,16 @@ export default function Navigation() {
             <Nav.Link href="/contact">Contact</Nav.Link>
           </Nav>
           <Nav className={styles.social}>
-            <Nav.Link href="https://www.facebook.com/frcteam2658/">
+            <Nav.Link className={styles.socialIcon} href="https://www.facebook.com/frcteam2658/">
               <FaFacebook />
             </Nav.Link>
-            <Nav.Link href="https://www.instagram.com/frcteam2658/">
+            <Nav.Link className={styles.socialIcon} href="https://www.instagram.com/frcteam2658/">
               <FaInstagram />
             </Nav.Link>
-            <Nav.Link href="https://www.youtube.com/user/team2658">
+            <Nav.Link className={styles.socialIcon} href="https://www.youtube.com/user/team2658">
               <FaYoutube />
             </Nav.Link>
-            <Nav.Link href="https://www.github.com/frc-emotion">
+            <Nav.Link className={styles.socialIcon} href="https://www.github.com/frc-emotion">
               <FaGithub />
             </Nav.Link>
           </Nav>
