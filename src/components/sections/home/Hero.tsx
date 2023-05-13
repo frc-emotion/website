@@ -1,10 +1,8 @@
-import Image from "next/image";
-
 export default function Hero() {
 	return (
-		<div className="bg-[#eafa33] grid px-[5vw]">
+		<div className="bg-[#eafa33] grid px-[5vw] z-0">
 			<div id="heroHeader">
-				<h1 className="2xl:text-[155px] xl:text-[145px] lg:text-[115px] text-[85px] font-semibold w-full text-center">
+				<h1 className="2xl:text-[155px] xl:text-[145px] lg:text-[115px] sm:text-[85px] text-[72px] font-semibold w-full text-center">
 					We are <br className="md:hidden" />
 					Σ-Motion
 				</h1>
@@ -18,9 +16,10 @@ export default function Hero() {
 			</div>
 			<div
 				id="heroImage"
-				className="md:mt-10 mt-7 lg:h-[75vh] h-[50vh] relative top-0 bg-fixed bg-cover bg-top bg-no-repeat"
+				className="md:mt-10 mt-7 lg:h-[75vh] h-[50vh] static top-0 bg-fixed bg-cover bg-top bg-no-repeat"
 				style={{ backgroundImage: "url(/hero.jpeg)" }}
-			></div>
+			>
+			</div>
 		</div>
 	);
 }

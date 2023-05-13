@@ -176,7 +176,7 @@ export default function Navbar() {
 							leaveTo="opacity-0 translate-y-1"
 						>
 							<Popover.Panel className="absolute z-10 w-screen max-w-md px-4 mt-7 transform -translate-x-1/2 left-1/2 sm:px-0 lg:max-w-[992px] xl:max-w-[1250px] xl:max-h-[525px] lg:max-h-[550px] rounded-3xl bg-white shadow-lg ring-1 ring-gray-900/5">
-								<div className="grid grid-cols-3 grid-rows-5 pt-[30px] pl-[50px]">
+								<div className="grid grid-cols-3 grid-rows-5 pt-[30px] px-[25px]">
 									<div className="col-span-1 xl:space-y-3 lg:space-y-0">
 										{moreMenuOne.map((item) => (
 											<div
