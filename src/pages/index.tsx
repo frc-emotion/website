@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { Inter } from "next/font/google";
 import Navbar from "../components/navigation/Navbar";
 import Hero from "../components/sections/home/Hero";
@@ -11,6 +10,7 @@ export default function Home() {
 		<main>
 			<Navbar />
 			<Hero />
+      <div className="h-[75vh] bg-[#eafa33]"></div>
 			<Footer />
 		</main>
 	);
