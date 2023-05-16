@@ -1,9 +1,9 @@
 "use client";
 
-import { Fragment, useState } from "react";
+import { Fragment } from "react";
 import "next/link";
 import { Popover, Transition } from "@headlessui/react";
-import { Bars3Icon } from "@heroicons/react/24/outline";
+import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { ChevronDownIcon } from "@heroicons/react/20/solid";
 import {
 	BsPeopleFill,
@@ -25,7 +25,28 @@ import { BiDonateHeart } from "react-icons/bi";
 import Link from "next/link";
 
 export default function Navbar() {
-	const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+	const mainMenuItems = [
+		{
+			title: "About",
+			href: "#",
+		},
+		{
+			title: "Sponsors",
+			href: "#",
+		},
+		{
+			title: "Outreach",
+			href: "#",
+		},
+		{
+			title: "Blog",
+			href: "#",
+		},
+		{
+			title: "Contact",
+			href: "#",
+		},
+	];
 	const moreMenuOne = [
 		{
 			title: "Team Resources",
@@ -123,42 +144,61 @@ export default function Navbar() {
 		},
 	];
 	return (
-		<header className="bg-[#eafa33]">
+		<header className="bg-teamYellow select-none">
 			<nav className="mx-auto max-w-7xl items-center justify-between p-6 lg:px-8 flex">
-				<div className="flex lg:flex-1 font-semibold text-[30px]">
+				<Link
+					href="/"
+					className="flex lg:flex-1 font-semibold text-[30px]"
+				>
 					Σ-Motion
-				</div>
+				</Link>
 				<div className="flex lg:hidden">
-					<button
-						type="button"
-						className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5"
-						onClick={() => setMobileMenuOpen(true)}
-					>
-						<span className="sr-only">Open main menu</span>
-						<Bars3Icon
-							className="h-[30px] w-[30px]"
-							aria-hidden="true"
-						/>
-					</button>
+					<Popover>
+						<Popover.Button className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5">
+							<span className="sr-only">Open main menu</span>
+							<Bars3Icon
+								className="h-[30px] w-[30px]"
+								aria-hidden="true"
+							/>
+						</Popover.Button>
+						<Transition
+							as={Fragment}
+							enter="transition ease-out duration-200"
+							enterFrom="opacity-0 translate-y-1"
+							enterTo="opacity-100 translate-y-0"
+							leave="transition ease-in duration-150"
+							leaveFrom="opacity-100 translate-y-0"
+							leaveTo="opacity-0 translate-y-1"
+						>
+							<Popover.Panel className="bg-white rounded-lg absolute right-3 top-5 md:w-[45vw] sm:w-[50vw] w-[70vw] h-[95vh]">
+								<div>
+									<Popover.Button className="float-right">
+										<span className="sr-only">
+											Close main menu
+										</span>
+										<XMarkIcon
+											className="h-[33px] w-[33px] m-4"
+											aria-hidden="true"
+										/>
+									</Popover.Button>
+								</div>
+								<div>
+									Home About Sponsors Outreach Blog Contact
+									More
+								</div>
+								<div>Settings Login</div>
+							</Popover.Panel>
+						</Transition>
+					</Popover>
 				</div>
 				<div className="hidden lg:flex space-x-8 text-[17px] font-semibold absolute left-1/2 transform -translate-x-1/2">
-					<Link href="/about" className="hover:underline">
-						About
-					</Link>
-					<Link href="/sponsors" className="hover:underline">
-						Sponsors
-					</Link>
-					<Link href="/outreach" className="hover:underline">
-						Outreach
-					</Link>
-					<Link href="/blog" className="hover:underline">
-						Blog
-					</Link>
-					<Link href="/contact" className="hover:underline">
-						Contact
-					</Link>
+					{mainMenuItems.map((item) => (
+						<Link href={item.href} className="hover:underline">
+							{item.title}
+						</Link>
+					))}
 					<Popover>
-						<Popover.Button className="lg:flex items-center gap-x-1 hover:underline">
+						<Popover.Button className="lg:flex items-center gap-x-1">
 							More{" "}
 							<ChevronDownIcon
 								className="h-5 w-5 flex-none"
@@ -185,7 +225,7 @@ export default function Navbar() {
 											>
 												<div className="flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
 													<item.icon
-														className="h-6 w-6 text-gray-600 group-hover:text-indigo-600"
+														className="h-6 w-6 text-gray-600 group-hover:text-teamYellow-dark"
 														aria-hidden="true"
 													/>
 												</div>
@@ -212,7 +252,7 @@ export default function Navbar() {
 											>
 												<div className="flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
 													<item.icon
-														className="h-6 w-6 text-gray-600 group-hover:text-indigo-600"
+														className="h-6 w-6 text-gray-600 group-hover:text-teamYellow-dark"
 														aria-hidden="true"
 													/>
 												</div>
@@ -239,7 +279,7 @@ export default function Navbar() {
 											>
 												<div className="flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
 													<item.icon
-														className="h-6 w-6 text-gray-600 group-hover:text-indigo-600"
+														className="h-6 w-6 text-gray-600 group-hover:text-teamYellow-dark"
 														aria-hidden="true"
 													/>
 												</div>

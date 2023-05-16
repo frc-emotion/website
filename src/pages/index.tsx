@@ -10,7 +10,7 @@ export default function Home() {
 		<main>
 			<Navbar />
 			<Hero />
-      <div className="h-[75vh] bg-[#eafa33]"></div>
+			<div className="h-[75vh] bg-teamYellow"></div>
 			<Footer />
 		</main>
 	);
