@@ -8,20 +8,17 @@ import { ChevronDownIcon } from "@heroicons/react/20/solid";
 import {
 	BsPeopleFill,
 	BsFillPersonBadgeFill,
-	BsFillHouseDoorFill,
-	BsFillPersonPlusFill,
 	BsClipboardFill,
 	BsPhoneFill,
 	BsFillCalendarWeekFill,
-	BsFillDiagram3Fill,
-	BsFillKanbanFill,
-	BsFiles,
 	BsTrophyFill,
 } from "react-icons/bs";
-import { FaRobot } from "react-icons/fa";
+import { FaRobot, FaHammer } from "react-icons/fa";
 import { IoMdPhotos } from "react-icons/io";
-import { RiCheckboxBlankFill } from "react-icons/ri";
+import { RiCheckboxBlankFill, RiSteering2Fill } from "react-icons/ri";
 import { BiDonateHeart } from "react-icons/bi";
+import { HiCodeBracketSquare } from "react-icons/hi2";
+import { MdElectricalServices, MdDesignServices } from "react-icons/md";
 import Link from "next/link";
 
 export default function Navbar() {
@@ -49,7 +46,7 @@ export default function Navbar() {
 	];
 	const moreMenuOne = [
 		{
-			title: "Team Resources",
+			title: "Member Home",
 			description: "Information for general members",
 			href: "#",
 			icon: BsPeopleFill,
@@ -61,16 +58,10 @@ export default function Navbar() {
 			icon: BsFillPersonBadgeFill,
 		},
 		{
-			title: "Parent Resources",
-			description: "Team information for parents",
+			title: "Attendance",
+			description: "Hours for our 4.5 period class",
 			href: "#",
-			icon: BsFillHouseDoorFill,
-		},
-		{
-			title: "New Members",
-			description: "Onboarding and subteam selection",
-			href: "#",
-			icon: BsFillPersonPlusFill,
+			icon: BsFillCalendarWeekFill,
 		},
 		{
 			title: "Join our Team",
@@ -78,37 +69,43 @@ export default function Navbar() {
 			href: "#",
 			icon: BsClipboardFill,
 		},
-	];
-	const moreMenuTwo = [
 		{
 			title: "Team App",
 			description: "Download for iOS and Android",
 			href: "#",
 			icon: BsPhoneFill,
 		},
+	];
+	const moreMenuTwo = [
 		{
-			title: "Attendance",
-			description: "Hours for our 4.5 period class",
+			title: "Software Team",
+			description: "Documentation and resources",
 			href: "#",
-			icon: BsFillCalendarWeekFill,
+			icon: HiCodeBracketSquare,
 		},
 		{
-			title: "Projects and Tasks",
-			description: "See and manage subteam projects",
+			title: "Build Team",
+			description: "Safety training and build timelines",
 			href: "#",
-			icon: BsFillKanbanFill,
+			icon: FaHammer,
 		},
 		{
-			title: "Directory",
-			description: "View profiles and contact info",
+			title: "Electrical Team",
+			description: "Training and project management",
 			href: "#",
-			icon: BsFillDiagram3Fill,
+			icon: MdElectricalServices,
 		},
 		{
-			title: "Documentation",
-			description: "Docs for our team's software tools",
+			title: "Drive Team",
+			description: "Information for drive team",
 			href: "#",
-			icon: BsFiles,
+			icon: RiSteering2Fill,
+		},
+		{
+			title: "Design Team",
+			description: "CAD and design resources",
+			href: "#",
+			icon: MdDesignServices,
 		},
 	];
 	const moreMenuThree = [
@@ -144,7 +141,7 @@ export default function Navbar() {
 		},
 	];
 	return (
-		<header className="bg-teamYellow select-none">
+		<header className="bg-teamYellow-500 select-none">
 			<nav className="mx-auto max-w-7xl items-center justify-between p-6 lg:px-8 flex">
 				<Link
 					href="/"
@@ -225,7 +222,7 @@ export default function Navbar() {
 											>
 												<div className="flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
 													<item.icon
-														className="h-6 w-6 text-gray-600 group-hover:text-teamYellow-dark"
+														className="h-6 w-6 text-gray-600 group-hover:text-teamYellow-600"
 														aria-hidden="true"
 													/>
 												</div>
@@ -252,7 +249,7 @@ export default function Navbar() {
 											>
 												<div className="flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
 													<item.icon
-														className="h-6 w-6 text-gray-600 group-hover:text-teamYellow-dark"
+														className="h-6 w-6 text-gray-600 group-hover:text-teamYellow-600"
 														aria-hidden="true"
 													/>
 												</div>
@@ -279,7 +276,7 @@ export default function Navbar() {
 											>
 												<div className="flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
 													<item.icon
-														className="h-6 w-6 text-gray-600 group-hover:text-teamYellow-dark"
+														className="h-6 w-6 text-gray-600 group-hover:text-teamYellow-600"
 														aria-hidden="true"
 													/>
 												</div>
