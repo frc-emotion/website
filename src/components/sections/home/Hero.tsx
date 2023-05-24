@@ -1,6 +1,8 @@
+import { motion } from "framer-motion";
+
 export default function Hero() {
 	return (
-		<div className="bg-teamYellow grid px-[5vw] z-0">
+		<div className="bg-teamYellow-500 grid px-[5vw] z-0">
 			<div id="heroHeader">
 				<h1 className="2xl:text-[200px] xl:text-[160px] lg:text-[140px] text-[85px] font-semibold w-full text-center">
 					Σ-Motion
@@ -15,7 +17,7 @@ export default function Hero() {
 			</div>
 			<div
 				id="heroImage"
-				className="md:mt-10 mt-7 lg:h-[75vh] h-[50vh] static top-0 bg-fixed bg-cover bg-top bg-no-repeat"
+				className="md:mt-10 mt-7 lg:h-[75vh] h-[45vh] static top-0 bg-cover bg-top bg-no-repeat"
 				style={{ backgroundImage: "url(/hero.jpeg)" }}
 			></div>
 		</div>
