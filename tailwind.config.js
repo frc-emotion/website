@@ -8,8 +8,16 @@ module.exports = {
 	theme: {
 		extend: {
 			colors: {
-				teamYellow: "#fcf000",
-				"teamYellow-dark": "#d9ce00",
+        "teamYellow-100": "#fcfaca",
+        "teamYellow-200": "#fcf797",
+        "teamYellow-300": "#fcf465",
+        "teamYellow-400": "#fcf232",
+				"teamYellow-500": "#fcf000",
+        "teamYellow-550": "#d9ce00",
+				"teamYellow-600": "#bfb600",
+        "teamYellow-700": "#8c8500",
+        "teamYellow-800": "#595500",
+        "teamYellow-900": "#262400",
 				midnight: "#050226",
 			},
 			backgroundImage: {
