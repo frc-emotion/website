@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 export default function Hero() {
 	return (
-		<div className="bg-teamYellow-500 grid px-[5vw] z-0">
+		<div id="#hero" className="bg-teamYellow-500 grid px-[5vw] z-0">
 			<div id="heroHeader">
 				<h1 className="2xl:text-[200px] xl:text-[160px] lg:text-[140px] text-[85px] font-semibold w-full text-center">
 					Σ-Motion

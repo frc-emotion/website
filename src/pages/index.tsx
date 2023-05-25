@@ -11,6 +11,7 @@ export default function Home() {
 			<Navbar />
 			<Hero />
 			<div className="h-[75vh] bg-teamYellow"></div>
+				<div id="#about" className="grid grid-cols-1 lg:grid-cols-3 bg-teamYellow-600 py-[10vh]">
 			<Footer />
 		</main>
 	);
