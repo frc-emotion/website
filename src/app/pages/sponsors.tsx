@@ -6,7 +6,7 @@ export default function Sponsor() {
     return (
         <main>
             <Navbar />
-            <SponsorImages />
+            <SponsorImages2023 />
             <Footer />
         </main>
     );
