@@ -25,15 +25,15 @@ export default function Navbar() {
 	const mainMenuItems = [
 		{
 			title: "About",
-			href: "#",
+			href: "/about",
 		},
 		{
 			title: "Sponsors",
-			href: "#",
+			href: "/sponsors",
 		},
 		{
 			title: "Outreach",
-			href: "#",
+			href: "/outreach",
 		},
 		{
 			title: "Blog",
@@ -41,7 +41,7 @@ export default function Navbar() {
 		},
 		{
 			title: "Contact",
-			href: "#",
+			href: "/contact",
 		},
 	];
 	const moreMenuOne = [
@@ -194,7 +194,7 @@ export default function Navbar() {
 							{item.title}
 						</Link>
 					))}
-					<Popover>
+					<Popover className="hidden">
 						<Popover.Button className="lg:flex items-center gap-x-1">
 							More{" "}
 							<ChevronDownIcon
@@ -300,7 +300,8 @@ export default function Navbar() {
 						</Transition>
 					</Popover>
 				</div>
-				<div className="hidden lg:flex space-x-8 text-[17px] font-semibold">
+				{/* lg:flex space-x-8 text-[17px] font-semibold */}
+				<div className="hidden">
 					<Link href="#">Settings</Link>
 					<Link href="/login" className="hover:underline">
 						Login
