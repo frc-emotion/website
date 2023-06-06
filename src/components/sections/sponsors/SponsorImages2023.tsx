@@ -14,7 +14,7 @@ export default function SponsorImages2023() {
                 <img src="https://upload.wikimedia.org/wikipedia/en/thumb/9/92/General_Atomics_Logo.svg/220px-General_Atomics_Logo.svg.png" width="500" height="500"></img>
                 <img src="https://cdn-gcppc.nitrocdn.com/ptXvfPuULgBMoaHTEkAhxPIvvnllWqnh/assets/images/optimized/rev-365445b/wp-content/uploads/2021/02/cropped-batteries-plus-logo-220x68.png" width="500" height="500"></img>
                 
-                <img class="content-center" src="https://scontent-lax3-1.xx.fbcdn.net/v/t39.30808-6/307455399_427026382908073_4508787573902862313_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=pOh9jR5s0-sAX-Q8Pts&_nc_ht=scontent-lax3-1.xx&oh=00_AfDmdXz3MnApVgZdbIFQGrX7xe4c32ALaUt9rGcKB9wjZw&oe=647D8B75" width="150" height="100"></img>
+                <img className="content-center" src="https://scontent-lax3-1.xx.fbcdn.net/v/t39.30808-6/307455399_427026382908073_4508787573902862313_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=pOh9jR5s0-sAX-Q8Pts&_nc_ht=scontent-lax3-1.xx&oh=00_AfDmdXz3MnApVgZdbIFQGrX7xe4c32ALaUt9rGcKB9wjZw&oe=647D8B75" width="150" height="100"></img>
             </div>
         </div>
     );
