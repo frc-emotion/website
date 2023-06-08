@@ -1,9 +1,14 @@
 "use client";
 
-import { Fragment } from "react";
+import { Fragment, useState } from "react";
 import "next/link";
 import { Popover, Transition } from "@headlessui/react";
-import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
+import {
+	Bars3Icon,
+	XMarkIcon,
+	ArrowRightIcon,
+	ArrowLeftIcon,
+} from "@heroicons/react/24/outline";
 import { ChevronDownIcon } from "@heroicons/react/20/solid";
 import {
 	BsPeopleFill,
@@ -35,10 +40,10 @@ export default function Navbar() {
 			title: "Outreach",
 			href: "/outreach",
 		},
-		{
-			title: "Blog",
-			href: "#",
-		},
+		// {
+		// 	title: "Blog",
+		// 	href: "#",
+		// },
 		{
 			title: "Contact",
 			href: "/contact",
@@ -140,8 +145,11 @@ export default function Navbar() {
 			icon: BiDonateHeart,
 		},
 	];
+
+	const [mobileActiveItem, setMobileActiveItem] = useState(0);
+
 	return (
-		<header className="bg-teamYellow-500 select-none">
+		<div id="header" className="bg-teamYellow-500 select-none">
 			<nav className="mx-auto max-w-7xl items-center justify-between p-6 lg:px-8 flex">
 				<Link
 					href="/"
@@ -149,48 +157,188 @@ export default function Navbar() {
 				>
 					Σ-Motion
 				</Link>
-				<div className="flex lg:hidden">
-					<Popover>
-						<Popover.Button className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5">
-							<span className="sr-only">Open main menu</span>
-							<Bars3Icon
-								className="h-[30px] w-[30px]"
-								aria-hidden="true"
-							/>
-						</Popover.Button>
-						<Transition
-							as={Fragment}
-							enter="transition ease-out duration-200"
-							enterFrom="opacity-0 translate-y-1"
-							enterTo="opacity-100 translate-y-0"
-							leave="transition ease-in duration-150"
-							leaveFrom="opacity-100 translate-y-0"
-							leaveTo="opacity-0 translate-y-1"
-						>
-							<Popover.Panel className="bg-white rounded-lg absolute right-3 top-5 md:w-[45vw] sm:w-[50vw] w-[70vw] h-[95vh]">
-								<div>
-									<Popover.Button className="float-right">
-										<span className="sr-only">
-											Close main menu
-										</span>
-										<XMarkIcon
-											className="h-[33px] w-[33px] m-4"
-											aria-hidden="true"
-										/>
-									</Popover.Button>
+				<Popover className="flex lg:hidden">
+					<Popover.Button
+						onClick={() => setMobileActiveItem(0)}
+						className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5"
+					>
+						<span className="sr-only">Open main menu</span>
+						<Bars3Icon
+							className="h-[30px] w-[30px]"
+							aria-hidden="true"
+						/>
+					</Popover.Button>
+					<Popover.Panel className="fixed h-[100vh] w-[100vw] z-10 bg-white top-0 right-0">
+						{/* close button */}
+						<div className="float-right relative z-30">
+							<Popover.Button className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5">
+								<span className="sr-only">Close main menu</span>
+								<XMarkIcon
+									className="h-[35px] w-[35px] my-[30px] mr-[20px]"
+									aria-hidden="true"
+								/>
+							</Popover.Button>
+						</div>
+						{/* main content */}
+						<div className="flex flex-col absolute z-10 items-center justify-center h-full w-full">
+							{mobileActiveItem === 0 ? (
+								<div className="flex flex-col items-center justify-center space-y-5">
+									<Link
+										href="/"
+										className="hover:underline font-semibold text-[30px]"
+									>
+										Home
+									</Link>
+
+									{mainMenuItems.map((item) => (
+										<Link
+											key={item.title}
+											href={item.href}
+											className="hover:underline font-semibold text-[30px]"
+										>
+											{item.title}
+										</Link>
+									))}
+									<div>
+										<button
+											onClick={() =>
+												setMobileActiveItem(
+													mobileActiveItem + 1
+												)
+											}
+											className="hover:underline font-semibold text-[30px]"
+										>
+											More
+											<ArrowRightIcon className="ml-[10px] h-[30px] w-[30px] inline no-underline -translate-y-[0.10rem]" />
+										</button>
+									</div>
 								</div>
-								<div>
-									Home About Sponsors Outreach Blog Contact
-									More
+							) : mobileActiveItem === 1 ? (
+								<div className="flex flex-col items-center justify-center space-y-5">
+									<div>
+										<button
+											onClick={() =>
+												setMobileActiveItem(
+													mobileActiveItem - 1
+												)
+											}
+											className="hover:underline font-semibold text-[30px]"
+										>
+											<ArrowLeftIcon className="mr-[10px] h-[30px] w-[30px] inline no-underline -translate-y-[0.10rem]" />
+											Back
+										</button>
+									</div>
+									{moreMenuOne.map((item) => (
+										<Link
+											key={item.title}
+											href={item.href}
+											className="hover:underline font-semibold text-[30px]"
+										>
+											{item.title}
+										</Link>
+									))}
+									<div>
+										<button
+											onClick={() =>
+												setMobileActiveItem(
+													mobileActiveItem + 1
+												)
+											}
+											className="hover:underline font-semibold text-[30px]"
+										>
+											More
+											<ArrowRightIcon className="ml-[10px] h-[30px] w-[30px] inline no-underline -translate-y-[0.10rem]" />
+										</button>
+									</div>
 								</div>
-								<div>Settings Login</div>
-							</Popover.Panel>
-						</Transition>
-					</Popover>
-				</div>
+							) : mobileActiveItem === 2 ? (
+								<div className="flex flex-col items-center justify-center space-y-5">
+									<div>
+										<button
+											onClick={() =>
+												setMobileActiveItem(
+													mobileActiveItem - 1
+												)
+											}
+											className="hover:underline font-semibold text-[30px]"
+										>
+											<ArrowLeftIcon className="mr-[10px] h-[30px] w-[30px] inline no-underline -translate-y-[0.10rem]" />
+											Back
+										</button>
+									</div>
+									{moreMenuTwo.map((item) => (
+										<Link
+											key={item.title}
+											href={item.href}
+											className="hover:underline font-semibold text-[30px]"
+										>
+											{item.title}
+										</Link>
+									))}
+									<div>
+										<button
+											onClick={() =>
+												setMobileActiveItem(
+													mobileActiveItem + 1
+												)
+											}
+											className="hover:underline font-semibold text-[30px]"
+										>
+											More
+											<ArrowRightIcon className="ml-[10px] h-[30px] w-[30px] inline no-underline -translate-y-[0.10rem]" />
+										</button>
+									</div>
+								</div>
+							) : mobileActiveItem === 3 ? (
+								<div className="flex flex-col items-center justify-center space-y-5">
+									<div>
+										<button
+											onClick={() =>
+												setMobileActiveItem(
+													mobileActiveItem - 1
+												)
+											}
+											className="hover:underline font-semibold text-[30px]"
+										>
+											<ArrowLeftIcon className="mr-[10px] h-[30px] w-[30px] inline no-underline -translate-y-[0.10rem]" />
+											Back
+										</button>
+									</div>
+									{moreMenuThree.map((item) => (
+										<Link
+											key={item.title}
+											href={item.href}
+											className="hover:underline font-semibold text-[30px]"
+										>
+											{item.title}
+										</Link>
+									))}
+								</div>
+							) : null}
+							{/* <div className="flex flex-col items-center justify-center space-y-5 mt-[3.5rem]">
+								<Link
+									href="#"
+									className="hover:underline font-semibold text-[30px]"
+								>
+									Settings
+								</Link>
+								<Link
+									href="#"
+									className="hover:underline font-semibold text-[30px]"
+								>
+									Login
+								</Link>
+							</div> */}
+						</div>
+					</Popover.Panel>
+				</Popover>
 				<div className="hidden lg:flex space-x-8 text-[17px] font-semibold absolute left-1/2 transform -translate-x-1/2">
 					{mainMenuItems.map((item) => (
-						<Link key={item.title} href={item.href} className="hover:underline">
+						<Link
+							key={item.title}
+							href={item.href}
+							className="hover:underline"
+						>
 							{item.title}
 						</Link>
 					))}
@@ -308,6 +456,6 @@ export default function Navbar() {
 					</Link>
 				</div>
 			</nav>
-		</header>
+		</div>
 	);
 }
