@@ -19,7 +19,7 @@ export default function Home() {
 				{/* Mission Statement */}
 				<div
 					id="#about"
-					className="grid grid-cols-1 2xl:grid-cols-3 py-[10vh]"
+					className="grid grid-cols-1 2xl:grid-cols-3 pb-[10vh]"
 				>
 					<div className="col-span-1 lg:mx-[4vw] mx-[10vw]">
 						<div className="flex-col">
@@ -72,8 +72,8 @@ export default function Home() {
 					</div>
 					<div className="mt-10 2xl:mt-0 col-span-1 2xl:col-span-2 flex w-full h-full items-center justify-center">
 						<img
-							src="/hero.jpeg"
-							className="w-[90vw] sm:w-[80vw] 2xl:w-[60vw]"
+							src="/about.jpeg"
+							className="w-[90vw] sm:w-[80vw] 2xl:w-[60vw] select-none"
 						/>
 					</div>
 				</div>
