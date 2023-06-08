@@ -19,9 +19,9 @@ export default function Home() {
 				{/* Mission Statement */}
 				<div
 					id="#about"
-					className="grid grid-cols-1 2xl:grid-cols-3 bg-teamYellow-600 py-[10vh]"
+					className="grid grid-cols-1 2xl:grid-cols-3 py-[10vh]"
 				>
-					<div className="col-span-1 2xl:mx-[4vw] mx-[10vw]">
+					<div className="col-span-1 lg:mx-[4vw] mx-[10vw]">
 						<div className="flex-col">
 							<h1 className="text-[50px] font-semibold">
 								About Us
@@ -45,7 +45,7 @@ export default function Home() {
 								Mission Statement
 							</h2>
 							<p className="text-[17px]">
-								Team ∑-Motion's purpose is to create a
+								Team Σ-Motion's purpose is to create a
 								student-run FRC team in cooperation with
 								advisors and mentors. We aim to educate and
 								spread STEM knowledge and FIRST values by
@@ -70,9 +70,12 @@ export default function Home() {
 							</div>
 						</div>
 					</div>
-					{/* <div className="col-span-2 w-full h-full">
-						<img src="/hero.jpeg" className="w-[60vw] m-auto" />
-					</div> */}
+					<div className="mt-10 2xl:mt-0 col-span-1 2xl:col-span-2 flex w-full h-full items-center justify-center">
+						<img
+							src="/hero.jpeg"
+							className="w-[90vw] sm:w-[80vw] 2xl:w-[60vw]"
+						/>
+					</div>
 				</div>
 			</div>
 			<Footer />
