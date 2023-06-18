@@ -1,5 +1,7 @@
 import { Bebas_Neue, Raleway } from "next/font/google";
 import "../styles/globals.css";
+import Navbar from "@/components/navigation/Navbar";
+import Footer from "@/components/sections/Footer";
 
 export const metadata = {
 	title: "FRC Team 2658",
@@ -27,7 +29,11 @@ export default function RootLayout({
 }) {
 	return (
 		<html lang="en">
-			<body className={`${raleway.variable} font-sans ${bebas_neue.variable}`}>{children}</body>
+			<body className={`${raleway.variable} font-sans ${bebas_neue.variable}`}>
+				<Navbar />
+				{children}
+				<Footer />
+				</body>
 		</html>
 	);
 }

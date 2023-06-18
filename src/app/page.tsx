@@ -12,7 +12,6 @@ const inter = Inter({ subsets: ["latin"] });
 export default function Home() {
 	return (
 		<main>
-			<Navbar />
 			<Hero />
 			<SponsorSnippet />
 			<div className="pb-5 bg-teamYellow-500">
@@ -78,7 +77,6 @@ export default function Home() {
 					</div>
 				</div>
 			</div>
-			<Footer />
 		</main>
 	);
 }
