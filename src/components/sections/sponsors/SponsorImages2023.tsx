@@ -1,21 +1,69 @@
-import '@/styles/globals.css';
+import "@/styles/globals.css";
+import Image from "next/image";
 
 export default function SponsorImages2023() {
-    return (
-        <div>
-            <div className="text-2xl text-center">
-                <h1>Our 2023 Sponsors</h1>
-            </div>
-            <div className="grid grid-cols-3 gap-10">
-                
-                <img src="https://www.defense.gov/portals/1/Page-Assets/branding-guide/logos/png/DoD-Logo.png" width="500" height="500"></img>
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Qualcomm-Logo.svg/512px-Qualcomm-Logo.svg.png?20191123135426" width="500" height="500"></img>
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/Northrop_Grumman_logo_blue-on-clear_2020.svg/800px-Northrop_Grumman_logo_blue-on-clear_2020.svg.png?20200301125825" width="500" height="500"></img>
-                <img src="https://upload.wikimedia.org/wikipedia/en/thumb/9/92/General_Atomics_Logo.svg/220px-General_Atomics_Logo.svg.png" width="500" height="500"></img>
-                <img src="https://cdn-gcppc.nitrocdn.com/ptXvfPuULgBMoaHTEkAhxPIvvnllWqnh/assets/images/optimized/rev-365445b/wp-content/uploads/2021/02/cropped-batteries-plus-logo-220x68.png" width="500" height="500"></img>
-                
-                <img className="content-center" src="https://scontent-lax3-1.xx.fbcdn.net/v/t39.30808-6/307455399_427026382908073_4508787573902862313_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=pOh9jR5s0-sAX-Q8Pts&_nc_ht=scontent-lax3-1.xx&oh=00_AfDmdXz3MnApVgZdbIFQGrX7xe4c32ALaUt9rGcKB9wjZw&oe=647D8B75" width="150" height="100"></img>
-            </div>
-        </div>
-    );
-} // 
+	const logoFolder = "/sponsors/2023"; // last character CANNOT be a '/'
+	const sponsors = [
+		// width and height both in pixels
+		{
+			name: "US Department of Defense",
+			path: `${logoFolder}/dod.png`,
+			width: 500,
+			height: 500,
+		},
+		{
+			name: "Qualcomm",
+			path: `${logoFolder}/qualcomm-updated.png`,
+			width: 500,
+			height: 500,
+		},
+		{
+			name: "Northrop Grumman",
+			path: `${logoFolder}/northrop.png`,
+			width: 500,
+			height: 500,
+		},
+		{
+			name: "General Atomics",
+			path: `${logoFolder}/generalAtomics.png`,
+			width: 500,
+			height: 500,
+		},
+		{
+			name: "Batteries Plus",
+			path: `${logoFolder}/batteries.png`,
+			width: 500,
+			height: 500,
+		},
+		{
+			name: "RBHS Foundation",
+			path: `${logoFolder}/rbhs.png`,
+			width: 150,
+			height: 100,
+		},
+	];
+
+	return (
+		<div className="mx-[5vw] my-[60px]" id="2023sponsors">
+			<div className="text-[56px] text-left font-semibold">
+				<h1>2023</h1>
+			</div>
+			<div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-10">
+				{sponsors.map((item) => (
+					<div
+						className="w-full flex justify-center items-center select-none"
+						key={"sponsor-" + item.name}
+					>
+						<Image
+							src={item.path}
+							title={item.name}
+							alt={item.name + " Logo"}
+							width={item.width}
+							height={item.height}
+						/>
+					</div>
+				))}
+			</div>
+		</div>
+	);
+} //
