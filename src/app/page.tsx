@@ -70,9 +70,12 @@ export default function Home() {
 						</div>
 					</div>
 					<div className="mt-10 2xl:mt-0 col-span-1 2xl:col-span-2 flex w-full h-full items-center justify-center">
-						<img
+						<Image
 							src="/about.jpeg"
 							className="w-[90vw] sm:w-[80vw] 2xl:w-[60vw] select-none"
+							width={6000}
+							height={4000}
+							alt="2658's 2023 robot, 'Trident'"
 						/>
 					</div>
 				</div>
