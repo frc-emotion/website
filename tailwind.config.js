@@ -19,6 +19,18 @@ module.exports = {
 				"teamYellow-900": "#262400",
 				midnight: "#050226",
 			},
+			screens: {
+				"-2xl": { max: "1535px" },
+				"-xl": { max: "1279px" },
+				"-lg": { max: "1023px" },
+				"-md": { max: "767px" },
+				"-sm": { max: "639px" },
+				"-xs": { max: "479px" },
+				"only-xl": { min: "1024px", max: "1279px" },
+				"only-lg": { min: "768px", max: "1023px" },
+				"only-md": { min: "640px", max: "767px" },
+				"only-sm": { min: "480px", max: "639px" },
+			},
 			backgroundImage: {
 				"gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
 				"gradient-conic":
