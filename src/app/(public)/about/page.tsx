@@ -1,7 +1,7 @@
 import AboutUs from "@/components/sections/about/AboutUs";
 import { Metadata } from "next";
 import Image from "next/image";
-import "./index.css";
+import ".//index.css";
 
 export const metadata: Metadata = {
 	title: "About Us | FRC Team 2658",
