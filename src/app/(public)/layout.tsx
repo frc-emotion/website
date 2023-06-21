@@ -1,5 +1,5 @@
 import { Bebas_Neue, Raleway } from "next/font/google";
-import "../styles/globals.css";
+import "../../styles/globals.css";
 import Navbar from "@/components/navigation/Navbar";
 import Footer from "@/components/sections/Footer";
 
@@ -13,14 +13,14 @@ const raleway = Raleway({
 	subsets: ["latin"],
 	display: "swap",
 	variable: "--font-raleway",
-})
+});
 
 const bebas_neue = Bebas_Neue({
 	subsets: ["latin"],
-	weight: '400', 
+	weight: "400",
 	display: "swap",
 	variable: "--font-bebas-neue",
-})
+});
 
 export default function RootLayout({
 	children,
@@ -29,11 +29,13 @@ export default function RootLayout({
 }) {
 	return (
 		<html lang="en">
-			<body className={`${raleway.variable} font-sans ${bebas_neue.variable}`}>
+			<body
+				className={`${raleway.variable} font-sans ${bebas_neue.variable}`}
+			>
 				<Navbar />
 				{children}
 				<Footer />
-				</body>
+			</body>
 		</html>
 	);
 }

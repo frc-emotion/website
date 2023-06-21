@@ -1,7 +1,5 @@
-export default function AboutUs(){
-    return (
-		<div className="flex-col flex">
-			<h1 className="text-[50px] font-semibold">About Us</h1>
+export default function AboutUs() {
+	return (
 			<p className="text-[17px]">
 				We are an FRC Robotics team founded in 2008, by and for high
 				school students. We are dedicated to giving students an
@@ -14,6 +12,5 @@ export default function AboutUs(){
 				the Σ-Motion team has designed and built over 10 robots which it
 				used in the FIRST Competitions around the country.
 			</p>
-		</div>
 	);
 }

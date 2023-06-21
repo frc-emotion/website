@@ -49,7 +49,7 @@ export default function Home() {
 							<div className="mt-10">
 								<Link
 									className="text-[17px] underline font-semibold select-none"
-									href="#"
+									href="/about"
 								>
 									Learn more
 									<ArrowUpRightIcon className="h-[14px] w-[14px] text-black inline no-underline stroke-[4px] translate-x-1/4" />
