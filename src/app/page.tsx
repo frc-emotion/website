@@ -14,15 +14,17 @@ export default function Home() {
 		<main>
 			<Navbar />
 			<Hero />
-			<SponsorSnippet />
+			{/* TODO: Finish sponsor snippet once sponsor page is finished */}
+			{/* <SponsorSnippet /> */}
+			<div className="h-[7.5vh] bg-teamYellow-500" />
 			<div className="pb-5 bg-teamYellow-500">
 				{/* Mission Statement */}
 				<div
 					id="#about"
-					className="grid grid-cols-1 2xl:grid-cols-3 pb-[10vh]"
+					className="grid grid-cols-1 lg:grid-cols-2 2xl:grid-cols-3 pb-[10vh]"
 				>
 					<div className="col-span-1 lg:mx-[4vw] mx-[10vw]">
-						<div className="flex-col">
+						<div className="flex-row">
 							<h1 className="text-[50px] font-semibold">
 								About Us
 							</h1>
@@ -70,10 +72,10 @@ export default function Home() {
 							</div>
 						</div>
 					</div>
-					<div className="mt-10 2xl:mt-0 col-span-1 2xl:col-span-2 flex w-full h-full items-center justify-center">
+					<div className="mt-10 lg:mt-0 col-span-1 2xl:col-span-2 flex w-full h-full items-center justify-center">
 						<img
 							src="/about.jpeg"
-							className="w-[90vw] sm:w-[80vw] 2xl:w-[60vw] select-none"
+							className="w-[90vw] sm:w-[80vw] lg:w-[45vw] 2xl:w-[60vw] select-none"
 						/>
 					</div>
 				</div>
