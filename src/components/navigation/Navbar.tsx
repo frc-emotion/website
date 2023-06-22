@@ -180,9 +180,9 @@ export default function Navbar() {
 							</Popover.Button>
 						</div>
 						{/* main content */}
-						<div className="flex flex-col absolute z-10 items-center justify-center h-full w-full">
+						<div className="flex flex-col absolute z-10 justify-center h-full w-full">
 							{mobileActiveItem === 0 ? (
-								<div className="flex flex-col items-center justify-center space-y-5">
+								<div className="flex flex-col items-center space-y-5">
 									<Link
 										href="/"
 										className="hover:underline font-semibold text-[30px]"

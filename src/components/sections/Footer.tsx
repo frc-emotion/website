@@ -56,11 +56,11 @@ export default function Footer() {
 					className="items-center col-span-2 py-[7vh] flex flex-col h-full justify-center"
 					id="footerPrimaryInfo"
 				>
-					<h1 className="text-[5.5rem] -mt-5 font-bold select-none">
+					<h1 className="text-[85px] -xs:text-[60px] -mt-5 font-bold select-none">
 						Σ-Motion
 					</h1>
-					<p>FRC Team 2658 - Rancho Bernardo High School</p>
-					<p>13010 Paseo Lucido - San Diego, CA 92128</p>
+					<p className="-xs:text-[12px]">FRC Team 2658 - Rancho Bernardo High School</p>
+					<p className="-xs:text-[12px]">13010 Paseo Lucido - San Diego, CA 92128</p>
 					<div
 						className="flex items-center space-x-5 mt-[1.5rem]"
 						id="socialIcons"
