@@ -1,0 +1,7 @@
+@tailwind components; 
+
+@layer components {
+    .grid3x2{
+        @apply grid xl:grid-cols-3 xl:grid-rows-2 grid-cols-1 grid-rows-6 xl:gap-6; 
+    }
+}

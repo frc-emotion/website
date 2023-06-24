@@ -1,5 +1,10 @@
-.bgAbout {
-	background-image: url(https://dummyimage.com/1920x200/bababa/AAAAAA&text=placeholder);
-	background-repeat: no-repeat;
-	background-size: 100% 100%;
+@tailwind components;
+
+@layer components {
+	.bgAbout {
+		/* Placeholder, will eventually put in image from marketing */
+		@apply bg-gradient-radial from-slate-700 to-gray-400; 
+		background-repeat: no-repeat;
+		background-size: 100% 100%;
+	}
 }

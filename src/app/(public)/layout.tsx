@@ -30,7 +30,7 @@ export default function RootLayout({
 	return (
 		<html lang="en">
 			<body
-				className={`${raleway.variable} font-sans ${bebas_neue.variable}`}
+				className={`font-sans ${raleway.variable} ${bebas_neue.variable}`}
 			>
 				<Navbar />
 				{children}
