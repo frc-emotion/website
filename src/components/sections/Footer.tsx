@@ -16,31 +16,31 @@ const social = [
 		name: "Instagram",
 		link: "https://instagram.com/frcteam2658",
 		icon: FaInstagram,
-		hoverColor: "text-[#dd2a7b]",
+		hoverColor: "hover:text-[#dd2a7b]",
 	},
 	{
 		name: "Facebook",
 		link: "https://www.facebook.com/frcteam2658/",
 		icon: FaFacebook,
-		hoverColor: "text-[#1877f2]",
+		hoverColor: "hover:text-[#1877f2]",
 	},
 	{
 		name: "Twitter",
 		link: "https://twitter.com/FRCTeam2658",
 		icon: FaTwitter,
-		hoverColor: "text-[#1DA1F2]",
+		hoverColor: "hover:text-[#1DA1F2]",
 	},
 	{
 		name: "YouTube",
 		link: "https://www.youtube.com/user/team2658",
 		icon: FaYoutube,
-		hoverColor: "text-[#FF0000]",
+		hoverColor: "hover:text-[#FF0000]",
 	},
 	{
 		name: "GitHub",
 		link: "https://www.github.com/frc-emotion",
 		icon: FaGithub,
-		hoverColor: "text-gray-500",
+		hoverColor: "hover:text-gray-500",
 	},
 ];
 
@@ -66,15 +66,15 @@ export default function Footer() {
 						id="socialIcons"
 					>
 						{social.map((social) => (
-							<Link
+							<a
 								href={social.link}
 								key={social.name}
-								prefetch={false}
+								aria-label={"Team 2658 on " + social.name}
 							>
 								<social.icon
-									className={`h-[${socialDimension}px] w-[${socialDimension}px] hover:${social.hoverColor}`}
+									className={`h-[${socialDimension}px] w-[${socialDimension}px] ${social.hoverColor}`}
 								/>
-							</Link>
+							</a>
 						))}
 					</div>
 				</div>
