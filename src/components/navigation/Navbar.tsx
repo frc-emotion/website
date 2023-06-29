@@ -168,7 +168,7 @@ export default function Navbar() {
 							aria-hidden="true"
 						/>
 					</Popover.Button>
-					<Popover.Panel className="fixed h-[100vh] w-[100vw] z-10 bg-white top-0 right-0">
+					<Popover.Panel className="fixed h-[100vh] w-[100vw] z-100 bg-white top-0 right-0">
 						{/* close button */}
 						<div className="float-right relative z-30">
 							<Popover.Button className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5">
@@ -180,7 +180,7 @@ export default function Navbar() {
 							</Popover.Button>
 						</div>
 						{/* main content */}
-						<div className="flex flex-col absolute z-10 items-center justify-center h-full w-full">
+						<div className="flex flex-col absolute z-100 items-center justify-center h-full w-full">
 							{mobileActiveItem === 0 ? (
 								<div className="flex flex-col items-center justify-center space-y-5">
 									<Link
@@ -360,7 +360,7 @@ export default function Navbar() {
 							leaveFrom="opacity-100 translate-y-0"
 							leaveTo="opacity-0 translate-y-1"
 						>
-							<Popover.Panel className="absolute z-10 w-screen max-w-md px-4 mt-7 transform -translate-x-1/2 left-1/2 sm:px-0 lg:max-w-[992px] xl:max-w-[1250px] xl:max-h-[525px] lg:max-h-[550px] rounded-3xl bg-white shadow-lg ring-1 ring-gray-900/5">
+							<Popover.Panel className="absolute z-100 w-screen max-w-md px-4 mt-7 transform -translate-x-1/2 left-1/2 sm:px-0 lg:max-w-[992px] xl:max-w-[1250px] xl:max-h-[525px] lg:max-h-[550px] rounded-3xl bg-white shadow-lg ring-1 ring-gray-900/5">
 								<div className="grid grid-cols-3 grid-rows-5 pt-[30px] px-[25px]">
 									<div className="col-span-1 xl:space-y-3 lg:space-y-0">
 										{moreMenuOne.map((item) => (

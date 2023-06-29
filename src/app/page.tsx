@@ -73,10 +73,14 @@ export default function Home() {
 						</div>
 					</div>
 					<div className="mt-10 lg:mt-0 col-span-1 2xl:col-span-2 flex w-full h-full items-center justify-center">
-						<img
-							src="/about.jpeg"
-							className="w-[90vw] sm:w-[80vw] lg:w-[45vw] 2xl:w-[60vw] select-none"
-						/>
+						<div className="h-full -lg:h-[50vh] w-[90vw] sm:w-[80vw] lg:w-[45vw] 2xl:w-[60vw] select-none relative">
+							<Image
+								src="/about.jpeg"
+								fill={true}
+								alt=""
+								className="object-cover"
+							/>
+						</div>
 					</div>
 				</div>
 			</div>

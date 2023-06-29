@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import Image from "next/image";
 import ".//index.css";
 
 export default function Hero() {
@@ -18,9 +18,18 @@ export default function Hero() {
 			</div>
 			<div
 				id="heroImage"
-				className="md:mt-10 mt-7 lg:h-[75vh] h-[45vh] static top-0 bg-cover bg-top bg-no-repeat"
-				style={{ backgroundImage: "url(/hero.jpeg)" }}
-			></div>
+				className="md:mt-10 mt-7 lg:h-[75vh] h-[45vh] static top-0"
+			>
+				<div className="w-full h-full relative">
+					<Image
+						src="/head.jpeg"
+						fill={true}
+						alt=""
+						className="object-cover object-top"
+						priority={true}
+					/>
+				</div>
+			</div>
 		</div>
 	);
 }
