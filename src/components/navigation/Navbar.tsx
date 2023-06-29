@@ -41,7 +41,7 @@ export default function Navbar() {
 		},
 		{
 			title: "Contact",
-			href: "#",
+			href: "/contact",
 		},
 	];
 	const moreMenuOne = [
@@ -190,7 +190,7 @@ export default function Navbar() {
 				</div>
 				<div className="hidden lg:flex space-x-8 text-[17px] font-semibold absolute left-1/2 transform -translate-x-1/2">
 					{mainMenuItems.map((item) => (
-						<Link href={item.href} className="hover:underline">
+						<Link key={item.title} href={item.href} className="hover:underline">
 							{item.title}
 						</Link>
 					))}
