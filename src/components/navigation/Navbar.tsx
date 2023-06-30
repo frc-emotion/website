@@ -168,9 +168,9 @@ export default function Navbar() {
                             aria-hidden="true"
                         />
                     </Popover.Button>
-                    <Popover.Panel className="z-100 fixed right-0 top-0 h-[100vh] w-[100vw] bg-white">
+                    <Popover.Panel className="fixed right-0 top-0 z-10 h-[100vh] w-[100vw] bg-white">
                         {/* close button */}
-                        <div className="relative z-100 float-right">
+                        <div className="relative z-30 float-right">
                             <Popover.Button className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5">
                                 <span className="sr-only">Close main menu</span>
                                 <XMarkIcon
@@ -180,9 +180,9 @@ export default function Navbar() {
                             </Popover.Button>
                         </div>
                         {/* main content */}
-                        <div className="z-100 absolute flex h-full w-full flex-col items-center justify-center">
+                        <div className="absolute z-10 flex h-full w-full flex-col justify-center">
                             {mobileActiveItem === 0 ? (
-                                <div className="flex flex-col items-center justify-center space-y-5">
+                                <div className="flex flex-col items-center space-y-5">
                                     <Link
                                         href="/"
                                         className="text-[30px] font-semibold hover:underline"
@@ -360,7 +360,7 @@ export default function Navbar() {
                             leaveFrom="opacity-100 translate-y-0"
                             leaveTo="opacity-0 translate-y-1"
                         >
-                            <Popover.Panel className="z-100 absolute left-1/2 mt-7 w-screen max-w-md -translate-x-1/2 transform rounded-3xl bg-white px-4 shadow-lg ring-1 ring-gray-900/5 sm:px-0 lg:max-h-[550px] lg:max-w-[992px] xl:max-h-[525px] xl:max-w-[1250px]">
+                            <Popover.Panel className="absolute left-1/2 z-10 mt-7 w-screen max-w-md -translate-x-1/2 transform rounded-3xl bg-white px-4 shadow-lg ring-1 ring-gray-900/5 sm:px-0 lg:max-h-[550px] lg:max-w-[992px] xl:max-h-[525px] xl:max-w-[1250px]">
                                 <div className="grid grid-cols-3 grid-rows-5 px-[25px] pt-[30px]">
                                     <div className="col-span-1 lg:space-y-0 xl:space-y-3">
                                         {moreMenuOne.map((item) => (
