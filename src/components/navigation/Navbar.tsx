@@ -170,7 +170,7 @@ export default function Navbar() {
                     </Popover.Button>
                     <Popover.Panel className="z-100 fixed right-0 top-0 h-[100vh] w-[100vw] bg-white">
                         {/* close button */}
-                        <div className="relative z-30 float-right">
+                        <div className="relative z-100 float-right">
                             <Popover.Button className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5">
                                 <span className="sr-only">Close main menu</span>
                                 <XMarkIcon
