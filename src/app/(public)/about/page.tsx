@@ -3,6 +3,8 @@ import { Metadata } from "next";
 import Image from "next/image";
 import ".//index.css";
 import Grid3x2 from "@/components/containers/Grid3x2";
+import TextWithIcon from "@/components/TextWithIcon";
+import { FaCode } from "react-icons/fa";
 
 export const metadata: Metadata = {
 	title: "About Us | FRC Team 2658",
@@ -46,12 +48,9 @@ export default function AboutPage() {
 				and current skills.
 			</AboutUsText>
 			<Grid3x2>
-				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas similique sapiente neque culpa tempora laudantium odio, numquam minus odit quam!</p>
-				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas similique sapiente neque culpa tempora laudantium odio, numquam minus odit quam!</p>
-				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas similique sapiente neque culpa tempora laudantium odio, numquam minus odit quam!</p>
-				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas similique sapiente neque culpa tempora laudantium odio, numquam minus odit quam!</p>
-				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas similique sapiente neque culpa tempora laudantium odio, numquam minus odit quam!</p>
-				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas similique sapiente neque culpa tempora laudantium odio, numquam minus odit quam!</p>
+				<TextWithIcon heading="Software" icon={FaCode}>
+					Software is in charge of developing and maintaining our team app and website, as well as writing, testing, and deploying robot code. 
+				</TextWithIcon>
 			</Grid3x2>
 		</main>
 	);
