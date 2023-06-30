@@ -45,42 +45,46 @@ const social = [
 ];
 
 export default function Footer() {
-	return (
-		<div id="footer">
-			{/* TODO: Finish footer w/ links or other elements LATER once the rest of the site is built */}
-			<div
-				className="grid grid-cols-2 bg-black text-white px-[5vw]"
-				id="footerMain"
-			>
-				<div
-					className="items-center col-span-2 py-[7vh] flex flex-col h-full justify-center"
-					id="footerPrimaryInfo"
-				>
-					<h1 className="text-[85px] -xs:text-[60px] -mt-5 font-bold select-none">
-						Σ-Motion
-					</h1>
-					<p className="-xs:text-[12px]">FRC Team 2658 - Rancho Bernardo High School</p>
-					<p className="-xs:text-[12px]">13010 Paseo Lucido - San Diego, CA 92128</p>
-					<div
-						className="flex items-center space-x-5 mt-[1.5rem]"
-						id="socialIcons"
-					>
-						{social.map((social) => (
-							<Link
-								href={social.link}
-								key={social.name}
-								prefetch={false}
-							>
-								<social.icon
-									className={`h-[${socialDimension}px] w-[${socialDimension}px] hover:${social.hoverColor}`}
-								/>
-							</Link>
-						))}
-					</div>
-				</div>
-			</div>
-			{/* TODO: Get contributors list and rank by most contributions */}
-			{/* <div
+    return (
+        <div id="footer">
+            {/* TODO: Finish footer w/ links or other elements LATER once the rest of the site is built */}
+            <div
+                className="grid grid-cols-2 bg-black px-[5vw] text-white"
+                id="footerMain"
+            >
+                <div
+                    className="col-span-2 flex h-full flex-col items-center justify-center py-[7vh]"
+                    id="footerPrimaryInfo"
+                >
+                    <h1 className="-mt-5 select-none text-[85px] font-bold -xs:text-[60px]">
+                        Σ-Motion
+                    </h1>
+                    <p className="-xs:text-[12px]">
+                        FRC Team 2658 - Rancho Bernardo High School
+                    </p>
+                    <p className="-xs:text-[12px]">
+                        13010 Paseo Lucido - San Diego, CA 92128
+                    </p>
+                    <div
+                        className="mt-[1.5rem] flex items-center space-x-5"
+                        id="socialIcons"
+                    >
+                        {social.map((social) => (
+                            <Link
+                                href={social.link}
+                                key={social.name}
+                                prefetch={false}
+                            >
+                                <social.icon
+                                    className={`h-[${socialDimension}px] w-[${socialDimension}px] hover:${social.hoverColor}`}
+                                />
+                            </Link>
+                        ))}
+                    </div>
+                </div>
+            </div>
+            {/* TODO: Get contributors list and rank by most contributions */}
+            {/* <div
 				id="footer-copyright"
 				className="h-[4.5vh] w-full flex items-center bg-white"
 			>

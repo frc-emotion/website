@@ -640,7 +640,7 @@ export default function Outreach() {
                                 <div id="miscContent" className="mb-5 mt-2">
                                     <div className="grid-rows-auto grid">
                                         <div className="grid grid-cols-1 md:grid-cols-2">
-                                            <div className="col-span-1 -md:mb-5 md:mr-2.5 flex items-center justify-center rounded-lg bg-white py-10 text-black">
+                                            <div className="col-span-1 flex items-center justify-center rounded-lg bg-white py-10 text-black md:mr-2.5 -md:mb-5">
                                                 <div className="relative mx-10">
                                                     <ul className="list-disc">
                                                         <li>
@@ -653,7 +653,7 @@ export default function Outreach() {
                                                     </ul>
                                                 </div>
                                             </div>
-                                            <div className="col-span-1 md:ml-2.5 flex items-center justify-center rounded-lg bg-white py-10 text-black">
+                                            <div className="col-span-1 flex items-center justify-center rounded-lg bg-white py-10 text-black md:ml-2.5">
                                                 <div className="relative mx-10">
                                                     <p>
                                                         We are working to
