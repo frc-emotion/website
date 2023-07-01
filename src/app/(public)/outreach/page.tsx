@@ -1,7 +1,5 @@
 "use client";
 
-import Navbar from "@/components/navigation/Navbar";
-import Footer from "@/components/sections/Footer";
 import { useState } from "react";
 import Image from "next/image";
 
@@ -56,7 +54,7 @@ export default function Outreach() {
     };
 
     return (
-        <div className="bg-teamYellow-500">
+        <main className="bg-teamYellow-500 overflow-hidden">
             <div
                 id="hero"
                 className="relative mx-[6vw] mt-1 flex h-[70vh] select-none items-center justify-center rounded-lg -sm:h-[45vh] -xs:h-[35vh]"
@@ -78,7 +76,7 @@ export default function Outreach() {
                         <button
                             className={`font-bold ${
                                 allExpanded()
-                                    ? "cursor-not-allowed opacity-100"
+                                    ? "cursor-not-allowed opacity-30"
                                     : "opacity-60 hover:opacity-100"
                             }`}
                             onClick={() => {
@@ -90,7 +88,7 @@ export default function Outreach() {
                         <button
                             className={`font-bold ${
                                 allCollapsed()
-                                    ? "cursor-not-allowed opacity-100"
+                                    ? "cursor-not-allowed opacity-30"
                                     : "opacity-60 hover:opacity-100"
                             }`}
                             onClick={() => {
@@ -678,6 +676,6 @@ export default function Outreach() {
                     </div>
                 </div>
             </div>
-        </div>
+        </main>
     );
 }
