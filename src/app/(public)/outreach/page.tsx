@@ -63,10 +63,10 @@ export default function Outreach() {
                     src="/outreach/head.jpeg"
                     fill={true}
                     alt=""
-                    className="rounded-lg object-cover"
+                    className="rounded-lg object-cover brightness-50"
                     priority={true}
                 />
-                <h1 className="absolute text-[5rem] font-bold text-white -sm:text-[3.5rem]">
+                <h1 className="absolute top-1/4 text-[5rem] font-bold text-white -sm:text-[3.5rem]">
                     Outreach
                 </h1>
             </div>

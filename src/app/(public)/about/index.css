@@ -16,8 +16,9 @@
 @layer components {
 	.bgAbout {
 		/* Placeholder, will eventually put in image from marketing */
-		background-size: 100%;
+		background-size: cover;
 		background-image: url("../../../../public/lvr.jpg");
 		background-position: 40%;
+		background-repeat: no-repeat;
 	}
 }
