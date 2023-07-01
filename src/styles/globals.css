@@ -11,4 +11,11 @@
         @apply text-4xl relative -top-5 inset-x-0 text-teamYellow-600 font-extrabold bg-teamYellow-500 px-4 rounded-3xl;
         content: "Σ"
     }
+    main {
+        min-height: 65vh; 
+        /* include the 65vh for compatibility with older browsers that don't support dvh
+            the dvh comes after so it will override the vh if the browser supports it
+        */
+        min-height: 65dvh;
+    }
 }
