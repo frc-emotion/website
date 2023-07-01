@@ -1,5 +1,4 @@
 import { IconType } from "react-icons";
-import { FaCode } from "react-icons/fa";
 
 // simple section of text with header, paragraph, and icon
 export default function TextWithIcon({

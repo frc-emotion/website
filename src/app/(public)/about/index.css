@@ -1,10 +1,23 @@
 @tailwind components;
+@tailwind base;
+
+@layer base {
+	h2 {
+		@apply text-3xl md:text-5xl px-4 pt-4 font-bold;
+	}
+	section {
+		@apply px-6;
+	}
+	strong {
+		@apply font-bold;
+	}
+}
 
 @layer components {
 	.bgAbout {
 		/* Placeholder, will eventually put in image from marketing */
-		@apply bg-gradient-radial from-slate-700 to-gray-400; 
-		background-repeat: no-repeat;
-		background-size: 100% 100%;
+		background-size: 100%;
+		background-image: url("../../../../public/lvr.jpg");
+		background-position: 40%;
 	}
 }
