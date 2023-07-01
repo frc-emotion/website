@@ -25,7 +25,7 @@ export default function Hero() {
                         src="/head.jpeg"
                         fill={true}
                         alt=""
-                        className="object-cover object-top"
+                        className="object-cover object-top rounded-lg"
                         priority={true}
                     />
                 </div>

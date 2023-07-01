@@ -6,9 +6,10 @@ import { ArrowUpRightIcon } from "@heroicons/react/24/outline";
 
 export default function Home() {
 	return (
-		<main>
+		<main className="bg-teamYellow-500">
 			<Hero />
 			{/* <SponsorSnippet /> */}
+			<hr/>
 			<div className="pb-5 bg-teamYellow-500">
 				{/* Mission Statement */}
 				<div
@@ -73,7 +74,7 @@ export default function Home() {
 					<div className="mt-10 2xl:mt-0 col-span-1 2xl:col-span-2 flex w-full h-full items-center justify-center">
 						<Image
 							src="/about.jpeg"
-							className="w-[90vw] sm:w-[80vw] 2xl:w-[60vw] select-none"
+							className="w-[90vw] sm:w-[80vw] 2xl:w-[60vw] select-none rounded-lg"
 							width={6000}
 							height={4000}
 							alt="2658's 2023 robot, 'Trident'"
