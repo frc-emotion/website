@@ -57,7 +57,6 @@ export default function Outreach() {
 
     return (
         <div className="bg-teamYellow-500">
-            <Navbar />
             <div
                 id="hero"
                 className="relative mx-[6vw] mt-1 flex h-[70vh] select-none items-center justify-center rounded-lg -sm:h-[45vh] -xs:h-[35vh]"
@@ -679,7 +678,6 @@ export default function Outreach() {
                     </div>
                 </div>
             </div>
-            <Footer />
         </div>
     );
 }
