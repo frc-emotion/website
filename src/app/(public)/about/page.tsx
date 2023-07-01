@@ -27,7 +27,7 @@ export default function AboutPage() {
 				</h1>
 			</div>
 			<section className="bg-teamYellow-400">
-				<h2 className="bg-teamYellow-400 font-bold">Team Structure</h2>
+				<h2 className="bg-teamYellow-400 font-bold text-center">Team Structure</h2>
 				<AboutUsText yellow>
 					Team 2658 is built through a simple and effective leadership
 					structure. Our team is split up into 5 different subteams:
@@ -196,6 +196,30 @@ export default function AboutPage() {
 				<div>
 					<h3 className="text-center text-2xl md:text-4xl font-bold">
 						Clifford Harrison
+					</h3>
+					<h4 className="text-center text-lg md:text-xl">Mentor</h4>
+				</div>
+				<div>
+					<h3 className="text-center text-2xl md:text-4xl font-bold">
+						Stanly Kudinov 
+					</h3>
+					<h4 className="text-center text-lg md:text-xl">Mentor</h4>
+				</div>
+				<div>
+					<h3 className="text-center text-2xl md:text-4xl font-bold"> 
+						Sherveen Shokoohi 
+					</h3>
+					<h4 className="text-center text-lg md:text-xl">Mentor</h4>
+				</div>
+				<div>
+					<h3 className="text-center text-2xl md:text-4xl font-bold"> 
+						Michael Ballinger
+					</h3>
+					<h4 className="text-center text-lg md:text-xl">Mentor</h4>
+				</div>
+				<div>
+					<h3 className="text-center text-2xl md:text-4xl font-bold"> 
+						Ronnie Villagran
 					</h3>
 					<h4 className="text-center text-lg md:text-xl">Mentor</h4>
 				</div>
