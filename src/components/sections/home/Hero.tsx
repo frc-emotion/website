@@ -1,25 +1,35 @@
-import { motion } from "framer-motion";
+import Image from "next/image";
+import ".//index.css";
 
 export default function Hero() {
-	return (
-		<div id="#hero" className="bg-teamYellow-500 grid px-[5vw] z-0">
-			<div id="heroHeader">
-				<h1 className="2xl:text-[200px] xl:text-[160px] lg:text-[140px] text-[85px] font-semibold w-full text-center">
-					Σ-Motion
-				</h1>
-				<div className="font-semibold px-[10vw] xl:text-[28px] lg:text-[20px] lg:mt-[-30px] grid md:grid-rows-1 md:grid-cols-4 grid-rows-3 grid-cols-1">
-					<p className="md:text-left text-center">FRC Team 2658</p>
-					<p className="text-center md:col-span-2">
-						Rancho Bernardo High School
-					</p>
-					<p className="md:text-right text-center">San Diego, CA</p>
-				</div>
-			</div>
-			<div
-				id="heroImage"
-				className="md:mt-10 mt-7 lg:h-[75vh] h-[45vh] static top-0 bg-cover bg-top bg-no-repeat"
-				style={{ backgroundImage: "url(/hero.jpeg)" }}
-			></div>
-		</div>
-	);
+    return (
+        <div id="#hero" className="z-0 grid bg-teamYellow-500 px-[5vw]">
+            <div id="heroHeader">
+                <h1 className="slideUp w-full text-center text-[85px] font-semibold lg:text-[140px] xl:text-[160px] 2xl:text-[200px] -xs:text-[60px]">
+                    Σ-Motion
+                </h1>
+                <div className="slideUp2 grid grid-cols-1 grid-rows-3 px-[10vw] font-semibold md:grid-cols-4 md:grid-rows-1 lg:mt-[-30px] lg:text-[20px] xl:text-[28px] -xs:text-[12px]">
+                    <p className="text-center md:text-left">FRC Team 2658</p>
+                    <p className="text-center md:col-span-2">
+                        Rancho Bernardo High School
+                    </p>
+                    <p className="text-center md:text-right">San Diego, CA</p>
+                </div>
+            </div>
+            <div
+                id="heroImage"
+                className="static top-0 mt-7 h-[45vh] md:mt-10 lg:h-[75vh]"
+            >
+                <div className="relative h-full w-full">
+                    <Image
+                        src="/head.jpeg"
+                        fill={true}
+                        alt=""
+                        className="object-cover object-top rounded-lg"
+                        priority={true}
+                    />
+                </div>
+            </div>
+        </div>
+    );
 }
