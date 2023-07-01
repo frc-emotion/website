@@ -92,6 +92,7 @@ export default function SponsorImages2022() {
 							alt={item.name + " Logo"}
 							width={item.width}
 							height={item.height}
+							quality={10}
 						/>
 					</div>
 				))}

@@ -60,6 +60,7 @@ export default function SponsorImages2023() {
 							alt={item.name + " Logo"}
 							width={item.width}
 							height={item.height}
+							quality={10} //dont need high quality for logos and this makes it load faster
 						/>
 					</div>
 				))}
