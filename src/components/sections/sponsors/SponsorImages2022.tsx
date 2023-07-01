@@ -76,7 +76,7 @@ export default function SponsorImages2022() {
 	];
 
 	return (
-		<div className="mx-[5vw] my-[60px]" id="2023sponsors">
+		<div className="mx-[5vw] my-[60px] bg-teamYellow-500 p-8 rounded-xl" id="2023sponsors">
 			<div className="text-left text-[56px] font-semibold">
 				<h1>2022</h1>
 			</div>

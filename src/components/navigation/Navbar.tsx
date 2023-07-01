@@ -149,11 +149,11 @@ export default function Navbar() {
     const [mobileActiveItem, setMobileActiveItem] = useState(0);
 
     return (
-        <div id="header" className="select-none bg-teamYellow-500">
+        <div id="header" className="select-none bg-black text-teamYellow-400">
             <nav className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8">
                 <Link
                     href="/"
-                    className="flex text-r2xl font-semibold lg:flex-1"
+                    className="text-r2xl font-semibold"
                 >
                     Σ-Motion
                 </Link>
@@ -168,7 +168,7 @@ export default function Navbar() {
                             aria-hidden="true"
                         />
                     </Popover.Button>
-                    <Popover.Panel className="fixed inset-0 z-10 h-[100%] w-[100vw] bg-white">
+                    <Popover.Panel className="fixed inset-0 z-10 h-[100%] w-[100vw] bg-black">
                         {/* close button */}
                         <div className="relative z-30 float-right">
                             <Popover.Button className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5">

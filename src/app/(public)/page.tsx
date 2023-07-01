@@ -54,9 +54,7 @@ export default function Home() {
 								showcase the intrigue and excitement of
 								robotics, while creating an enjoyable and
 								inclusive environment that strives for
-								excellence. We believe outreach is crucial to
-								our success and something that defines us as a
-								team. For 14 years we have attended and
+								excellence. For 14 years we have attended and
 								sponsored community events to inspire others in
 								STEAM.
 							</p>

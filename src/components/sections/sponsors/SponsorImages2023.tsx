@@ -25,13 +25,13 @@ export default function SponsorImages2023() {
 		},
 		{
 			name: "General Atomics",
-			path: `${logoFolder}/generalAtomics.png`,
+			path: `${logoFolder}/general-atomics.png`,
 			width: 500,
 			height: 500,
 		},
 		{
 			name: "Batteries Plus",
-			path: `${logoFolder}/batteries.png`,
+			path: `${logoFolder}/batteries-bulbs.png`,
 			width: 500,
 			height: 500,
 		},
@@ -44,14 +44,17 @@ export default function SponsorImages2023() {
 	];
 
 	return (
-		<div className="mx-[5vw] my-[60px]" id="2023sponsors">
-			<div className="text-[56px] text-left font-semibold">
+		<div
+			className="my-[60px] mx-[5vw] rounded-xl p-8 bg-teamYellow-500"
+			id="2023sponsors"
+		>
+			<div className="text-left  text-[56px] font-semibold">
 				<h1>2023</h1>
 			</div>
-			<div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-10">
+			<div className="grid grid-cols-1 gap-10 md:grid-cols-2 xl:grid-cols-3">
 				{sponsors.map((item) => (
 					<div
-						className="w-full flex justify-center items-center select-none"
+						className="flex w-full select-none items-center justify-center"
 						key={"sponsor-" + item.name}
 					>
 						<Image

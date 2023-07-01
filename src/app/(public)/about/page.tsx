@@ -21,13 +21,15 @@ export const metadata: Metadata = {
 export default function AboutPage() {
 	return (
 		<main className="min-h-[55vh]">
-			<div className="overflow-hidden h-[30rem] w-full bgAbout table">
-				<h1 className="text-r10xl text-center text-white backdrop-brightness-50 backdrop-blur-sm h-full table-cell align-middle font-bold">
+			<div className="bgAbout table h-[30rem] w-full overflow-hidden">
+				<h1 className="table-cell h-full text-center align-middle text-r10xl font-bold backdrop-blur-sm backdrop-brightness-50 text-teamYellow-100">
 					About Us
 				</h1>
 			</div>
 			<section className="bg-teamYellow-400">
-				<h2 className="bg-teamYellow-400 font-bold text-center">Team Structure</h2>
+				<h2 className="bg-teamYellow-400 text-center font-bold">
+					Team Structure
+				</h2>
 				<AboutUsText yellow>
 					Team 2658 is built through a simple and effective leadership
 					structure. Our team is split up into 5 different subteams:
@@ -44,7 +46,7 @@ export default function AboutPage() {
 					team's decisions and current skills.
 				</AboutUsText>
 			</section>
-			<section className="py-8">
+			<section className="py-8 text-teamYellow-400">
 				<h2 className="text-center">Subteams</h2>
 				<Grid3x2>
 					<TextWithIcon heading="Software" icon={FaLaptopCode}>
@@ -93,9 +95,29 @@ export default function AboutPage() {
 			</section>
 			<section className="bg-teamYellow-400 py-8">
 				<h2 className="text-center">Student Leadership</h2>
-				<Grid3x2>
+				<section className="grid-cols-5 md:grid">
 					<div className="p-4">
-						<h3 className="m-1 text-r2xl text-center font-bold">
+						<h3 className="m-1 text-center text-r2xl font-bold">
+							Design <br/> Leads
+						</h3>
+						<ul className="text-center text-rmd font-semibold">
+							<li>Simeon Kim</li>
+							<li>Kaiden Simon</li>
+						</ul>
+					</div>
+					<div className="p-4">
+						<h3 className="m-1 text-center text-r2xl font-bold">
+							Build Leads
+						</h3>
+						<ul className="text-center text-rmd font-semibold">
+							<li>Drhuv Patel</li>
+							<li>Bella Pineda</li>
+							<li>Katie Schmitz</li>
+							<li>Kaitlyn Nguy (Safety Lead)</li>
+						</ul>
+					</div>
+					<div className="p-4">
+						<h3 className="m-1 text-center text-r2xl font-bold">
 							Software Leads
 						</h3>
 						<ul className="text-center text-rmd font-semibold">
@@ -107,18 +129,7 @@ export default function AboutPage() {
 						</ul>
 					</div>
 					<div className="p-4">
-						<h3 className="m-1 text-r2xl text-center font-bold">
-							Build Leads
-						</h3>
-						<ul className="text-center text-rmd font-semibold">
-							<li>Drhuv Patel</li>
-							<li>Bella Pineda</li>
-							<li>Katie Schmitz</li>
-							<li>Kaitlyn Nguy (Safety Lead)</li>
-						</ul>
-					</div>
-					<div className="p-4">
-						<h3 className="m-1 text-r2xl text-center font-bold">
+						<h3 className="m-1 text-center text-r2xl font-bold">
 							Electrical Leads
 						</h3>
 						<ul className="text-center text-rmd font-semibold">
@@ -129,28 +140,19 @@ export default function AboutPage() {
 						</ul>
 					</div>
 					<div className="p-4">
-						<h3 className="m-1 text-r2xl text-center font-bold">
-							Marketing Leads
+						<h3 className="m-1 text-center text-r2xl font-bold">
+							Marketing <br/> Leads
 						</h3>
 						<ul className="text-center text-rmd font-semibold">
 							<li>Sachin Nayak</li>
 							<li>Shravya Hotathodi</li>
 						</ul>
 					</div>
-					<div className="p-4">
-						<h3 className="m-1 text-r2xl text-center font-bold">
-							Design Leads
-						</h3>
-						<ul className="text-center text-rmd font-semibold">
-							<li>Simeon Kim</li>
-							<li>Kaiden Simon</li>
-						</ul>
-					</div>
-					<div className="p-4">
-						<h3 className="m-1 text-r2xl text-center font-bold">
+					<div className="col-span-5 p-4">
+						<h3 className="m-1 text-center text-r2xl font-bold">
 							Execs
 						</h3>
-						<ul className="text-center text-rmd font-semibold">
+						<ul className="my-4 grid-cols-3 gap-y-6 text-center text-rlg font-semibold md:grid">
 							<li>
 								<strong> President: </strong> Karan Thakkar
 							</li>
@@ -171,10 +173,10 @@ export default function AboutPage() {
 							</li>
 						</ul>
 					</div>
-				</Grid3x2>
+				</section>
 			</section>
-			<section className="bg-black width-screen text-teamYellow-400 grid grid-cols-2 gap-y-12 py-8">
-				<h2 className="text-center col-span-2">Advisors and Mentors</h2>
+			<section className="width-screen grid grid-cols-2 gap-y-12 bg-black py-8 text-teamYellow-400">
+				<h2 className="col-span-2 text-center">Advisors and Mentors</h2>
 				<div>
 					<h3 className="text-center text-r3xl font-bold">
 						Katherine Rumsey
@@ -201,193 +203,137 @@ export default function AboutPage() {
 				</div>
 				<div>
 					<h3 className="text-center text-r3xl font-bold">
-						Stanly Kudinov 
+						Stanly Kudinov
 					</h3>
 					<h4 className="text-center text-rlg">Mentor</h4>
 				</div>
 				<div>
-					<h3 className="text-center text-r3xl font-bold"> 
-						Sherveen Shokoohi 
+					<h3 className="text-center text-r3xl font-bold">
+						Sherveen Shokoohi
 					</h3>
 					<h4 className="text-center text-rlg">Mentor</h4>
 				</div>
 				<div>
-					<h3 className="text-center text-r3xl font-bold"> 
+					<h3 className="text-center text-r3xl font-bold">
 						Michael Ballinger
 					</h3>
 					<h4 className="text-center text-rlg">Mentor</h4>
 				</div>
 				<div>
-					<h3 className="text-center text-r3xl font-bold"> 
+					<h3 className="text-center text-r3xl font-bold">
 						Ronnie Villagran
 					</h3>
 					<h4 className="text-center text-rlg">Mentor</h4>
 				</div>
 			</section>
-			<section className="grid grid-cols-2 xl:grid-cols-3 gap-y-6 py-8">
-				<h2 className="text-center m-4 col-span-full">Alumni</h2>
+			<section className="grid grid-cols-2 gap-y-6 bg-teamYellow-400 py-8 text-black xl:grid-cols-3">
+				<h2 className="col-span-full m-4 text-center">Alumni</h2>
 				<div className="text-center">
-					<h3 className="font-semibold text-r3xl">
-						John Chang
-					</h3>
+					<h3 className="text-r3xl font-semibold">John Chang</h3>
 					<h4 className="text-rlg">President, 2022-2023</h4>
-					<h4 className="text-rlg">
-						Vice President, 2021-2022
-					</h4>
+					<h4 className="text-rlg">Vice President, 2021-2022</h4>
 				</div>
 				<div className="text-center">
-					<h3 className="font-semibold text-r3xl">
+					<h3 className="text-r3xl font-semibold">
 						Keshav Narasimma
 					</h3>
 					<h4 className="text-rlg">President, 2021-2022</h4>
-					<h4 className="text-rlg">
-						Vice President, 2020-2021
-					</h4>
+					<h4 className="text-rlg">Vice President, 2020-2021</h4>
 				</div>
 				<div className="text-center">
-					<h3 className="font-semibold text-r3xl">
-						Toshko Andreev
-					</h3>
+					<h3 className="text-r3xl font-semibold">Toshko Andreev</h3>
 					<h4 className="text-rlg">President, 2020-2021</h4>
-					<h4 className="text-rlg">
-						Vice President, 2019-2020
-					</h4>
+					<h4 className="text-rlg">Vice President, 2019-2020</h4>
 				</div>
 				<div className="text-center">
-					<h3 className="font-semibold text-r3xl">
-						Krish Thakkar
-					</h3>
+					<h3 className="text-r3xl font-semibold">Krish Thakkar</h3>
 					<h4 className="text-rlg">President, 2020-2021</h4>
-					<h4 className="text-rlg">
-						Vice President, 2019-2020
-					</h4>
+					<h4 className="text-rlg">Vice President, 2019-2020</h4>
 				</div>
 				<div className="text-center">
-					<h3 className="font-semibold text-r3xl">
-						Beni Korol
-					</h3>
+					<h3 className="text-r3xl font-semibold">Beni Korol</h3>
 					<h4 className="text-rlg">President, 2019-2020</h4>
-					<h4 className="text-rlg">
-						Vice President, 2018-2019
-					</h4>
+					<h4 className="text-rlg">Vice President, 2018-2019</h4>
 				</div>
 				<div className="text-center">
-					<h3 className="font-semibold text-r3xl">
-						Andrew da Cunha
-					</h3>
+					<h3 className="text-r3xl font-semibold">Andrew da Cunha</h3>
 					<h4 className="text-rlg">President, 2018-2019</h4>
-					<h4 className="text-rlg">
-						Vice President, 2017-2018
-					</h4>
+					<h4 className="text-rlg">Vice President, 2017-2018</h4>
 				</div>
 				<div className="text-center">
-					<h3 className="font-semibold text-r3xl">
-						Anmol Seth
-					</h3>
+					<h3 className="text-r3xl font-semibold">Anmol Seth</h3>
 					<h4 className="text-rlg">President, 2017-2018</h4>
-					<h4 className="text-rlg">
-						Vice President, 2016-2017
-					</h4>
+					<h4 className="text-rlg">Vice President, 2016-2017</h4>
 				</div>
 				<div className="text-center">
-					<h3 className="font-semibold text-r3xl">
+					<h3 className="text-r3xl font-semibold">
 						Nicolas Wiscour-Conter
 					</h3>
 					<h4 className="text-rlg">President, 2016-2017</h4>
-					<h4 className="text-rlg">
-						Vice President, 2015-2016
-					</h4>
+					<h4 className="text-rlg">Vice President, 2015-2016</h4>
 				</div>
 				<div className="text-center">
-					<h3 className="font-semibold text-r3xl">
+					<h3 className="text-r3xl font-semibold">
 						Mario Maldonado-Santos
 					</h3>
 					<h4 className="text-rlg">President, 2015-2016</h4>
 				</div>
 				<div className="text-center">
-					<h3 className="font-semibold text-r3xl">
-						Nikhil Shinde
-					</h3>
-					<h4 className="text-rlg">
-						Vice President, 2014-2015
-					</h4>
+					<h3 className="text-r3xl font-semibold">Nikhil Shinde</h3>
+					<h4 className="text-rlg">Vice President, 2014-2015</h4>
 				</div>
 				<div className="text-center">
-					<h3 className="font-semibold text-r3xl">
+					<h3 className="text-r3xl font-semibold">
 						Yashes Srinivasan
 					</h3>
 					<h4 className="text-rlg">President, 2014-2015</h4>
-					<h4 className="text-rlg">
-						Vice President, 2013-2014
-					</h4>
+					<h4 className="text-rlg">Vice President, 2013-2014</h4>
 				</div>
 				<div className="text-center">
-					<h3 className="font-semibold text-r3xl">
+					<h3 className="text-r3xl font-semibold">
 						Nithin Dharmaraj
 					</h3>
 					<h4 className="text-rlg">President, 2013-2014</h4>
 				</div>
 				<div className="text-center">
-					<h3 className="font-semibold text-r3xl">
+					<h3 className="text-r3xl font-semibold">
 						Aditya Zadgaonkar
 					</h3>
 					<h4 className="text-rlg">President, 2012-2013</h4>
 				</div>
 				<div className="text-center">
-					<h3 className="font-semibold text-r3xl">
-						Eric Hammon
-					</h3>
-					<h4 className="text-rlg">
-						Vice President, 2012-2013
-					</h4>
+					<h3 className="text-r3xl font-semibold">Eric Hammon</h3>
+					<h4 className="text-rlg">Vice President, 2012-2013</h4>
 				</div>
 				<div className="text-center">
-					<h3 className="font-semibold text-r3xl">
+					<h3 className="text-r3xl font-semibold">
 						Karthik Jayakumar
 					</h3>
 					<h4 className="text-rlg">President, 2011-2012</h4>
 				</div>
 				<div className="text-center">
-					<h3 className="font-semibold text-r3xl">
-						Wassim Alsafi
-					</h3>
-					<h4 className="text-rlg">
-						Vice President, 2011-2012
-					</h4>
+					<h3 className="text-r3xl font-semibold">Wassim Alsafi</h3>
+					<h4 className="text-rlg">Vice President, 2011-2012</h4>
 				</div>
 				<div className="text-center">
-					<h3 className="font-semibold text-r3xl">
-						Paul Warren
-					</h3>
+					<h3 className="text-r3xl font-semibold">Paul Warren</h3>
 					<h4 className="text-rlg">President, 2010-2011</h4>
 				</div>
 				<div className="text-center">
-					<h3 className="font-semibold text-r3xl">
-						Zachary Forster
-					</h3>
+					<h3 className="text-r3xl font-semibold">Zachary Forster</h3>
 					<h4 className="text-rlg">President, 2009-2010</h4>
 				</div>
 				<div className="text-center">
-					<h3 className="font-semibold text-r3xl">
-						Sahar Mesri
-					</h3>
-					<h4 className="text-rlg">
-						Vice President, 2009-2011
-					</h4>
+					<h3 className="text-r3xl font-semibold">Sahar Mesri</h3>
+					<h4 className="text-rlg">Vice President, 2009-2011</h4>
 				</div>
 				<div className="text-center">
-					<h3 className="font-semibold text-r3xl">
-						Jay Dey
-					</h3>
+					<h3 className="text-r3xl font-semibold">Jay Dey</h3>
 					<h4 className="text-rlg">President, 2008-2009</h4>
 				</div>
 				<div className="text-center">
-					<h3 className="font-semibold text-r3xl">
-						Richard Lin
-					</h3>
-					<h4 className="text-rlg">
-						Vice President, 2008-2009
-					</h4>
+					<h3 className="text-r3xl font-semibold">Richard Lin</h3>
+					<h4 className="text-rlg">Vice President, 2008-2009</h4>
 					<h4 className="text-rlg">President, 2007-2008</h4>
 				</div>
 			</section>

@@ -1,78 +1,82 @@
-"use client";
-
-import { useState } from "react";
 import Image from "next/image";
 
-export default function Outreach() {
-	// const [calendarExpanded, setCalendarExpanded] = useState(true);
-	const [schoolExpanded, setSchoolExpanded] = useState(false);
-	const [competitionsExpanded, setCompetitionsExpanded] = useState(false);
-	const [fairsExpanded, setFairsExpanded] = useState(false);
-	const [FTCExpanded, setFTCExpanded] = useState(false);
-	const [FLLExpanded, setFLLExpanded] = useState(false);
-	const [miscExpanded, setMiscExpanded] = useState(false);
+export const metadata = {
+	title: "Outreach | FRC Team 2658",
+	description: "Learn about Σ-Motion's outreach efforts",
+};
 
-	const allStates = [
-		// calendarExpanded,
-		schoolExpanded,
-		competitionsExpanded,
-		fairsExpanded,
-		FTCExpanded,
-		FLLExpanded,
-		miscExpanded,
-	];
-	const allSets = [
-		// setCalendarExpanded,
-		setSchoolExpanded,
-		setCompetitionsExpanded,
-		setFairsExpanded,
-		setFTCExpanded,
-		setFLLExpanded,
-		setMiscExpanded,
-	];
-	const expandAll = () => {
-		for (let i = 0; i < allSets.length; i++) {
-			allSets[i](true);
-		}
-	};
-	const collapseAll = () => {
-		for (let i = 0; i < allSets.length; i++) {
-			allSets[i](false);
-		}
-	};
-	const allExpanded = () => {
-		for (let i = 0; i < allStates.length; i++) {
-			if (!allStates[i]) return false;
-		}
-		return true;
-	};
-	const allCollapsed = () => {
-		for (let i = 0; i < allStates.length; i++) {
-			if (allStates[i]) return false;
-		}
-		return true;
-	};
+
+export default function Outreach() {
+	// // const [calendarExpanded, setCalendarExpanded] = useState(true);
+	// const [schoolExpanded, setSchoolExpanded] = useState(false);
+	// const [competitionsExpanded, setCompetitionsExpanded] = useState(false);
+	// const [fairsExpanded, setFairsExpanded] = useState(false);
+	// const [FTCExpanded, setFTCExpanded] = useState(false);
+	// const [FLLExpanded, setFLLExpanded] = useState(false);
+	// const [miscExpanded, setMiscExpanded] = useState(false);
+
+	// const allStates = [
+	// 	// calendarExpanded,
+	// 	schoolExpanded,
+	// 	competitionsExpanded,
+	// 	fairsExpanded,
+	// 	FTCExpanded,
+	// 	FLLExpanded,
+	// 	miscExpanded,
+	// ];
+	// const allSets = [
+	// 	// setCalendarExpanded,
+	// 	setSchoolExpanded,
+	// 	setCompetitionsExpanded,
+	// 	setFairsExpanded,
+	// 	setFTCExpanded,
+	// 	setFLLExpanded,
+	// 	setMiscExpanded,
+	// ];
+	// const expandAll = () => {
+	// 	for (let i = 0; i < allSets.length; i++) {
+	// 		allSets[i](true);
+	// 	}
+	// };
+	// const collapseAll = () => {
+	// 	for (let i = 0; i < allSets.length; i++) {
+	// 		allSets[i](false);
+	// 	}
+	// };
+	// const allExpanded = () => {
+	// 	for (let i = 0; i < allStates.length; i++) {
+	// 		if (!allStates[i]) return false;
+	// 	}
+	// 	return true;
+	// };
+	// const allCollapsed = () => {
+	// 	for (let i = 0; i < allStates.length; i++) {
+	// 		if (allStates[i]) return false;
+	// 	}
+	// 	return true;
+	// };
 
 	return (
-		<main className="overflow-hidden bg-teamYellow-500">
+		// <div className="overflow-hidden bg-teamYellow-500 p-0">
+		<main className="bg-teamYellow-500 overflow-hidden relative">
 			<div
 				id="hero"
-				className="relative mx-[6vw] mt-1 flex h-[70vh] select-none items-center justify-center rounded-lg transition-all duration-300 ease-in-out -sm:h-[45vh] -xs:h-[35vh] "
+				className="relative select-none h-clampLarge overflow-hidden bg-black"
 			>
 				<Image
 					src="/outreach/head.jpeg"
 					fill={true}
 					alt=""
-					className="rounded-lg object-cover brightness-50"
+					className="object-cover brightness-50 blur-sm absolute"
 					priority={true}
 				/>
-				<h1 className="absolute top-1/4 text-r8xl font-bold text-white">
+				<h1 className="absolute py-8 text-r8xl font-bold text-teamYellow-100 inset-0 text-center">
 					Outreach
 				</h1>
 			</div>
 			<div id="content" className="mx-[6vw] mb-[8vh] mt-[4vh]">
 				<div>
-					<div className="flex select-none flex-row space-x-[3rem]">
+					{/* <div className="flex select-none flex-row space-x-[3rem]">
 						<button
 							className={`font-bold ${
 								allExpanded()
@@ -97,7 +101,7 @@ export default function Outreach() {
 						>
 							collapse all
 						</button>
-					</div>
+					</div> */}
 					<div className="mt-[0.4rem] space-y-2">
 						{/* TODO: Calendar coming in a later version, will integrate with other functions of the site */}
 						{/* <div id="calendarSection">
@@ -115,7 +119,7 @@ export default function Outreach() {
 							</button>
 						</div> */}
 						<div id="school">
-							<button
+							{/* <button
 								className={`text-r2xl ${
 									schoolExpanded
 										? "mb-[0.25rem] opacity-100"
@@ -126,8 +130,11 @@ export default function Outreach() {
 								}}
 							>
 								School Events
-							</button>
-							{schoolExpanded ? (
+							</button> */}
+							<h2 className="text-r2xl font-bold">
+								School Events
+							</h2>
+							{/* {true ? ( */}
 								<div id="schoolSetionContent" className="mb-5">
 									<div className="grid-rows-auto grid">
 										<div className="row-span-auto grid grid-cols-1 md:grid-cols-2">
@@ -213,10 +220,10 @@ export default function Outreach() {
 										</div>
 									</div>
 								</div>
-							) : null}
+							{/* ) : null} */}
 						</div>
 						<div id="competitions">
-							<button
+							{/* <button
 								className={`text-r2xl ${
 									competitionsExpanded
 										? "opacity-100"
@@ -229,8 +236,11 @@ export default function Outreach() {
 								}}
 							>
 								Competitions
-							</button>
-							{competitionsExpanded ? (
+							</button> */}
+							<h2 className="text-r2xl font-bold">
+								Competitions
+							</h2>
+							{/* {true ? ( */}
 								<div
 									id="competitionsContent"
 									className="mb-5 mt-2"
@@ -385,10 +395,10 @@ export default function Outreach() {
 										</div>
 									</div>
 								</div>
-							) : null}
+							{/* ) : null} */}
 						</div>
 						<div id="fairs">
-							<button
+							{/* <button
 								className={`text-r2xl ${
 									fairsExpanded
 										? "opacity-100"
@@ -402,8 +412,11 @@ export default function Outreach() {
 									Fairs and Showcases
 								</div>
 								<div className="sm:hidden">Fairs</div>
-							</button>
-							{fairsExpanded ? (
+							</button> */}
+							<h2 className="text-r2xl font-bold">
+								Fairs and Showcases
+							</h2>
+							{/* {true ? ( */}
 								<div id="fairsContent" className="mb-5 mt-2">
 									<div className="grid-rows-auto grid">
 										<div className="row-span-auto grid grid-cols-1 md:grid-cols-2">
@@ -481,10 +494,10 @@ export default function Outreach() {
 										</div>
 									</div>
 								</div>
-							) : null}
+							{/* ) : null} */}
 						</div>
 						<div id="ftc">
-							<button
+							{/* <button
 								className={`text-r2xl ${
 									FTCExpanded
 										? "opacity-100"
@@ -495,8 +508,9 @@ export default function Outreach() {
 								}}
 							>
 								FTC Teams
-							</button>
-							{FTCExpanded ? (
+							</button> */}
+							<h2 className="text-r2xl font-bold">FTC Teams</h2>
+							{/* {true ? ( */}
 								<div id="ftc-content" className="mb-5 mt-2">
 									<div className="grid-rows-auto grid">
 										<div className="row-span-auto grid grid-cols-1 md:grid-cols-2">
@@ -556,10 +570,10 @@ export default function Outreach() {
 										</div>
 									</div>
 								</div>
-							) : null}
+							{/* ) : null} */}
 						</div>
 						<div id="fll">
-							<button
+							{/* <button
 								className={`text-r2xl ${
 									FLLExpanded
 										? "opacity-100"
@@ -570,8 +584,9 @@ export default function Outreach() {
 								}}
 							>
 								FLL Teams
-							</button>
-							{FLLExpanded ? (
+							</button> */}
+							<h2 className="text-r2xl font-bold">FLL Teams</h2>
+							{/* {true ? ( */}
 								<div id="FLL-content" className="mb-5 mt-2">
 									<div className="flex items-center justify-center rounded-lg bg-white py-10 text-black md:col-span-2">
 										<div className="relative mx-10 grid grid-cols-1 lg:grid-cols-2 lg:space-x-10">
@@ -618,10 +633,10 @@ export default function Outreach() {
 										</div>
 									</div>
 								</div>
-							) : null}
+							{/* ) : null} */}
 						</div>
 						<div id="miscellaneous">
-							<button
+							{/* <button
 								className={`text-r2xl ${
 									miscExpanded
 										? "opacity-100"
@@ -632,8 +647,9 @@ export default function Outreach() {
 								}}
 							>
 								Miscellaneous
-							</button>
-							{miscExpanded ? (
+							</button> */}
+							<h2 className="text-r2xl font-bold">Community</h2>
+							{/* {true ? ( */}
 								<div id="miscContent" className="mb-5 mt-2">
 									<div className="grid-rows-auto grid">
 										<div className="grid grid-cols-1 md:grid-cols-2">
@@ -671,11 +687,12 @@ export default function Outreach() {
 										</div>
 									</div>
 								</div>
-							) : null}
+							{/* ) : null} */}
 						</div>
 					</div>
 				</div>
 			</div>
+		{/* </div> */}
 		</main>
 	);
 }

@@ -1,4 +1,4 @@
-import { Bebas_Neue, Raleway } from "next/font/google";
+import { Bebas_Neue, Kablammo, Orbitron, } from "next/font/google";
 import '@/styles/globals.css'
 
 
@@ -8,10 +8,10 @@ export const metadata = {
         "Team Σ-Motion is a high school FIRST robotics team at Rancho Bernardo High School dedicated to promoting Science, Technology, Engineering, and Mathematics.",
 };
 
-const raleway = Raleway({
+const font = Orbitron({
 	subsets: ["latin"],
 	display: "swap",
-	variable: "--font-raleway",
+	variable: "--font-main",
 });
 
 const bebas_neue = Bebas_Neue({
@@ -29,7 +29,7 @@ export default function RootLayout({
 	return (
 		<html lang="en">
 			<body
-				className={`${bebas_neue.variable} ${raleway.variable} font-sans`}
+				className={`${bebas_neue.variable} ${font.variable} font-sans bg-black`}
 			>
 				{children}
 			</body>

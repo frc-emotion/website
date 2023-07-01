@@ -49,7 +49,7 @@ export default function Footer() {
         <div id="footer">
             {/* TODO: Finish footer w/ links or other elements LATER once the rest of the site is built */}
             <div
-                className="grid grid-cols-2 bg-black px-[5vw] text-white"
+                className="grid grid-cols-2 bg-black px-[5vw] text-teamYellow-400"
                 id="footerMain"
             >
                 <div

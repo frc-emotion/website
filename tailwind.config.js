@@ -37,6 +37,10 @@ module.exports = {
                 r11xl: "clamp(2.5rem, 10vw + 1rem, 11rem)",
                 r12xl: "clamp(2.5rem, 10.5vw + 1rem, 12rem)",
             },
+			height: {
+				clampLarge: "clamp(15rem, 30vh, 30rem)",
+				clampXL: "clamp(25rem, 40vh, 40rem)",
+			},
 			screens: {
 				"-2xl": { max: "1535px" }, // inverse 2xl
 				"-xl": { max: "1279px" }, // inverse xl
@@ -62,7 +66,7 @@ module.exports = {
 					"conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
 			},
 			fontFamily: {
-				sans: ["var(--font-raleway)"],
+				sans: ["var(--font-main)"],
 				"bebas-neue": ["var(--font-bebas-neue)"],
 			},
 		},

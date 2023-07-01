@@ -90,7 +90,7 @@ export default function ContactForm() {
 	return (
 		<>
 			<form
-				className="text-center md:grid grid-cols-2 gap-6 bg-teamYellow-300 p-4 rounded-xl my-8 mx-6"
+				className="text-center flex flex-col gap-6 bg-neutral-900 text-white p-4 rounded-xl my-8 mx-6"
 				name="contact-form"
 				onSubmit={(e) => {
 					submitForm(e, {
@@ -104,12 +104,11 @@ export default function ContactForm() {
 				}}
 			>
 					<h2 className='col-span-2 text-r3xl font-semibold my-4'>Get in Touch</h2>
-					<div className="mb-3">
-						<label htmlFor="name" className="block text-center">
+					<div className="formSection">
+						<label htmlFor="name" className="">
 							Full Name *
 						</label>
 						<input
-							className="w-4/5"
 							type="text"
 							name="name"
 							id="name"
@@ -121,12 +120,11 @@ export default function ContactForm() {
 						/>
 					</div>
 
-					<div className="mb-3">
-						<label htmlFor="company" className="block text-center">
+					<div className="formSection">
+						<label htmlFor="company" className="">
 							Company
 						</label>
 						<input
-							className="w-4/5"
 							type="text"
 							name="company"
 							id="company"
@@ -137,12 +135,11 @@ export default function ContactForm() {
 						/>
 					</div>
 
-					<div className="mb-3">
-						<label htmlFor="email" className="block text-center">
+					<div className="formSection">
+						<label htmlFor="email" className="">
 							Email *
 						</label>
 						<input
-							className="w-4/5"
 							type="email"
 							name="email"
 							id="email"
@@ -154,23 +151,22 @@ export default function ContactForm() {
 						/>
 					</div>
 
-					<div className="mb-3">
-						<label className="block text-center" htmlFor="subject">
+					<div className="formSection">
+						<label className="" htmlFor="subject">
 							Subject *
 						</label>
 						<input
 							name="subject"
 							id="subject"
 							required
-							className="w-4/5"
 							value={subject}
 							onChange={(e) => {
 								setSubject(e.target.value);
 							}}
 						/>
 					</div>
-				<div className="mb-3 col-span-2 flex flex-col justify-center items-center">
-					<label htmlFor="message" className="block text-center">
+				<div className="formSection flex flex-col">
+					<label htmlFor="message" className="">
 						Message *
 					</label>
 					<textarea
@@ -181,9 +177,8 @@ export default function ContactForm() {
 						onChange={(e) => {
 							setMessage(e.target.value);
 						}}
-						className="w-4/5"
 					/>
-				<button className="text-center bg-teamYellow-100 w-min m-8" type="submit">
+				<button className="text-center w-min bg-neutral-800" type='submit'>
 					Submit
 				</button>
 				</div>
@@ -191,7 +186,7 @@ export default function ContactForm() {
 			<dialog ref={submittedDialogRef}>
 				<h2 className='font-bold text-6xl my-16'>Form Submitted</h2>
 				<p className='font-semibold text-3xl mx-8 my-16'>Thank you for your submission!</p>
-				<button onClick={()=>{submittedDialogRef.current?.close()}} className='absolute bottom-8 inset-x-[40%]'>Close</button>
+				<button onClick={()=>{submittedDialogRef.current?.close()}} className='relative inset-x-[45%]'>Close</button>
 			</dialog>
 		</>
 	);
