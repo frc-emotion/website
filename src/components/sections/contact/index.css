@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+	dialog {
+		@apply rounded-lg bg-teamYellow-300 shadow-lg inset-0 relative w-[80vw] p-16;
+	}
+    button {
+        @apply bg-teamYellow-100 font-bold px-4 py-2 rounded-lg;
+    }
+    button:hover{
+        @apply opacity-50
+    }
+    dialog::backdrop {
+        @apply bg-black bg-opacity-75 bg-blend-darken backdrop-blur-xl; 
+    }
+    label{
+        @apply font-bold text-lg;
+    }
+    input, textarea {
+        @apply bg-teamYellow-100 rounded-lg p-2 border-gray-300 border-2;
+    }
+}
