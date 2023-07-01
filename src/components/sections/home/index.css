@@ -1,0 +1,34 @@
+@tailwind base;
+@tailwind components;
+@tailwind variants;
+
+@layer components {
+    .slideUp {
+        animation: slideUp 1s ease-in-out;
+    }
+    .slideUp2 {
+        animation: slideUp2 1.4s ease-in-out;
+    }
+
+    @keyframes slideUp {
+        from {
+            transform: translateY(40%);
+            @apply hidden opacity-0;
+        }
+        to {
+            transform: translateY(0%);
+            @apply opacity-100;
+        }
+    }
+    @keyframes slideUp2 {
+        0%,
+        20% {
+            transform: translateY(40%);
+            @apply hidden opacity-0;
+        }
+        to {
+            transform: translateY(0%);
+            @apply opacity-100;
+        }
+    }
+}
