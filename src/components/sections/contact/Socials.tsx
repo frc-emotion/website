@@ -7,6 +7,7 @@ import {
 	FaGit,
 	FaEnvelope,
 } from "react-icons/fa";
+import './index.css'
 import Link from "next/link";
 
 const socialDimension = 30;
@@ -57,16 +58,17 @@ const social = [
 
 export default function Socials() {
 	return (
-		<section className="bg-teamYellow-100 rounded-xl py-8 mx-8">
-			<h2 className="text-center font-bold text-4xl m-8">Socials</h2>
-			<ul className="inset-x-0 bottom-16 grid grid-cols-2 lg:grid-cols-3 gap-4 xl:gap-16 p-6">
+		<section className="bg-teamYellow-100 rounded-xl py-8 mx-6">
+			<h2 className="text-center font-bold text-r4xl m-8">Socials</h2>
+			<ul className="inset-x-0 bottom-16 grid grid-cols-2 lg:grid-cols-3 gap-8 p-6 -2xs:grid-cols-1">
 				{social.map((social) => (
 					<Link href={social.link} key={social.name} prefetch={false}>
 						<center>
 							<social.icon
-								className={`h-[${socialDimension}px] w-[${socialDimension}px] hover:${social.hoverColor}`}
+								className={`h-[30px] w-[30px] hover:${social.hoverColor}`}
 							/>
-							{social.username}
+							
+							<span>{social.username}</span>
 						</center>
 					</Link>
 				))}

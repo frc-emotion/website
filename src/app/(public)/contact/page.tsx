@@ -9,7 +9,7 @@ export const metadata = {
 export default function Home() {
 	return (
 		<main className="bg-teamYellow-500 relativ py-8">
-				<h1 className="text-8xl text-black font-bold text-center py-16">Contact Us</h1>
+				<h1 className="text-r8xl text-black font-bold text-center py-16">Contact Us</h1>
 			<ContactForm />
 			<Socials />
 		</main>

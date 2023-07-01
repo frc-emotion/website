@@ -5,10 +5,10 @@ export default function Hero() {
     return (
         <div id="#hero" className="z-0 grid bg-teamYellow-500 px-[5vw]">
             <div id="heroHeader">
-                <h1 className="slideUp w-full text-center text-[85px] font-semibold lg:text-[140px] xl:text-[160px] 2xl:text-[200px] -xs:text-[60px]">
+                <h1 className="slideUp w-full text-center font-semibold text-r12xl">
                     Σ-Motion
                 </h1>
-                <div className="slideUp2 grid grid-cols-1 grid-rows-3 px-[10vw] font-semibold md:grid-cols-4 md:grid-rows-1 lg:mt-[-30px] lg:text-[20px] xl:text-[28px] -xs:text-[12px]">
+                <div className="slideUp2 grid grid-cols-1 grid-rows-3 px-[10vw] font-semibold md:grid-cols-4 md:grid-rows-1 lg:mt-[-30px] clamp">
                     <p className="text-center md:text-left">FRC Team 2658</p>
                     <p className="text-center md:col-span-2">
                         Rancho Bernardo High School

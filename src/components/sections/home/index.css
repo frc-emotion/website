@@ -9,6 +9,9 @@
     .slideUp2 {
         animation: slideUp2 1.4s ease-in-out;
     }
+    .clamp{
+        font-size: clamp(1.2rem, 1.6vw, 2rem);
+    }
 
     @keyframes slideUp {
         from {

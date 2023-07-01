@@ -3,13 +3,16 @@
 
 @layer base {
 	h2 {
-		@apply text-3xl md:text-5xl px-4 pt-4 font-bold;
+		@apply text-r4xl px-4 pt-4 font-bold;
 	}
 	section {
 		@apply px-6;
 	}
 	strong {
 		@apply font-bold;
+	}
+	p {
+		@apply text-rmd;
 	}
 }
 

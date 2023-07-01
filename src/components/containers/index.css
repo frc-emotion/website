@@ -2,6 +2,6 @@
 
 @layer components {
     .grid3x2{
-        @apply sm:grid grid-cols-3 grid-rows-2 xl:gap-6; 
+        @apply sm:grid grid-cols-3 grid-rows-2 xl:gap-6 transition-all duration-300 ease-in-out; 
     }
 }

@@ -56,13 +56,13 @@ export default function Footer() {
                     className="col-span-2 flex h-full flex-col items-center justify-center py-[7vh]"
                     id="footerPrimaryInfo"
                 >
-                    <h1 className="-mt-5 select-none text-[85px] font-bold -xs:text-[60px]">
+                    <h1 className="-mt-5 select-none text-r7xl font-bold">
                         Σ-Motion
                     </h1>
-                    <p className="-xs:text-[12px]">
+                    <p className="text-rsm">
                         FRC Team 2658 - Rancho Bernardo High School
                     </p>
-                    <p className="-xs:text-[12px]">
+                    <p className="text-rsm">
                         13010 Paseo Lucido - San Diego, CA 92128
                     </p>
                     <div

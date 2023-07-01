@@ -90,7 +90,7 @@ export default function ContactForm() {
 	return (
 		<>
 			<form
-				className="text-center grid grid-cols-2 gap-6 bg-teamYellow-300 p-8 rounded-xl m-8"
+				className="text-center md:grid grid-cols-2 gap-6 bg-teamYellow-300 p-4 rounded-xl my-8 mx-6"
 				name="contact-form"
 				onSubmit={(e) => {
 					submitForm(e, {
@@ -103,7 +103,7 @@ export default function ContactForm() {
 					submissionCleanup();
 				}}
 			>
-					<h2 className='col-span-2 text-4xl font-semibold'>Get in Touch</h2>
+					<h2 className='col-span-2 text-r3xl font-semibold my-4'>Get in Touch</h2>
 					<div className="mb-3">
 						<label htmlFor="name" className="block text-center">
 							Full Name *

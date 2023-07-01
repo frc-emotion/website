@@ -153,7 +153,7 @@ export default function Navbar() {
             <nav className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8">
                 <Link
                     href="/"
-                    className="flex text-[30px] font-semibold lg:flex-1"
+                    className="flex text-r2xl font-semibold lg:flex-1"
                 >
                     Σ-Motion
                 </Link>
@@ -168,7 +168,7 @@ export default function Navbar() {
                             aria-hidden="true"
                         />
                     </Popover.Button>
-                    <Popover.Panel className="fixed right-0 top-0 z-10 h-[100vh] w-[100vw] bg-white">
+                    <Popover.Panel className="fixed inset-0 z-10 h-[100%] w-[100vw] bg-white">
                         {/* close button */}
                         <div className="relative z-30 float-right">
                             <Popover.Button className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5">
@@ -185,7 +185,7 @@ export default function Navbar() {
                                 <div className="flex flex-col items-center space-y-5">
                                     <Link
                                         href="/"
-                                        className="text-[30px] font-semibold hover:underline"
+                                        className="text-r2xl font-semibold hover:underline"
                                     >
                                         Home
                                     </Link>
@@ -194,24 +194,24 @@ export default function Navbar() {
                                         <Link
                                             key={item.title}
                                             href={item.href}
-                                            className="text-[30px] font-semibold hover:underline"
+                                            className="text-r2xl font-semibold hover:underline"
                                         >
                                             {item.title}
                                         </Link>
                                     ))}
-                                    <div>
+                                    {/* <div>
                                         <button
                                             onClick={() =>
                                                 setMobileActiveItem(
                                                     mobileActiveItem + 1
                                                 )
                                             }
-                                            className="text-[30px] font-semibold hover:underline"
+                                            className="text-r2xl font-semibold hover:underline"
                                         >
                                             More
                                             <ArrowRightIcon className="ml-[10px] inline h-[30px] w-[30px] -translate-y-[0.10rem] no-underline" />
                                         </button>
-                                    </div>
+                                    </div> */}
                                 </div>
                             ) : mobileActiveItem === 1 ? (
                                 <div className="flex flex-col items-center justify-center space-y-5">
@@ -222,7 +222,7 @@ export default function Navbar() {
                                                     mobileActiveItem - 1
                                                 )
                                             }
-                                            className="text-[30px] font-semibold hover:underline"
+                                            className="text-r2xl font-semibold hover:underline"
                                         >
                                             <ArrowLeftIcon className="mr-[10px] inline h-[30px] w-[30px] -translate-y-[0.10rem] no-underline" />
                                             Back
@@ -232,7 +232,7 @@ export default function Navbar() {
                                         <Link
                                             key={item.title}
                                             href={item.href}
-                                            className="text-[30px] font-semibold hover:underline"
+                                            className="text-r2xl font-semibold hover:underline"
                                         >
                                             {item.title}
                                         </Link>
@@ -244,7 +244,7 @@ export default function Navbar() {
                                                     mobileActiveItem + 1
                                                 )
                                             }
-                                            className="text-[30px] font-semibold hover:underline"
+                                            className="text-r2xl font-semibold hover:underline"
                                         >
                                             More
                                             <ArrowRightIcon className="ml-[10px] inline h-[30px] w-[30px] -translate-y-[0.10rem] no-underline" />
@@ -260,7 +260,7 @@ export default function Navbar() {
                                                     mobileActiveItem - 1
                                                 )
                                             }
-                                            className="text-[30px] font-semibold hover:underline"
+                                            className="text-r2xl font-semibold hover:underline"
                                         >
                                             <ArrowLeftIcon className="mr-[10px] inline h-[30px] w-[30px] -translate-y-[0.10rem] no-underline" />
                                             Back
@@ -270,7 +270,7 @@ export default function Navbar() {
                                         <Link
                                             key={item.title}
                                             href={item.href}
-                                            className="text-[30px] font-semibold hover:underline"
+                                            className="text-r2xl font-semibold hover:underline"
                                         >
                                             {item.title}
                                         </Link>
@@ -282,7 +282,7 @@ export default function Navbar() {
                                                     mobileActiveItem + 1
                                                 )
                                             }
-                                            className="text-[30px] font-semibold hover:underline"
+                                            className="text-r2xl font-semibold hover:underline"
                                         >
                                             More
                                             <ArrowRightIcon className="ml-[10px] inline h-[30px] w-[30px] -translate-y-[0.10rem] no-underline" />
@@ -298,7 +298,7 @@ export default function Navbar() {
                                                     mobileActiveItem - 1
                                                 )
                                             }
-                                            className="text-[30px] font-semibold hover:underline"
+                                            className="text-r2xl font-semibold hover:underline"
                                         >
                                             <ArrowLeftIcon className="mr-[10px] inline h-[30px] w-[30px] -translate-y-[0.10rem] no-underline" />
                                             Back
@@ -308,7 +308,7 @@ export default function Navbar() {
                                         <Link
                                             key={item.title}
                                             href={item.href}
-                                            className="text-[30px] font-semibold hover:underline"
+                                            className="text-r2xl font-semibold hover:underline"
                                         >
                                             {item.title}
                                         </Link>
@@ -318,13 +318,13 @@ export default function Navbar() {
                             {/* <div className="flex flex-col items-center justify-center space-y-5 mt-[3.5rem]">
 								<Link
 									href="#"
-									className="hover:underline font-semibold text-[30px]"
+									className="hover:underline font-semibold text-r2xl"
 								>
 									Settings
 								</Link>
 								<Link
 									href="#"
-									className="hover:underline font-semibold text-[30px]"
+									className="hover:underline font-semibold text-r2xl"
 								>
 									Login
 								</Link>
@@ -332,7 +332,7 @@ export default function Navbar() {
                         </div>
                     </Popover.Panel>
                 </Popover>
-                <div className="absolute left-1/2 hidden -translate-x-1/2 transform space-x-8 text-[17px] font-semibold lg:flex">
+                <div className="absolute left-1/2 hidden -translate-x-1/2 transform space-x-8 text-rmd font-semibold lg:flex">
                     {mainMenuItems.map((item) => (
                         <Link
                             key={item.title}
@@ -448,7 +448,7 @@ export default function Navbar() {
                         </Transition>
                     </Popover>
                 </div>
-                {/* lg:flex space-x-8 text-[17px] font-semibold */}
+                {/* lg:flex space-x-8 text-rmd font-semibold */}
                 <div className="hidden">
                     <Link href="#">Settings</Link>
                     <Link href="/login" className="hover:underline">

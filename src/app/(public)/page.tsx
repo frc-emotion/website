@@ -18,16 +18,16 @@ export default function Home() {
 				>
 					<div className="col-span-1 lg:mx-[4vw] mx-[10vw]">
 						<div className="flex-col">
-							<h1 className="text-[50px] font-semibold">
+							<h1 className="text-r5xl font-semibold">
 								Team Info
 							</h1>
-							<p className="text-[17px]">
+							<p className="text-rmd">
 								FRC Team 2658, Σ-Motion, is the robotics team of
 								Rancho Bernardo High School. We are located at
 								13010 Paseo Lucido, San Diego, CA 92128.
 							</p>
 							<br/>
-							<p className="text-[17px]">
+							<p className="text-rmd">
 								We are an FRC Robotics team founded in 2008, by
 								and for high school students. We are dedicated
 								to giving students an experience that will help
@@ -42,10 +42,10 @@ export default function Home() {
 								built over 10 robots which it used in the FIRST
 								Competitions around the country.
 							</p>
-							<h2 className="text-[40px] font-semibold mt-10">
+							<h2 className="text-r3xl font-semibold mt-10">
 								Mission Statement
 							</h2>
-							<p className="text-[17px]">
+							<p className="text-rmd">
 								Team Σ-Motion's purpose is to create a
 								student-run FRC team in cooperation with
 								advisors and mentors. We aim to educate and
@@ -62,7 +62,7 @@ export default function Home() {
 							</p>
 							<div className="mt-10">
 								<Link
-									className="text-[17px] underline font-semibold select-none"
+									className="text-rmd underline font-semibold select-none"
 									href="/about"
 								>
 									Learn more

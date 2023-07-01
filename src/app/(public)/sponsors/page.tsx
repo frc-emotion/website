@@ -12,7 +12,7 @@ export const metadata = {
 export default function Sponsor() {
 	return (
 		<main>
-			<h1 className="text-9xl font-bold text-center py-32 bg-black text-teamYellow-400">Sponsors</h1>
+			<h1 className="text-r8xl font-bold text-center py-32 bg-black text-teamYellow-400">Sponsors</h1>
 			<SponsorImages2023 />
 			<SponsorImages2022 />
 		</main>
