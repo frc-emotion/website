@@ -1,19 +1,14 @@
-import { Inter } from "next/font/google";
-import Navbar from "@/components/navigation/Navbar";
 import Hero from "@/components/sections/home/Hero";
-import SponsorSnippet from "@/components/sections/home/SponsorSnippet";
-import Footer from "@/components/sections/Footer";
 import Link from "next/link";
 import Image from "next/image";
 import { ArrowUpRightIcon } from "@heroicons/react/24/outline";
 
-const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
 	return (
 		<main>
 			<Hero />
-			<SponsorSnippet />
+			{/* <SponsorSnippet /> */}
 			<div className="pb-5 bg-teamYellow-500">
 				{/* Mission Statement */}
 				<div
