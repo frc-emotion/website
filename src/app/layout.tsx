@@ -1,6 +1,5 @@
-import { Bebas_Neue, Kablammo, Orbitron, } from "next/font/google";
+import { Bebas_Neue, Orbitron } from "next/font/google";
 import '@/styles/globals.css'
-
 
 export const metadata = {
     title: "FRC Team 2658",

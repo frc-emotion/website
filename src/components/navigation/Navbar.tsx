@@ -315,20 +315,20 @@ export default function Navbar() {
                                     ))}
                                 </div>
                             ) : null}
-                            {/* <div className="flex flex-col items-center justify-center space-y-5 mt-[3.5rem]">
-								<Link
+                            <div className="flex flex-col items-center justify-center space-y-5 mt-[3.5rem]">
+								{/* <Link
 									href="#"
 									className="hover:underline font-semibold text-r2xl"
 								>
 									Settings
-								</Link>
+								</Link> */}
 								<Link
-									href="#"
+									href="/login"
 									className="hover:underline font-semibold text-r2xl"
 								>
 									Login
 								</Link>
-							</div> */}
+							</div>
                         </div>
                     </Popover.Panel>
                 </Popover>
@@ -449,8 +449,8 @@ export default function Navbar() {
                     </Popover>
                 </div>
                 {/* lg:flex space-x-8 text-rmd font-semibold */}
-                <div className="hidden">
-                    <Link href="#">Settings</Link>
+                <div className="hidden lg:flex space-x-8 text-rmd font-semibold">
+                    {/* <Link href="#">Settings</Link> */}
                     <Link href="/login" className="hover:underline">
                         Login
                     </Link>
