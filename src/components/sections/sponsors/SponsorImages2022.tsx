@@ -2,7 +2,7 @@ import "@/styles/globals.css";
 import Image from "next/image";
 
 export default function SponsorImages2022() {
-	const logoFolder = "/sponsors/2022"; // last character CANNOT be a '/'
+	const logoFolder = "https://cdn.team2658.org/web-public/sponsors/2022"; // last character CANNOT be a '/'
 
 	type Sponsor = {
 		name: string;

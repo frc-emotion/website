@@ -2,7 +2,7 @@ import "@/styles/globals.css";
 import Image from "next/image";
 
 export default function SponsorImages2023() {
-	const logoFolder = "/sponsors/2023"; // last character CANNOT be a '/'
+	const logoFolder = "https://cdn.team2658.org/web-public/sponsors/2023"; // last character CANNOT be a '/'
 	const sponsors = [
 		// width and height both in pixels
 		{
@@ -45,7 +45,7 @@ export default function SponsorImages2023() {
 
 	return (
 		<div
-			className="my-[60px] mx-[5vw] rounded-xl p-8 bg-teamYellow-500"
+			className="mx-[5vw] my-[60px] rounded-xl bg-teamYellow-500 p-8"
 			id="2023sponsors"
 		>
 			<div className="text-left  text-[56px] font-semibold">

@@ -22,7 +22,7 @@ export default function Hero() {
             >
                 <div className="relative h-full w-full">
                     <Image
-                        src="/head.jpeg"
+                        src="https://cdn.team2658.org/web-public/head.jpeg"
                         fill={true}
                         alt=""
                         className="object-cover object-top rounded-lg"

@@ -14,14 +14,14 @@ export const metadata = {
 export default function Sponsor() {
 	return (
 		<main className="bg-black">
-			<div className="relative overflow-hidden h-clampLarge">
+			<div className="relative h-clampLarge overflow-hidden">
 				<Image
-					src="/trident.jpg"
+					src="https://cdn.team2658.org/web-public/trident.jpeg"
 					alt="2023 Robot, Trident"
 					fill={true}
-					className="object-cover absolute brightness-50 blur-sm"
+					className="absolute object-cover blur-sm brightness-50"
 				/>
-				<h1 className="text-center py-8 text-r8xl font-bold absolute inset-0 text-teamYellow-100">
+				<h1 className="absolute inset-0 py-8 text-center text-r8xl font-bold text-teamYellow-100">
 					Sponsors
 				</h1>
 			</div>
