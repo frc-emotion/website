@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { FormEvent, useRef, useState } from "react";
+import { useRouter } from "next/navigation";
 
 type formData = {
 	username: string;
@@ -35,6 +36,7 @@ async function submitForm(e: FormEvent<HTMLFormElement>, formData: formData) {
 export default function Login() {
 	const [username, setUsername] = useState("");
 	const [password, setPassword] = useState("");
+	const router = useRouter();
 
 	return (
 		<main className="h-screen bg-teamYellow-500">
@@ -58,17 +60,18 @@ export default function Login() {
 								submitForm(e, {
 									username: username,
 									password: password,
-								});
+								}).then(()=>{router.back()});
 							}}
 						>
 							<div className="grid grid-cols-1">
 								<label className="block p-1.5">
-									<span className="text-gray-700">
+									<label htmlFor="usernameInput" className="text-gray-700">
 										Username
-									</span>
+									</label>
 									<input
 										type="text"
 										id="usernameInput"
+										name="usernameInput"
 										className="mt-1 w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
 										placeholder=""
 										value={username}
@@ -78,12 +81,13 @@ export default function Login() {
 									/>
 								</label>
 								<label className="block p-1.5">
-									<span className="text-gray-700">
+									<label htmlFor="passwordInput" className="text-gray-700">
 										Password
-									</span>
+									</label>
 									<input
 										type="password"
 										id="passwordInput"
+										name="passwordInput"
 										className="mt-1 w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
 										placeholder=""
 										value={password}
