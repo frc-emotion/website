@@ -1,15 +1,16 @@
 "use client";
 
 import Image from "next/image";
-import { FormEvent, useRef, useState } from "react";
+import { FormEvent, useState } from "react";
 import { useRouter } from "next/navigation";
+import { AppRouterInstance } from "next/dist/shared/lib/app-router-context";
 
 type formData = {
 	username: string;
 	password: string;
 };
 
-async function submitForm(e: FormEvent<HTMLFormElement>, formData: formData) {
+async function submitForm(e: FormEvent<HTMLFormElement>, formData: formData, router: AppRouterInstance) {
 	e.preventDefault();
 	console.log("logging in");
 	try {
@@ -23,10 +24,15 @@ async function submitForm(e: FormEvent<HTMLFormElement>, formData: formData) {
 
 		const json = await response.json();
 
-		if (response.status === 200) {
+		if (response.status === 200 && json && json.isVerified) {
 			alert(`Succesfully logged in as ${json.username}!`)
+			localStorage.setItem("token", json.token);
+			document.cookie = `auth=${json.isVerified};admin=${json.isAdmin}`;
+			router.back();
 		} else {
-			alert(`Error ${response.status}: ${json.message}`);
+			alert(`${response.ok? "" : `Error ${response.status}: ${response.statusText}\n`} ${json?.message??""} ${json?.isVerified==false? "\nPlease get your account verified by a team lead or advisor": ""}`);
+			localStorage.removeItem("token");
+			document.cookie = `auth=false;admin=false`;
 		}
 	} catch (error) {
 		console.error(error);
@@ -60,7 +66,7 @@ export default function Login() {
 								submitForm(e, {
 									username: username,
 									password: password,
-								}).then(()=>{router.back()});
+								}, router)
 							}}
 						>
 							<div className="grid grid-cols-1">
