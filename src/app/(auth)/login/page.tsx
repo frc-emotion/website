@@ -4,6 +4,7 @@ import Image from "next/image";
 import { FormEvent, useState } from "react";
 import { useRouter } from "next/navigation";
 import { AppRouterInstance } from "next/dist/shared/lib/app-router-context";
+import Link from "next/link";
 
 type formData = {
 	username: string;
@@ -27,12 +28,14 @@ async function submitForm(e: FormEvent<HTMLFormElement>, formData: formData, rou
 		if (response.status === 200 && json && json.isVerified) {
 			alert(`Succesfully logged in as ${json.username}!`)
 			localStorage.setItem("token", json.token);
-			document.cookie = `auth=${json.isVerified};admin=${json.isAdmin}`;
+			document.cookie = `auth=${json.isVerified}`;
+			document.cookie = `admin=${json.isAdmin}`;
 			router.back();
 		} else {
 			alert(`${response.ok? "" : `Error ${response.status}: ${response.statusText}\n`} ${json?.message??""} ${json?.isVerified==false? "\nPlease get your account verified by a team lead or advisor": ""}`);
 			localStorage.removeItem("token");
-			document.cookie = `auth=false;admin=false`;
+			document.cookie = `auth=false`;
+			document.cookie = `admin=false`;
 		}
 	} catch (error) {
 		console.error(error);
@@ -70,7 +73,7 @@ export default function Login() {
 							}}
 						>
 							<div className="grid grid-cols-1">
-								<label className="block p-1.5">
+								<div className="block p-1.5">
 									<label htmlFor="usernameInput" className="text-gray-700">
 										Username
 									</label>
@@ -85,8 +88,8 @@ export default function Login() {
 											setUsername(e.target.value);
 										}}
 									/>
-								</label>
-								<label className="block p-1.5">
+								</div>
+								<div className="block p-1.5">
 									<label htmlFor="passwordInput" className="text-gray-700">
 										Password
 									</label>
@@ -101,7 +104,7 @@ export default function Login() {
 											setPassword(e.target.value);
 										}}
 									/>
-								</label>
+								</div>
 								<div className="mt-3 flex items-center justify-center">
 									<button
 										type="submit"
@@ -113,18 +116,18 @@ export default function Login() {
 							</div>
 						</form>
 						<div className="mt-3 flex flex-col items-center justify-center lg:flex-row lg:space-x-10 -lg:space-y-2">
-							<a
+							<Link
 								href="#"
 								className="text-gray-500 hover:text-gray-700"
 							>
 								Forgot password?
-							</a>
-							<a
-								href="#"
+							</Link>
+							<Link
+								href="/register"
 								className="text-gray-500 hover:text-gray-700"
 							>
 								Create account
-							</a>
+							</Link>
 						</div>
 					</div>
 				</div>
