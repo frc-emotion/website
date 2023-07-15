@@ -1,0 +1,10 @@
+@tailwind base;
+
+@layer base {
+	main {
+		@apply text-white font-inter;
+	}
+    article {
+        @apply mx-8;
+    }
+}
