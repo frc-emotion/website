@@ -4,19 +4,19 @@ import { Fragment, useState } from "react";
 import "next/link";
 import { Popover, Transition } from "@headlessui/react";
 import {
-    Bars3Icon,
-    XMarkIcon,
-    ArrowRightIcon,
-    ArrowLeftIcon,
+	Bars3Icon,
+	XMarkIcon,
+	ArrowRightIcon,
+	ArrowLeftIcon,
 } from "@heroicons/react/24/outline";
 import { ChevronDownIcon } from "@heroicons/react/20/solid";
 import {
-    BsPeopleFill,
-    BsFillPersonBadgeFill,
-    BsClipboardFill,
-    BsPhoneFill,
-    BsFillCalendarWeekFill,
-    BsTrophyFill,
+	BsPeopleFill,
+	BsFillPersonBadgeFill,
+	BsClipboardFill,
+	BsPhoneFill,
+	BsFillCalendarWeekFill,
+	BsTrophyFill,
 } from "react-icons/bs";
 import { FaRobot, FaHammer } from "react-icons/fa";
 import { IoMdPhotos } from "react-icons/io";
@@ -27,130 +27,130 @@ import { MdElectricalServices, MdDesignServices } from "react-icons/md";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 
-export default function Navbar({auth}: {auth: boolean}) {    
-    const router = useRouter();
-    const mainMenuItems = [
-        {
-            title: "About",
-            href: "/about",
-        },
-        {
-            title: "Sponsors",
-            href: "/sponsors",
-        },
-        {
-            title: "Outreach",
-            href: "/outreach",
-        },
-        // {
-        // 	title: "Blog",
-        // 	href: "#",
-        // },
-        {
-            title: "Contact",
-            href: "/contact",
-        },
-    ];
-    const moreMenuOne = [
-        {
-            title: "Member Home",
-            description: "Information for general members",
-            href: "#",
-            icon: BsPeopleFill,
-        },
-        {
-            title: "Lead Resources",
-            description: "For leads, advisors, and mentors",
-            href: "#",
-            icon: BsFillPersonBadgeFill,
-        },
-        {
-            title: "Attendance",
-            description: "Hours for our 4.5 period class",
-            href: "#",
-            icon: BsFillCalendarWeekFill,
-        },
-        {
-            title: "Join our Team",
-            description: "Interest form and club rush info",
-            href: "#",
-            icon: BsClipboardFill,
-        },
-        {
-            title: "Team App",
-            description: "Download for iOS and Android",
-            href: "#",
-            icon: BsPhoneFill,
-        },
-    ];
-    const moreMenuTwo = [
-        {
-            title: "Software Team",
-            description: "Documentation and resources",
-            href: "#",
-            icon: HiCodeBracketSquare,
-        },
-        {
-            title: "Build Team",
-            description: "Safety training and build timelines",
-            href: "#",
-            icon: FaHammer,
-        },
-        {
-            title: "Electrical Team",
-            description: "Training and project management",
-            href: "#",
-            icon: MdElectricalServices,
-        },
-        {
-            title: "Drive Team",
-            description: "Information for drive team",
-            href: "#",
-            icon: RiSteering2Fill,
-        },
-        {
-            title: "Design Team",
-            description: "CAD and design resources",
-            href: "#",
-            icon: MdDesignServices,
-        },
-    ];
-    const moreMenuThree = [
-        {
-            title: "Competitions",
-            description: "See where we're headed",
-            href: "#",
-            icon: FaRobot,
-        },
-        {
-            title: "Awards",
-            description: "See what we've accomplished",
-            href: "#",
-            icon: BsTrophyFill,
-        },
-        {
-            title: "Photos",
-            description: "Gallery from past events",
-            href: "#",
-            icon: IoMdPhotos,
-        },
-        {
-            title: "FIRST",
-            description: "Info on FIRST, FRC, FLL, and FTC",
-            href: "#",
-            icon: RiCheckboxBlankFill,
-        },
-        {
-            title: "Donate",
-            description: "Make a tax-deductible contribution",
-            href: "#",
-            icon: BiDonateHeart,
-        },
-    ];
+export default function Navbar({ auth }: { auth: boolean }) {
+	const router = useRouter();
+	const mainMenuItems = [
+		{
+			title: "About",
+			href: "/about",
+		},
+		{
+			title: "Sponsors",
+			href: "/sponsors",
+		},
+		{
+			title: "Outreach",
+			href: "/outreach",
+		},
+		// {
+		// 	title: "Blog",
+		// 	href: "#",
+		// },
+		{
+			title: "Contact",
+			href: "/contact",
+		},
+	];
+	const moreMenuOne = [
+		{
+			title: "Member Home",
+			description: "Information for general members",
+			href: "#",
+			icon: BsPeopleFill,
+		},
+		{
+			title: "Lead Resources",
+			description: "For leads, advisors, and mentors",
+			href: "#",
+			icon: BsFillPersonBadgeFill,
+		},
+		{
+			title: "Attendance",
+			description: "Hours for our 4.5 period class",
+			href: "#",
+			icon: BsFillCalendarWeekFill,
+		},
+		{
+			title: "Join our Team",
+			description: "Interest form and club rush info",
+			href: "#",
+			icon: BsClipboardFill,
+		},
+		{
+			title: "Team App",
+			description: "Download for iOS and Android",
+			href: "#",
+			icon: BsPhoneFill,
+		},
+	];
+	const moreMenuTwo = [
+		{
+			title: "Software Team",
+			description: "Documentation and resources",
+			href: "#",
+			icon: HiCodeBracketSquare,
+		},
+		{
+			title: "Build Team",
+			description: "Safety training and build timelines",
+			href: "#",
+			icon: FaHammer,
+		},
+		{
+			title: "Electrical Team",
+			description: "Training and project management",
+			href: "#",
+			icon: MdElectricalServices,
+		},
+		{
+			title: "Drive Team",
+			description: "Information for drive team",
+			href: "#",
+			icon: RiSteering2Fill,
+		},
+		{
+			title: "Design Team",
+			description: "CAD and design resources",
+			href: "#",
+			icon: MdDesignServices,
+		},
+	];
+	const moreMenuThree = [
+		{
+			title: "Competitions",
+			description: "See where we're headed",
+			href: "#",
+			icon: FaRobot,
+		},
+		{
+			title: "Awards",
+			description: "See what we've accomplished",
+			href: "#",
+			icon: BsTrophyFill,
+		},
+		{
+			title: "Photos",
+			description: "Gallery from past events",
+			href: "#",
+			icon: IoMdPhotos,
+		},
+		{
+			title: "FIRST",
+			description: "Info on FIRST, FRC, FLL, and FTC",
+			href: "#",
+			icon: RiCheckboxBlankFill,
+		},
+		{
+			title: "Donate",
+			description: "Make a tax-deductible contribution",
+			href: "#",
+			icon: BiDonateHeart,
+		},
+	];
 
-    const [mobileActiveItem, setMobileActiveItem] = useState(0);
+	const [mobileActiveItem, setMobileActiveItem] = useState(0);
 
-    return (
+	return (
 		<div id="header" className="select-none bg-black text-teamYellow-400">
 			<nav className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8">
 				<Link href="/" className="text-r2xl font-semibold">
@@ -322,13 +322,22 @@ export default function Navbar({auth}: {auth: boolean}) {
 									Settings
 								</Link> */}
 								{auth ? (
-									<button className="text-r2xl font-semibold hover:underline" onClick={()=>{
-                                        document.cookie = `auth=false;admin=false`;
-                                        localStorage.removeItem("token");
-                                        router.push("/login");
-                                    }}>
-                                        Logout
-                                    </button>
+									<button
+										className="text-r2xl font-semibold hover:underline"
+										// onClick={() => {
+										// 	document.cookie = `auth=false;admin=false`;
+										// 	localStorage.removeItem("token");
+										// 	router.push("/login");
+										// }}
+									>
+										{
+											JSON.parse(
+												localStorage.getItem(
+													"userObj"
+												) as string
+											).firstname
+										}
+									</button>
 								) : (
 									<Link
 										href="/login"
@@ -459,10 +468,28 @@ export default function Navbar({auth}: {auth: boolean}) {
 				</div>
 				{/* lg:flex space-x-8 text-rmd font-semibold */}
 				<div className="hidden space-x-8 text-rmd font-semibold lg:flex">
-					{/* <Link href="#">Settings</Link> */}
-					<Link href="/login" className="hover:underline">
-						Login
-					</Link>
+					{/* 
+					<Link href="#">Settings</Link> */}
+					{auth ? (
+						<button
+							className="hover:underline"
+							// onClick={() => {
+							// 	document.cookie = `auth=false;admin=false`;
+							// 	localStorage.removeItem("token");
+							// 	router.push("/login");
+							// }}
+						>
+							{
+								JSON.parse(
+									localStorage.getItem("userObj") as string
+								).firstname
+							}
+						</button>
+					) : (
+						<Link href="/login" className="hover:underline">
+							Login
+						</Link>
+					)}
 				</div>
 			</nav>
 		</div>

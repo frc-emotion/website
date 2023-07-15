@@ -25,9 +25,15 @@ async function submitForm(e: FormEvent<HTMLFormElement>, formData: formData, rou
 		const json = await response.json();
 
 		if (response.status === 200 && json && json.isVerified) {
-			alert(`Succesfully logged in as ${json.username}!`)
 			localStorage.setItem("token", json.token);
-			document.cookie = `auth=${json.isVerified};admin=${json.isAdmin}`;
+			localStorage.setItem("userObj", JSON.stringify({
+				username: json.username,
+				email: json.email,
+				firstname: json.firstname,
+				lastname: json.lastname,
+			}))
+			document.cookie = `auth=${json.isVerified}`;
+			document.cookie = `admin=${json.isAdmin}`;
 			router.back();
 		} else {
 			alert(`${response.ok? "" : `Error ${response.status}: ${response.statusText}\n`} ${json?.message??""} ${json?.isVerified==false? "\nPlease get your account verified by a team lead or advisor": ""}`);
