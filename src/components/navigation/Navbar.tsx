@@ -26,8 +26,16 @@ import { HiCodeBracketSquare } from "react-icons/hi2";
 import { MdElectricalServices, MdDesignServices } from "react-icons/md";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
+import { cookies } from "next/dist/client/components/headers";
+import { User } from "@/app/(auth)/login/page";
 
-export default function Navbar({ auth }: { auth: boolean }) {
+export default function Navbar({
+	auth,
+	user,
+}: {
+	auth: boolean;
+	user: User | null;
+}) {
 	const router = useRouter();
 	const mainMenuItems = [
 		{
@@ -321,7 +329,7 @@ export default function Navbar({ auth }: { auth: boolean }) {
 								>
 									Settings
 								</Link> */}
-								{auth ? (
+								{auth && user ? (
 									<button
 										className="text-r2xl font-semibold hover:underline"
 										// onClick={() => {
@@ -330,13 +338,7 @@ export default function Navbar({ auth }: { auth: boolean }) {
 										// 	router.push("/login");
 										// }}
 									>
-										{
-											JSON.parse(
-												localStorage.getItem(
-													"userObj"
-												) as string
-											).firstname
-										}
+										{user.firstname}
 									</button>
 								) : (
 									<Link
@@ -470,7 +472,7 @@ export default function Navbar({ auth }: { auth: boolean }) {
 				<div className="hidden space-x-8 text-rmd font-semibold lg:flex">
 					{/* 
 					<Link href="#">Settings</Link> */}
-					{auth ? (
+					{auth && user ? (
 						<button
 							className="hover:underline"
 							// onClick={() => {
@@ -480,10 +482,11 @@ export default function Navbar({ auth }: { auth: boolean }) {
 							// }}
 						>
 							{
-								JSON.parse(
-									localStorage.getItem("userObj") as string
-								).firstname
+								// JSON.parse(
+								// 	localStorage.getItem("userObj") as string
+								// ).firstname
 							}
+							{user.firstname}
 						</button>
 					) : (
 						<Link href="/login" className="hover:underline">

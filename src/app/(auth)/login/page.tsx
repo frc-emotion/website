@@ -11,33 +11,59 @@ type formData = {
 	password: string;
 };
 
-async function submitForm(e: FormEvent<HTMLFormElement>, formData: formData, router: AppRouterInstance) {
+export type User = {
+	username: string;
+	email: string;
+	firstname: string;
+	lastname: string;
+}
+
+async function submitForm(
+	e: FormEvent<HTMLFormElement>,
+	formData: formData,
+	router: AppRouterInstance
+) {
 	e.preventDefault();
 	console.log("logging in");
 	try {
-		const response = await fetch("https://api.team2658.org/v1/users/login", {
-			method: "POST",
-			headers: {
-				"Content-Type": "application/json",
-			},
-			body: JSON.stringify(formData),
-		});
+		const response = await fetch(
+			"https://api.team2658.org/v1/users/login",
+			{
+				method: "POST",
+				headers: {
+					"Content-Type": "application/json",
+				},
+				body: JSON.stringify(formData),
+			}
+		);
 
 		const json = await response.json();
 
 		if (response.status === 200 && json && json.isVerified) {
 			localStorage.setItem("token", json.token);
-			localStorage.setItem("userObj", JSON.stringify({
+			const user:User = {
 				username: json.username,
 				email: json.email,
 				firstname: json.firstname,
 				lastname: json.lastname,
-			}))
+			};
+			localStorage.setItem("userObj", JSON.stringify(user));
 			document.cookie = `auth=${json.isVerified}`;
 			document.cookie = `admin=${json.isAdmin}`;
+			document.cookie = `user=${JSON.stringify(user)}`;
 			router.back();
 		} else {
-			alert(`${response.ok? "" : `Error ${response.status}: ${response.statusText}\n`} ${json?.message??""} ${json?.isVerified==false? "\nPlease get your account verified by a team lead or advisor": ""}`);
+			alert(
+				`${
+					response.ok
+						? ""
+						: `Error ${response.status}: ${response.statusText}\n`
+				} ${json?.message ?? ""} ${
+					json?.isVerified == false
+						? "\nPlease get your account verified by a team lead or advisor"
+						: ""
+				}`
+			);
 			localStorage.removeItem("token");
 			document.cookie = `auth=false`;
 			document.cookie = `admin=false`;
@@ -71,15 +97,22 @@ export default function Login() {
 						<form
 							className="mt-3"
 							onSubmit={(e) => {
-								submitForm(e, {
-									username: username,
-									password: password,
-								}, router)
+								submitForm(
+									e,
+									{
+										username: username,
+										password: password,
+									},
+									router
+								);
 							}}
 						>
 							<div className="grid grid-cols-1">
 								<div className="block p-1.5">
-									<label htmlFor="usernameInput" className="text-gray-700">
+									<label
+										htmlFor="usernameInput"
+										className="text-gray-700"
+									>
 										Username
 									</label>
 									<input
@@ -95,7 +128,10 @@ export default function Login() {
 									/>
 								</div>
 								<div className="block p-1.5">
-									<label htmlFor="passwordInput" className="text-gray-700">
+									<label
+										htmlFor="passwordInput"
+										className="text-gray-700"
+									>
 										Password
 									</label>
 									<input
