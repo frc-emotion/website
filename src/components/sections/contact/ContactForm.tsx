@@ -1,5 +1,5 @@
 "use client";
-import './index.css'
+import './index.scss'
 
 import { FormEvent, useRef, useState } from "react";
 

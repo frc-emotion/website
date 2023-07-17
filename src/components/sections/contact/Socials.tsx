@@ -7,7 +7,7 @@ import {
 	FaGit,
 	FaEnvelope,
 } from "react-icons/fa";
-import './index.css'
+import './index.scss'
 import Link from "next/link";
 
 const socialDimension = 30;
