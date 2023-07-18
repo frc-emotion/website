@@ -3,6 +3,7 @@
 @layer base {
 	main {
 		@apply text-white font-inter;
+        line-break: anywhere;
 	}
     article {
         @apply mx-8;
