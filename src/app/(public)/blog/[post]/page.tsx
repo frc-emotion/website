@@ -58,7 +58,7 @@ async function getMDX(post: string, auth: boolean) {
 			author: "UNAUTHORIZED",
 			date: blogPost.date,
 			body: `# This post is private. Please log in to view it.`,
-			tags: [""],
+			tags: [],
 			public: false,
 		};
 	} else {
@@ -68,7 +68,7 @@ async function getMDX(post: string, auth: boolean) {
 			author: "meow",
 			date: Date.now(),
 			body: `Error ${response.status}: ${response.statusText}`,
-			tags: ["meow", "meow", "meow", "meow", "meow", "meow"],
+			tags: [],
 			public: true,
 		};
 	}
@@ -96,7 +96,8 @@ export default async function BlogPost({
 			{/* <h3 className="text-center text-rxl font-semibold opacity-60">{"# "}{source.tags.map((it) => `${it} `)}</h3> */}
 			<div className="text-center text-rxl font-semibold opacity-60 ">
 				<span>{"# "}</span>
-				{source?.tags?.map((tag) => {
+				{ source?.tags?.length === 0 ? <span className="italic">No tags</span> : //if there are tags, map through and display links for each one, else display "No tags"
+				source?.tags?.map((tag) => {
 					return (
 						<Link className="hover:underline" key={tag} href={`/blog/tag/${tag}`}>
 							{tag}{" "}

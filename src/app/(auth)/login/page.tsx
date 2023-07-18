@@ -16,6 +16,7 @@ export type User = {
 	email: string;
 	firstname: string;
 	lastname: string;
+	token: string;
 }
 
 async function submitForm(
@@ -46,6 +47,7 @@ async function submitForm(
 				email: json.email,
 				firstname: json.firstname,
 				lastname: json.lastname,
+				token: json.token,
 			};
 			localStorage.setItem("userObj", JSON.stringify(user));
 			document.cookie = `auth=${json.isVerified}`;
