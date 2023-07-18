@@ -18,7 +18,7 @@ async function submitForm({
 	author: string;
 	token: string;
 }) {
-	const tags = tagsStr.split(",").map((tag) => tag.trim());
+	const tags = tagsStr? tagsStr.split(",").map((tag) => tag.trim()) : [];  
     const bod = JSON.stringify({
 			title: title,
 			author: author,
@@ -99,7 +99,6 @@ export default function PostForm({
 					id="tags"
 					value={tagsStr}
 					onChange={(e) => setTagsStr(e.target.value)}
-					required
 				/>
 				<label htmlFor="body">Post Body (MDX Markdown)</label>
 				<textarea
