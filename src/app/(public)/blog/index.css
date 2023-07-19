@@ -1,7 +1,7 @@
 @tailwind base;
 
 @layer base {
-	main * {
+    main * {
 		@apply text-white font-inter;
         line-break: anywhere;
 	}

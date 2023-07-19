@@ -4,12 +4,14 @@
 
 @layer base {
     hr{
-        @apply overflow-visible text-center border-teamYellow-600 rounded-lg;
+        @apply overflow-visible text-center bg-inherit border-2 rounded-lg;
         @apply my-16 mx-32 !important;
+        border-color: color-mix(in srgb, currentColor 30%, transparent 70%);
     }
     hr:after{
-        @apply text-4xl relative -top-5 inset-x-0 text-teamYellow-600 font-extrabold bg-teamYellow-500 px-4 rounded-3xl;
-        content: "Σ"
+        @apply text-4xl relative -top-5 inset-x-0 font-extrabold px-4 rounded-3xl bg-inherit;
+        content: "Σ";
+        color: color-mix(in srgb, currentColor 30%, transparent 70%);
     }
     main {
         min-height: 65vh; 

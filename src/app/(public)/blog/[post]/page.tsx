@@ -84,7 +84,7 @@ export default async function BlogPost({
 	const auth = cookies().get("auth")?.value === "true";
 	const source = await getMDX(params?.post, auth);
 	return (
-		<main>
+		<main className="flex flex-col items-center">
 			<h1 className="text-center text-r4xl font-bold">{source.title}</h1>
 			<h2 className="text-center text-r2xl font-semibold">
 				{source.author}
@@ -105,7 +105,7 @@ export default async function BlogPost({
 					);
 				})}
 			</div>
-			<article>
+			<article className="bg-neutral-900 rounded-lg mx-16 my-8 p-16 min-h-[40vh] max-w-7xl">
 				<MDXRemote source={source.body} />
 			</article>
 		</main>

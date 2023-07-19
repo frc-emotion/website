@@ -2,6 +2,11 @@ import { cookies } from "next/dist/client/components/headers"
 import PostForm from "./PostForm";
 import './index.css'
 import { User } from "@/app/(auth)/login/page";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+    title: "New Post | Team 2658 Blog",
+}
 
 export default function Blog() {
     const cookieJar = cookies();

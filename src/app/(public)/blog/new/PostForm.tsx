@@ -1,7 +1,9 @@
 "use client";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./index.css";
 import { useRouter } from "next/navigation";
+import { MDXRemote, MDXRemoteSerializeResult } from "next-mdx-remote";
+import { serialize } from "next-mdx-remote/serialize";
 
 async function submitForm({
 	title,
@@ -58,9 +60,14 @@ export default function PostForm({
 	const [tagsStr, setTagsStr] = useState("");
 	const [pub, setPublic] = useState(false);
 	const router = useRouter();
+	const [Preview, setPreview] = useState(<></>);
+
+	useEffect(() => {
+		RenderMDX(body).then((res) => setPreview(res));
+	}, [body]);
 
 	return (
-		<div>
+		<div className="xl:grid grid-cols-2">
 			<form
 				className="flex flex-col mx-32"
 				onSubmit={(e) => {
@@ -128,6 +135,23 @@ export default function PostForm({
 					Submit
 				</button>
 			</form>
+			<div className="min-h-[80vh]">
+				<h1 className="text-center text-r3xl font-bold">
+					Markdown Preview
+				</h1>
+				<div className="mx-8 my-8 p-8 rounded-xl bg-neutral-900 overflow-scroll min-h-[90%]">
+					{Preview}
+				</div>
+			</div>
 		</div>
 	);
+}
+
+async function RenderMDX(source: string) {
+	const serialized = await serialize(source, {
+		mdxOptions: {
+			development: process.env.NODE_ENV === "development",
+		},
+	});
+	return <MDXRemote {...serialized} />;
 }
