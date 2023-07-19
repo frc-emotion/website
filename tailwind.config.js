@@ -69,6 +69,7 @@ module.exports = {
 				sans: ["var(--font-main)"],
 				"bebas-neue": ["var(--font-bebas-neue)"],
 				inter: ["var(--font-inter)"],
+				mono: ["var(--font-mono)"],
 			},
 		},
 	},

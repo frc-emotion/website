@@ -1,4 +1,4 @@
-import { Bebas_Neue, Inter, Orbitron } from "next/font/google";
+import { Bebas_Neue, Inter, JetBrains_Mono, Orbitron } from "next/font/google";
 import '@/styles/globals.css'
 
 export const metadata = {
@@ -12,6 +12,12 @@ const font = Orbitron({
 	display: "swap",
 	variable: "--font-main",
 });
+
+const mono = JetBrains_Mono({
+	subsets: ["latin"],
+	display: "swap",
+	variable: "--font-mono",
+})
 
 const inter = Inter({
 	subsets: ["latin"],
@@ -34,7 +40,7 @@ export default function RootLayout({
 	return (
 		<html lang="en">
 			<body
-				className={`${bebas_neue.variable} ${font.variable} ${inter.variable} font-sans bg-black`}
+				className={`${bebas_neue.variable} ${font.variable} ${inter.variable} ${mono.variable} font-sans bg-black`}
 			>
 				{children}
 			</body>

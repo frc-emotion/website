@@ -1,6 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
-import "./index.css";
+import "../index.css";
 import { useRouter } from "next/navigation";
 import { MDXRemote, MDXRemoteSerializeResult } from "next-mdx-remote";
 import { serialize } from "next-mdx-remote/serialize";
