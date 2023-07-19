@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 @layer base {
-	main>* {
+	main * {
         @apply font-inter text-white;
     }
     dialog {

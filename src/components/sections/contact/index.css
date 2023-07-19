@@ -6,7 +6,7 @@
 	dialog {
 		@apply fixed inset-0 w-[80vw] rounded-lg bg-neutral-800 p-16 text-white shadow-lg;
 	}
-	button {
+	main button {
 		@apply my-4 rounded-lg bg-neutral-700 px-4 py-2 text-rlg font-bold;
 	}
 	button:hover {
