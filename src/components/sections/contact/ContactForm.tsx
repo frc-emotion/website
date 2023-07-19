@@ -178,7 +178,7 @@ export default function ContactForm() {
 							setMessage(e.target.value);
 						}}
 					/>
-				<button className="text-center w-min bg-neutral-800" type='submit'>
+				<button className="text-center bg-neutral-800" type='submit'>
 					Submit
 				</button>
 				</div>

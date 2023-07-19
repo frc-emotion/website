@@ -18,15 +18,15 @@ async function submitForm({
 	author: string;
 	token: string;
 }) {
-	const tags = tagsStr? tagsStr.split(",").map((tag) => tag.trim()) : [];  
-    const bod = JSON.stringify({
-			title: title,
-			author: author,
-            date: Date.now(),
-            body: body,
-            tags: tags,
-            public: String(pub),
-		});
+	const tags = tagsStr ? tagsStr.split(",").map((tag) => tag.trim()) : [];
+	const bod = JSON.stringify({
+		title: title,
+		author: author,
+		date: Date.now(),
+		body: body,
+		tags: tags,
+		public: String(pub),
+	});
 
 	const response = await fetch("https://api.team2658.org/v1/blog", {
 		method: "POST",
@@ -39,11 +39,11 @@ async function submitForm({
 	if (response.ok) {
 		const json = await response.json();
 		const id = json._id as string;
-		return [0,id];
+		return [0, id];
 	}
-    console.log(await response.text());
-    console.log(bod);
-	return [1,response.status];
+	console.log(await response.text());
+	console.log(bod);
+	return [1, response.status];
 }
 
 export default function PostForm({
@@ -57,16 +57,15 @@ export default function PostForm({
 	const [body, setBody] = useState("");
 	const [tagsStr, setTagsStr] = useState("");
 	const [pub, setPublic] = useState(false);
-    const router = useRouter();
+	const router = useRouter();
 
 	return (
 		<div>
-			{" "}
 			<form
 				className="flex flex-col mx-32"
 				onSubmit={(e) => {
 					e.preventDefault();
-                    submitForm({
+					submitForm({
 						title: title,
 						body: body,
 						tagsStr: tagsStr,
@@ -75,10 +74,14 @@ export default function PostForm({
 						token: token,
 					}).then((res) => {
 						if (res[0] === 0) {
-							alert(`Post submitted successfully!\nPost URL:\n https://team2658.org/blog/${res[1]}`);
-                    router.push("/blog/"+res[1]);
+							alert(
+								`Post submitted successfully!\nPost URL:\n https://team2658.org/blog/${res[1]}`
+							);
+							router.push("/blog/" + res[1]);
 						} else {
-							alert("Error submitting post. Status code: " + res[1]);
+							alert(
+								"Error submitting post. Status code: " + res[1]
+							);
 						}
 					});
 				}}
