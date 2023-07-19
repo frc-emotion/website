@@ -33,7 +33,7 @@
     h6 {
         @apply text-rlg font-semibold;
     }
-    main a{
+    article a{
         @apply text-blue-400 hover:text-blue-300 underline;
     }
     blockquote{

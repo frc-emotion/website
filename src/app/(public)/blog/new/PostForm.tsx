@@ -139,9 +139,9 @@ export default function PostForm({
 				<h1 className="text-center text-r3xl font-bold">
 					Markdown Preview
 				</h1>
-				<div className="mx-8 my-8 p-8 rounded-xl bg-neutral-900 overflow-scroll min-h-[90%]">
+				<article className="mx-8 my-8 p-8 rounded-xl bg-neutral-900 overflow-y-scroll min-h-[70vh]">
 					{Preview}
-				</div>
+				</article>
 			</div>
 		</div>
 	);
