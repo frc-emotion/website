@@ -4,11 +4,9 @@
     "private": true,
     "scripts": {
         "dev": "next dev",
-        "build": "prettier --write . && next build",
+        "build": "next build",
         "start": "next start",
-        "prettier": "prettier --write .",
-        "serve": "prettier --write . && next build && next start",
-        "lint": "prettier --write . && next lint",
+        "prettier": "prettier --write . --tab-width 4 --trailing-comma es5",
         "update": "ncu -u && npm update"
     },
     "dependencies": {
