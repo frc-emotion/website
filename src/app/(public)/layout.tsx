@@ -23,12 +23,15 @@ export default function PublicLayout({
 	children: React.ReactNode;
 }) {
 	const cookieJar = cookies();
-	const auth = cookieJar.get("auth");
+	const auth = cookieJar.get("auth")?.value;
 	const userCookie = cookieJar.get("user")?.value;
 	const user = userCookie ? (JSON.parse(userCookie) as User) : null;
 	return (
-		<div id="publicLayout" className={`${bbnFont.variable} ${orbFont.variable} font-sans bg-black`}>
-			<Navbar auth={auth?.value === "true"} user={user} />
+		<div
+			id="publicLayout"
+			className={`${bbnFont.variable} ${orbFont.variable} font-sans bg-black`}
+		>
+			<Navbar auth={auth ? true : false} user={user} />
 			{children}
 			<Footer />
 		</div>
