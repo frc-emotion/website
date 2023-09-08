@@ -171,7 +171,9 @@ export default function Navbar() {
                     <Popover.Panel className="fixed inset-0 z-10 h-[100%] w-[100vw] bg-black">
                         {/* close button */}
                         <div className="relative z-30 float-right">
-                            <Popover.Button className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5">
+                            <Popover.Button 
+                            className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5"
+                            >
                                 <span className="sr-only">Close main menu</span>
                                 <XMarkIcon
                                     className="my-[30px] mr-[20px] h-[35px] w-[35px]"
@@ -189,16 +191,17 @@ export default function Navbar() {
                                     >
                                         Home
                                     </Link>
-
-                                    {mainMenuItems.map((item) => (
-                                        <Link
-                                            key={item.title}
-                                            href={item.href}
-                                            className="text-r2xl font-semibold hover:underline"
-                                        >
-                                            {item.title}
-                                        </Link>
-                                    ))}
+                                    
+                                        {mainMenuItems.map((item) => (
+                                            <Popover.Button 
+                                                className="text-r2xl font-semibold hover:underline"
+                                                key={item.title}
+                                                onClick={() => window.location.replace(item.href)}
+                                            >
+                                                {item.title}
+                                            </Popover.Button>
+                                        ))}
+                                    
                                     {/* <div>
                                         <button
                                             onClick={() =>
