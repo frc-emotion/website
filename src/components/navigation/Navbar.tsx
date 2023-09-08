@@ -173,7 +173,6 @@ export default function Navbar() {
                         <div className="relative z-30 float-right">
                             <Popover.Button 
                             className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5"
-                            
                             >
                                 <span className="sr-only">Close main menu</span>
                                 <XMarkIcon
@@ -198,7 +197,8 @@ export default function Navbar() {
                                                 className="text-r2xl font-semibold hover:underline"
                                                 key={item.title}
                                                 onClick={() => window.location.replace(item.href)}
-                                            >{item.title}
+                                            >
+                                                {item.title}
                                             </Popover.Button>
                                         ))}
                                     
