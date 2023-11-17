@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { FormEvent, useState } from "react";
 import { useRouter } from "next/navigation";
-import { AppRouterInstance } from "next/dist/shared/lib/app-router-context";
+import { AppRouterInstance } from "next/dist/shared/lib/app-router-context.shared-runtime";
 import Link from "next/link";
 import { User } from "@/app/(auth)/login/page";
 
