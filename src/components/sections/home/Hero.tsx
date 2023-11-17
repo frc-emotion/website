@@ -1,14 +1,14 @@
 import Image from "next/image";
-import ".//index.css";
+import ".//index.scss";
 
 export default function Hero() {
     return (
-        <div id="#hero" className="z-0 grid bg-teamYellow-500 px-[5vw]">
+        <div id="#hero" className="z-0 mt-[2%] grid bg-teamYellow-500 px-[5vw]">
             <div id="heroHeader">
-                <h1 className="slideUp w-full text-center font-semibold text-r12xl">
+                <h1 className="slideUp w-full text-center text-r12xl font-semibold">
                     Σ-Motion
                 </h1>
-                <div className="slideUp2 grid grid-cols-1 grid-rows-3 px-[10vw] font-semibold md:grid-cols-4 md:grid-rows-1 lg:mt-[-30px] clamp">
+                <div className="slideUp2 clamp grid grid-cols-1 grid-rows-3 px-[10vw] font-semibold md:grid-cols-4 md:grid-rows-1 lg:mt-[-30px]">
                     <p className="text-center md:text-left">FRC Team 2658</p>
                     <p className="text-center md:col-span-2">
                         Rancho Bernardo High School
@@ -25,7 +25,7 @@ export default function Hero() {
                         src="https://cdn.team2658.org/web-public/head.jpeg"
                         fill={true}
                         alt=""
-                        className="object-cover object-top rounded-lg"
+                        className="rounded-lg object-cover object-top"
                         priority={true}
                     />
                 </div>

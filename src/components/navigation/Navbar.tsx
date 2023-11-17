@@ -25,8 +25,18 @@ import { BiDonateHeart } from "react-icons/bi";
 import { HiCodeBracketSquare } from "react-icons/hi2";
 import { MdElectricalServices, MdDesignServices } from "react-icons/md";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
+import { cookies } from "next/dist/client/components/headers";
+import { User } from "@/app/(auth)/login/page";
 
-export default function Navbar() {
+export default function Navbar({
+    auth,
+    user,
+}: {
+    auth: boolean;
+    user: User | null;
+}) {
+    const router = useRouter();
     const mainMenuItems = [
         {
             title: "About",
@@ -151,10 +161,7 @@ export default function Navbar() {
     return (
         <div id="header" className="select-none bg-black text-teamYellow-400">
             <nav className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8">
-                <Link
-                    href="/"
-                    className="text-r2xl font-semibold"
-                >
+                <Link href="/" className="text-r2xl font-semibold">
                     Σ-Motion
                 </Link>
                 <Popover className="flex lg:hidden">
@@ -171,9 +178,7 @@ export default function Navbar() {
                     <Popover.Panel className="fixed inset-0 z-10 h-[100%] w-[100vw] bg-black">
                         {/* close button */}
                         <div className="relative z-30 float-right">
-                            <Popover.Button 
-                            className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5"
-                            >
+                            <Popover.Button className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5">
                                 <span className="sr-only">Close main menu</span>
                                 <XMarkIcon
                                     className="my-[30px] mr-[20px] h-[35px] w-[35px]"
@@ -191,17 +196,21 @@ export default function Navbar() {
                                     >
                                         Home
                                     </Link>
-                                    
-                                        {mainMenuItems.map((item) => (
-                                            <Popover.Button 
-                                                className="text-r2xl font-semibold hover:underline"
-                                                key={item.title}
-                                                onClick={() => window.location.replace(item.href)}
-                                            >
-                                                {item.title}
-                                            </Popover.Button>
-                                        ))}
-                                    
+
+                                    {mainMenuItems.map((item) => (
+                                        <Popover.Button
+                                            className="text-r2xl font-semibold hover:underline"
+                                            key={item.title}
+                                            onClick={() =>
+                                                window.location.replace(
+                                                    item.href
+                                                )
+                                            }
+                                        >
+                                            {item.title}
+                                        </Popover.Button>
+                                    ))}
+
                                     {/* <div>
                                         <button
                                             onClick={() =>
@@ -318,20 +327,33 @@ export default function Navbar() {
                                     ))}
                                 </div>
                             ) : null}
-                            {/* <div className="flex flex-col items-center justify-center space-y-5 mt-[3.5rem]">
-								<Link
+                            <div className="mt-[3.5rem] flex flex-col items-center justify-center space-y-5">
+                                {/* <Link
 									href="#"
 									className="hover:underline font-semibold text-r2xl"
 								>
 									Settings
-								</Link>
-								<Link
-									href="#"
-									className="hover:underline font-semibold text-r2xl"
-								>
-									Login
-								</Link>
-							</div> */}
+								</Link> */}
+                                {auth && user ? (
+                                    <button
+                                        className="text-r2xl font-semibold hover:underline"
+                                        // onClick={() => {
+                                        // 	document.cookie = `auth=false;admin=false`;
+                                        // 	localStorage.removeItem("token");
+                                        // 	router.push("/login");
+                                        // }}
+                                    >
+                                        {user.firstname}
+                                    </button>
+                                ) : (
+                                    <Link
+                                        href="/login"
+                                        className="text-r2xl font-semibold hover:underline"
+                                    >
+                                        Login
+                                    </Link>
+                                )}
+                            </div>
                         </div>
                     </Popover.Panel>
                 </Popover>
@@ -452,11 +474,30 @@ export default function Navbar() {
                     </Popover>
                 </div>
                 {/* lg:flex space-x-8 text-rmd font-semibold */}
-                <div className="hidden">
-                    <Link href="#">Settings</Link>
-                    <Link href="/login" className="hover:underline">
-                        Login
-                    </Link>
+                <div className="hidden space-x-8 text-rmd font-semibold lg:flex">
+                    {/* 
+					<Link href="#">Settings</Link> */}
+                    {auth && user ? (
+                        <button
+                            className="hover:underline"
+                            // onClick={() => {
+                            // 	document.cookie = `auth=false;admin=false`;
+                            // 	localStorage.removeItem("token");
+                            // 	router.push("/login");
+                            // }}
+                        >
+                            {
+                                // JSON.parse(
+                                // 	localStorage.getItem("userObj") as string
+                                // ).firstname
+                            }
+                            {user.firstname}
+                        </button>
+                    ) : (
+                        <Link href="/login" className="hover:underline">
+                            Login
+                        </Link>
+                    )}
                 </div>
             </nav>
         </div>
