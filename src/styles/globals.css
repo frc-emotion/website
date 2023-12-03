@@ -3,30 +3,27 @@
 @tailwind utilities;
 
 @layer base {
-	hr {
-		@apply overflow-visible text-center border-teamYellow-600 rounded-lg;
-		@apply my-16 mx-32 !important;
-	}
-	hr:after {
-		@apply text-4xl relative -top-5 inset-x-0 text-teamYellow-600 font-extrabold bg-teamYellow-500 px-4 rounded-3xl;
-		content: "Σ";
-	}
-	main {
-		min-height: 65vh;
-		/* include the 65vh for compatibility with older browsers that don't support dvh
+    hr {
+        @apply overflow-visible text-center border-teamYellow-600 rounded-lg;
+        @apply my-16 mx-32 !important;
+    }
+    hr:after {
+        @apply text-4xl relative -top-5 inset-x-0 text-teamYellow-600 font-extrabold bg-teamYellow-500 px-4 rounded-3xl;
+        content: "Σ";
+    }
+    main {
+        min-height: 65vh;
+        /* include the 65vh for compatibility with older browsers that don't support dvh
             the dvh comes after so it will override the vh if the browser supports it
         */
-		min-height: 65dvh;
-	}
-	div,
-	main,
-	section {
-		@apply overflow-hidden transition-all ease-in-out duration-300;
-	}
-	a {
-		@apply hover:opacity-50 transition-all duration-300 ease-in-out;
-	}
-	dialog::backdrop {
-		@apply bg-black bg-opacity-75;
-	}
+        min-height: 65dvh;
+    }
+    div,
+    main,
+    section {
+        @apply overflow-hidden transition-all ease-in-out duration-300;
+    }
+    a {
+        @apply hover:opacity-50 transition-all duration-300 ease-in-out;
+    }
 }

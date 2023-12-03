@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { FormEvent, useEffect, useRef, useState } from "react";
+import { FormEvent, useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import { AppRouterInstance } from "next/dist/shared/lib/app-router-context.shared-runtime";
 import Link from "next/link";
@@ -83,8 +83,6 @@ export default function Login() {
 	const [password, setPassword] = useState("");
 	const router = useRouter();
 
-	const dialogref = useRef<HTMLDialogElement>(null);
-
 	const [thisUser, setThisUser] = useState<string | null>(null);
 	useEffect(() => {
 		const user = localStorage.getItem("userObj");
@@ -125,62 +123,9 @@ export default function Login() {
 									Log Out
 								</button>
 							</div>
-							<div className="mt-3 items-center justify-center text-center">
-								<p>
-									To delete your account, click the link
-									below. No user data will be kept after your
-									account is deleted.
-								</p>
-								<br />
-								<button
-									onClick={() => {
-										dialogref.current?.showModal();
-									}}
-									className="rounded-md bg-red-600 p-2 font-bold text-gray-900 hover:bg-red-900"
-								>
-									Delete Account
-								</button>
-							</div>
 						</div>
 					</div>
 				</div>
-				<dialog
-					ref={dialogref}
-					className="p-16 flex flex-col bg-gray-800 text-white"
-				>
-					<h2 className="font-bold text-xl m-2">
-						Are you sure you want to delete your account?
-					</h2>
-					<button
-						onClick={() => {
-							fetch("https://api.team2658.org/v2/users/me", {
-								method: "DELETE",
-								headers: {
-									"Authorization":
-										"Bearer " + JSON.parse(thisUser).token,
-								},
-							}).then(() => {
-								localStorage.removeItem("token");
-								localStorage.removeItem("userObj");
-								document.cookie = `auth=""`;
-								document.cookie = `user=""`;
-								document.cookie = 'token=""';
-								router.push("/");
-							});
-						}}
-						className="rounded-md bg-red-600 p-2 font-bold text-white hover:bg-red-900 mt-16 mb-4"
-					>
-						Yes
-					</button>
-					<button
-						onClick={() => {
-							dialogref.current?.close();
-						}}
-						className="rounded-md bg-gray-700 p-2 font-bold text-white hover:bg-gray-900 mb-16"
-					>
-						No
-					</button>
-				</dialog>
 			</main>
 		);
 
