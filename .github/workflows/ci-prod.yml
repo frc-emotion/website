@@ -2,36 +2,35 @@
 name: "ci / prod"
 
 on:
-  push:
-    branches:
-      - master
+    push:
+        branches:
+            - master
 
 jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      - name: Build the Docker image
-        run: docker build -t frc-emotion/website:latest .
-      - name: Upload build artifact
-        uses: actions/upload-artifact@v3
-        with:
-          name: website-prod-artifact
-          path: .
-        
-  deploy:
-    runs-on: ubuntu-latest
-    environment: production
-    needs: build
-    steps:
-      - name: Download Build Artifact
-        uses: actions/download-artifact@v2
-        with:
-          name: website-prod-artifact
-          path: .
-      - name: Push to Dokku
-        uses: dokku/github-action@master
-        with:
-          git_remote_url: ssh://dokku@team2658.org:22/website
-          ssh_private_key: ${{ secrets.SSH_PRIVATE_KEY }}
-      
+    build:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v3
+            - name: Build the Docker image
+              run: docker build -t frc-emotion/website:latest .
+            - name: Upload build artifact
+              uses: actions/upload-artifact@v3
+              with:
+                  name: website-prod-artifact
+                  path: .
+
+    deploy:
+        runs-on: ubuntu-latest
+        environment: production
+        needs: build
+        steps:
+            - name: Download Build Artifact
+              uses: actions/download-artifact@v2
+              with:
+                  name: website-prod-artifact
+                  path: .
+            - name: Push to Dokku
+              uses: dokku/github-action@master
+              with:
+                  git_remote_url: ssh://dokku@146.190.15.139:22/website
+                  ssh_private_key: ${{ secrets.SSH_PRIVATE_KEY }}
