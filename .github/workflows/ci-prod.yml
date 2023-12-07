@@ -7,28 +7,11 @@ on:
             - master
 
 jobs:
-    build:
-        runs-on: ubuntu-latest
-        steps:
-            - uses: actions/checkout@v3
-            - name: Build the Docker image
-              run: docker build -t frc-emotion/website:latest .
-            - name: Upload build artifact
-              uses: actions/upload-artifact@v3
-              with:
-                  name: website-prod-artifact
-                  path: .
-
     deploy:
         runs-on: ubuntu-latest
         environment: production
-        needs: build
         steps:
-            - name: Download Build Artifact
-              uses: actions/download-artifact@v2
-              with:
-                  name: website-prod-artifact
-                  path: .
+            - uses: actions/checkout@v3
             - name: Push to Dokku
               uses: dokku/github-action@master
               with:
