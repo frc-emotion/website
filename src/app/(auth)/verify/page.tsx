@@ -33,12 +33,33 @@ async function getUsers(token: string | null) {
 	return bruh;
 }
 
+async function getLeads(token: string | null): Promise<User[]> {
+	if (!token) return [] as User[];
+	const response = await fetch(
+		"https://api.team2658.org/v2/users?accountType=2",
+		{
+			method: "GET",
+			headers: {
+				"Content-Type": "application/json",
+				authorization: "Bearer " + token,
+			},
+		}
+	);
+	const data = await response.json();
+	// return data;
+	const filtered = data.filter((user: any) => {
+		return user.roles[0] == undefined;
+	});
+	return filtered;
+}
+
 type Action = "BASE" | "LEAD" | "ADMIN" | "SUPERUSER" | "DELETE";
 
 export default function Verify() {
 	const [token, setToken] = useState<string | null>(null);
 	const [users, setUsers] = useState<User[]>([]);
 	const [user, setUser] = useState<Number | null>(null);
+	const [leads, setLeads] = useState<User[]>([]);
 
 	async function verifyUser(
 		user: User,
@@ -51,18 +72,61 @@ export default function Verify() {
 		try {
 			if (action != "DELETE") {
 				let accountType: number;
+				let roles: any[] = [];
 				switch (action) {
 					case "BASE":
 						accountType = 1;
 						break;
 					case "LEAD":
 						accountType = 2;
+						roles = [
+							{
+								"name": "Lead",
+								"permissions": {
+									"standScouting": true,
+									"inPitScouting": true,
+									"viewScoutingData": false,
+									"makeBlogPosts": false,
+									"verifySubteamAttendance": true,
+									"verifyAllAttendance": true,
+									"makeAnnouncements": true,
+								},
+							},
+						];
 						break;
 					case "ADMIN":
 						accountType = 3;
+						roles = [
+							{
+								"name": "Lead",
+								"permissions": {
+									"standScouting": true,
+									"inPitScouting": true,
+									"viewScoutingData": false,
+									"makeBlogPosts": false,
+									"verifySubteamAttendance": true,
+									"verifyAllAttendance": true,
+									"makeAnnouncements": true,
+								},
+							},
+						];
 						break;
 					case "SUPERUSER":
 						accountType = 4;
+						roles = [
+							{
+								"name": "Lead",
+								"permissions": {
+									"standScouting": true,
+									"inPitScouting": true,
+									"viewScoutingData": false,
+									"makeBlogPosts": false,
+									"verifySubteamAttendance": true,
+									"verifyAllAttendance": true,
+									"makeAnnouncements": true,
+								},
+							},
+						];
 						break;
 				}
 				const res = await fetch(API_URL + "/users/user/" + user._id, {
@@ -71,7 +135,10 @@ export default function Verify() {
 						"Content-Type": "application/json",
 						"Authorization": "Bearer " + token,
 					},
-					body: JSON.stringify({ "accountType": accountType }),
+					body: JSON.stringify({
+						"accountType": accountType,
+						"roles": roles,
+					}),
 				});
 				console.log(res);
 			} else {
@@ -97,7 +164,9 @@ export default function Verify() {
 
 	useEffect(() => {
 		getUsers(token).then((users) => setUsers(users));
+		getLeads(token).then((leads) => setLeads(leads));
 	}, [token]);
+
 	if (token && Number(user) > 2)
 		return (
 			<main>
@@ -179,6 +248,34 @@ export default function Verify() {
 								</button>
 							</section>
 					  ))}
+				<h1>Leads</h1>
+				{!Array.isArray(leads)
+					? null
+					: leads?.map((lead) => {
+							return (
+								<div key={lead._id}>
+									<h1>
+										{lead.firstname} {lead.lastname}
+									</h1>
+									<h2>{lead.username}</h2>
+									<button
+										onClick={() => {
+											verifyUser(
+												lead,
+												"LEAD",
+												token
+											).then(() =>
+												getLeads(token).then((leads) =>
+													setLeads(leads)
+												)
+											);
+										}}
+									>
+										Give Permissions
+									</button>
+								</div>
+							);
+					  })}
 			</main>
 		);
 	else return <main>FORBIDDEN</main>;
