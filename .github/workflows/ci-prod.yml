@@ -50,3 +50,4 @@ jobs:
                       docker stop website
                       docker rm website
                       docker run -d --name website -p 3000:3000 ghcr.io/frc-emotion/prod-website:amd-latest
+                      docker logout ghcr.io
