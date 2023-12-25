@@ -20,7 +20,7 @@
     .bgAbout {
         /* Placeholder, will eventually put in image from marketing */
         background-size: cover;
-        background-image: url("../../../../public/lvr.jpg");
+        background-image: url("https://cdn.team2658.org/web-public/lvr.jpg");
         background-position: 40%;
         background-repeat: no-repeat;
     }
