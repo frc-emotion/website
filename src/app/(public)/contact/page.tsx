@@ -13,7 +13,7 @@ export default function Home() {
         <main className="relative flex flex-col justify-center bg-black py-8">
             <div className="relative inset-x-0 top-0 h-clampXL w-full overflow-hidden object-cover">
                 <Image
-                    src="/lvr-stands.jpg"
+                    src="https://cdn.team2658.org/web-public/lvr-stands.jpg"
                     alt="Σ-Motion at the Las Vegas Regional"
                     fill={true}
                     className="absolute overflow-hidden object-cover blur-sm brightness-50"
