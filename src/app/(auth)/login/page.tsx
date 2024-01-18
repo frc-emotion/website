@@ -288,13 +288,12 @@ export default function Login() {
 							</div>
 						</form>
 						<div className="mt-3 flex flex-col items-center justify-center lg:flex-row lg:space-x-10 -lg:space-y-2">
-							{/* TODO: Add forgot password backend functionality */}
-							{/* <Link
-                                href="/forgot"
-                                className="text-gray-500 hover:text-gray-700"
-                            >
-                                Forgot password?
-                            </Link> */}
+							<Link
+								href="/forgot"
+								className="text-gray-500 hover:text-gray-700"
+							>
+								Forgot password?
+							</Link>
 							<Link
 								href="/register"
 								className="text-gray-500 hover:text-gray-700"
