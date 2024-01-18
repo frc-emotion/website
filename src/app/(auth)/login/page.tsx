@@ -83,6 +83,8 @@ export default function Login() {
 	const [password, setPassword] = useState("");
 	const router = useRouter();
 
+	const [confirmDel, setConfirmDel] = useState(false);
+
 	const dialogref = useRef<HTMLDialogElement>(null);
 
 	const [thisUser, setThisUser] = useState<string | null>(null);
@@ -124,6 +126,12 @@ export default function Login() {
 								>
 									Log Out
 								</button>
+								<Link
+									href="/"
+									className="w-[50%] rounded border-neutral-800 py-2 font-bold text-black hover:bg-neutral-900 text-center border-2 mx-4"
+								>
+									Go to Home Page
+								</Link>
 							</div>
 							<div className="mt-3 items-center justify-center text-center">
 								<p>
@@ -146,13 +154,30 @@ export default function Login() {
 				</div>
 				<dialog
 					ref={dialogref}
-					className="p-16 flex flex-col bg-gray-800 text-white"
+					className={
+						"p-16 flex flex-col bg-gray-800 text-white" +
+						dialogref.current?.open
+							? ""
+							: " hidden"
+					}
 				>
 					<h2 className="font-bold text-xl m-2">
 						Are you sure you want to delete your account?
 					</h2>
+					<div className="flex flex-row align-bottom relative mt-8">
+						<input
+							type="checkbox"
+							checked={confirmDel}
+							onChange={(e) => {
+								setConfirmDel(e.target.checked);
+							}}
+							className="h-fill mx-2 bottom-0"
+						/>
+						<h4 className="font-bold">Check this box to confirm</h4>
+					</div>
 					<button
 						onClick={() => {
+							if (!confirmDel) return;
 							fetch("https://api.team2658.org/v2/users/me", {
 								method: "DELETE",
 								headers: {
@@ -168,7 +193,7 @@ export default function Login() {
 								router.push("/");
 							});
 						}}
-						className="rounded-md bg-red-600 p-2 font-bold text-white hover:bg-red-900 mt-16 mb-4"
+						className="rounded-md bg-red-600 p-2 font-bold text-white hover:bg-red-900 mt-8 mb-4 mx-8 px-4"
 					>
 						Yes
 					</button>
@@ -176,7 +201,7 @@ export default function Login() {
 						onClick={() => {
 							dialogref.current?.close();
 						}}
-						className="rounded-md bg-gray-700 p-2 font-bold text-white hover:bg-gray-900 mb-16"
+						className="rounded-md bg-gray-700 p-2 font-bold text-white hover:bg-gray-900 mb-16 px-4"
 					>
 						No
 					</button>

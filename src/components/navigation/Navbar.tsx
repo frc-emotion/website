@@ -328,31 +328,12 @@ export default function Navbar({
 								</div>
 							) : null}
 							<div className="mt-[3.5rem] flex flex-col items-center justify-center space-y-5">
-								{/* <Link
-									href="#"
-									className="hover:underline font-semibold text-r2xl"
+								<Link
+									href="/login"
+									className="text-r2xl font-semibold hover:underline"
 								>
-									Settings
-								</Link> */}
-								{auth && user ? (
-									<button
-										className="text-r2xl font-semibold hover:underline"
-										// onClick={() => {
-										// 	document.cookie = `auth=false;admin=false`;
-										// 	localStorage.removeItem("token");
-										// 	router.push("/login");
-										// }}
-									>
-										{user.firstname}
-									</button>
-								) : (
-									<Link
-										href="/login"
-										className="text-r2xl font-semibold hover:underline"
-									>
-										Login
-									</Link>
-								)}
+									{user?.firstname ?? "Login"}
+								</Link>
 							</div>
 						</div>
 					</Popover.Panel>
@@ -475,22 +456,9 @@ export default function Navbar({
 				</div>
 				{/* lg:flex space-x-8 text-rmd font-semibold */}
 				<div className="hidden space-x-8 text-rmd font-semibold lg:flex">
-					{/* 
-					<Link href="#">Settings</Link> */}
-					{auth && user ? (
-						<Link className="hover:underline" href="/login">
-							{
-								// JSON.parse(
-								// 	localStorage.getItem("userObj") as string
-								// ).firstname
-							}
-							{user.firstname}
-						</Link>
-					) : (
-						<Link href="/login" className="hover:underline">
-							Login
-						</Link>
-					)}
+					<Link href="/login" className="hover:underline">
+						{user?.firstname ?? "Login"}
+					</Link>
 				</div>
 			</nav>
 		</div>
