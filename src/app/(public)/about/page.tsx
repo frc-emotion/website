@@ -110,7 +110,7 @@ export default function AboutPage() {
                             Build Leads
                         </h3>
                         <ul className="text-center text-rmd font-semibold">
-                            <li>Drhuv Patel</li>
+                            <li>Dhruv Patel</li>
                             <li>Bella Pineda</li>
                             <li>Katie Schmitz</li>
                             <li>Kaitlyn Nguy (Safety Lead)</li>
