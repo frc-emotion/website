@@ -23,7 +23,7 @@ export default function Forgot() {
 								height={175}
 							/>
 						</div>
-						<h1 className="p-3 text-center text-6xl font-bold">
+						<h1 className="p-3 text-center text-r6xl font-bold">
 							Forgot Password
 						</h1>
 						<p className="text-center font-normal mt-3 mb-2 text-gray-500">
