@@ -113,7 +113,7 @@ export default function AboutPage() {
                             <li>Dhruv Patel</li>
                             <li>Bella Pineda</li>
                             <li>Katie Schmitz</li>
-                            <li>Kaitlyn Nguy (Safety Lead)</li>
+                            <li>Radhika Patil (Safety Lead)</li>
                         </ul>
                     </div>
                     <div className="p-4">
@@ -145,7 +145,7 @@ export default function AboutPage() {
                         </h3>
                         <ul className="text-center text-rmd font-semibold">
                             <li>Sachin Nayak</li>
-                            <li>Shravya Hotathodi</li>
+                            <li>Shravya Hatathodi</li>
                         </ul>
                     </div>
                     <div className="col-span-5 p-4">
