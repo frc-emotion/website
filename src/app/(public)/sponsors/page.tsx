@@ -1,8 +1,9 @@
 import Navbar from "@/components/navigation/Navbar";
 import Footer from "@/components/sections/Footer";
 import Hero from "@/components/sections/home/Hero";
-import SponsorImages2022 from "@/components/sections/sponsors/SponsorImages2022";
+// import SponsorImages2022 from "@/components/sections/sponsors/SponsorImages2022";
 import SponsorImages2023 from "@/components/sections/sponsors/SponsorImages2023";
+import SponsorImages2024 from "@/components/sections/sponsors/SponsorImages2024";
 import Image from "next/image";
 
 export const metadata = {
@@ -25,8 +26,8 @@ export default function Sponsor() {
                     Sponsors
                 </h1>
             </div>
+            <SponsorImages2024 />
             <SponsorImages2023 />
-            <SponsorImages2022 />
         </main>
     );
 }
