@@ -1,34 +1,45 @@
 import "@/styles/globals.css";
 import Image from "next/image";
 
-export default function SponsorImages2023() {
-  const logoFolder = "https://cdn.team2658.org/web-public/robots"; // last character CANNOT be a '/'
+export default function RobotImages() {
+	const logoFolder = "https://cdn.team2658.org/web-public/robots"; // last character CANNOT be a '/'
 	const robots = [
+		/*
 		{
-			name: "Charged Up",
-			year: "2022",
-			path: `${logoFolder}/ChargedUp.jpeg`,
+			name: "Blud",
+			year: "2024",
+			path: `${logoFolder}/Blud.jpeg`,
 			width: 300,
 			height: 300,
-			description: ``,
+			description: '',
 			pos: 'center'
 		},
 		{
-            name: "Rapid React",
-			year: "2021",
+			name: "Charged Up",
+			year: "2023",
+			path: `${logoFolder}/ChargedUp.jpeg`,
+			width: 300,
+			height: 300,
+			description: '',
+			pos: 'center'
+		},
+		// */
+		{
+			name: "Rapid React",
+			year: "2022",
 			path: `${logoFolder}/RapidReact.png`,
 			width: 300,
 			height: 300,
-			description: ``,
+			description: '',
 			pos: 'center'
 		},
 		{
 			name: "Infinite Recharge",
-			year: "2020",
+			year: "2020/2021",
 			path: `${logoFolder}/InfiniteRecharge.jpeg`,
 			width: 300,
 			height: 300,
-			description: ``,
+			description: '',
 			pos: 'center'
 		},
 		{
@@ -37,7 +48,7 @@ export default function SponsorImages2023() {
 			path: `${logoFolder}/DeepSpace.png`,
 			width: 300,
 			height: 300,
-			description: ``,
+			description: '',
 			pos: 'center'
 		},
 		{
@@ -46,7 +57,7 @@ export default function SponsorImages2023() {
 			path: `${logoFolder}/PowerUp.jpeg`,
 			width: 300,
 			height: 300,
-			description: ``,
+			description: '',
 			pos: 'center'
 		},
 		{
@@ -55,7 +66,7 @@ export default function SponsorImages2023() {
 			path: `${logoFolder}/Steamworks.jpeg`,
 			width: 300,
 			height: 300,
-			description: ``,
+			description: '',
 			pos: 'center'
 		},
 		{
@@ -64,7 +75,7 @@ export default function SponsorImages2023() {
 			path: `${logoFolder}/Stronghold.jpeg`,
 			width: 300,
 			height: 300,
-			description: ``,
+			description: '',
 			pos: 'center'
 		},
 		{
@@ -73,8 +84,8 @@ export default function SponsorImages2023() {
 			path: `${logoFolder}/RecycleRush.jpeg`,
 			width: 300,
 			height: 300,
-			description: ``,
-			pos: 'center'
+			description: '',
+			pos: 'bottom'
 		},
 		{
 			name: "Aerial Assist",
@@ -82,7 +93,7 @@ export default function SponsorImages2023() {
 			path: `${logoFolder}/AerialAssist.jpeg`,
 			width: 300,
 			height: 300,
-			description: ``,
+			description: '',
 			pos: 'center'
 		},
 		{
@@ -91,7 +102,7 @@ export default function SponsorImages2023() {
 			path: `${logoFolder}/UltimateAscent.jpeg`,
 			width: 300,
 			height: 300,
-			description: ``,
+			description: '',
 			pos: 'center'
 		},
 		{
@@ -100,7 +111,7 @@ export default function SponsorImages2023() {
 			path: `${logoFolder}/ReboundRumble.jpeg`,
 			width: 300,
 			height: 300,
-			description: ``,
+			description: '',
 			pos: 'center'
 		},
 		{
@@ -109,7 +120,7 @@ export default function SponsorImages2023() {
 			path: `${logoFolder}/LogoMotion.jpeg`,
 			width: 300,
 			height: 300,
-			description: ``,
+			description: '',
 			pos: 'bottom'
 		},
 		{
@@ -118,7 +129,7 @@ export default function SponsorImages2023() {
 			path: `${logoFolder}/Breakaway.jpeg`,
 			width: 300,
 			height: 300,
-			description: ``,
+			description: '',
 			pos: 'center'
 		},
 		{
@@ -127,7 +138,7 @@ export default function SponsorImages2023() {
 			path: `${logoFolder}/Lunacy.jpeg`,
 			width: 300,
 			height: 300,
-			description: ``,
+			description: '',
 			pos: 'center'
 		},
 		{
@@ -136,21 +147,21 @@ export default function SponsorImages2023() {
 			path: `${logoFolder}/Overdrive.png`,
 			width: 300,
 			height: 300,
-			description: ``,
+			description: '',
 			pos: 'bottom'
 		},
 	];
 
 	return (
 		<div
-			className="mx-[5vw] my-[160px] rounded-xl bg-black p-8"
+			className="mx-[5vw] mt-[0px] rounded-xl bg-black p-8"
 			id="robots"
 		>
 			{robots.map((item) => (
-			<div key={"robot-" + item.name} className="grid grid-cols-1 gap-10 md:grid-cols-1 xl:grid-cols-1 mx-[10vw]">
+			<div key={"robot-" + item.name.split(" ").join("")} className="grid grid-cols-1 gap-10 md:grid-cols-1 xl:grid-cols-1 mx-[10vw]">
 					<div className=" bg-teamYellow-500 rounded-xl">
 						<br></br>
-						<div className="text-center  text-[56px] font-semibold p-5">
+						<div className="text-center text-[56px] font-semibold p-5">
 							<h1>{item.name} - {item.year}</h1>
 						</div>
 						<br></br>

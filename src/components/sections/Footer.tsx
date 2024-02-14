@@ -84,7 +84,8 @@ export default function Footer() {
                 </div>
             </div>
             {/* TODO: Get contributors list and rank by most contributions */}
-            {/* <div
+            {/*
+            <div
 				id="footer-copyright"
 				className="h-[4.5vh] w-full flex items-center bg-white"
 			>
@@ -97,10 +98,12 @@ export default function Footer() {
 						>
 							Σ-Motion
 						</Link>{" "}
-						by
+						by Nova Mondal, Jason Ballinger, & Nathan Gillespie
 					</p>
 				</div>
-			</div> */}
+			</div>
+            */
+            }
         </div>
     );
 }

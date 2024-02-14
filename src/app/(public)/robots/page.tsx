@@ -7,7 +7,7 @@ import Image from "next/image";
 export const metadata = {
 	title: "Robots | FRC Team 2658",
 	description:
-		"Sponsorship information for FRC Team 2658, Σ-Motion, from Rancho Bernardo, California",
+		"Previous Σ-Motion Robots from FRC Team 2658, in Rancho Bernardo, California",
 };
 
 export default function Robot() {
