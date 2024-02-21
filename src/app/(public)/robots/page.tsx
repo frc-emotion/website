@@ -12,7 +12,7 @@ export const metadata = {
 
 export default function Robot() {
 	return (
-		<main className="bg-black">
+		<main className="bg-black w-full">
 			<div className="relative h-clampLarge overflow-hidden">
 				<Image
 					src="https://cdn.team2658.org/web-public/trident.jpeg"

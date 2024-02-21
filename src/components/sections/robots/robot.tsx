@@ -154,18 +154,16 @@ export default function RobotImages() {
 
 	return (
 		<div
-			className="mx-[5vw] mt-[0px] rounded-xl bg-black p-8"
+			className="mt-[0px] grid grid-cols-1 lg:grid-cols-2 lg:gap-x-8 rounded-xl justify-center align-middle bg-black p-8"
 			id="robots"
 		>
 			{robots.map((item) => (
-			<div key={"robot-" + item.name.split(" ").join("")} className="grid grid-cols-1 gap-10 md:grid-cols-1 xl:grid-cols-1 mx-[10vw]">
-					<div className=" bg-teamYellow-500 rounded-xl">
-						<br></br>
-						<div className="text-center text-[56px] font-semibold p-5">
-							<h1>{item.name} - {item.year}</h1>
+			<div key={"robot-" + item.name.split(" ").join("")} className="flex relative flex-col items-center justify-center justify-self-center gap-10 mx-2">
+					<div className="bg-teamYellow-500 rounded-xl text-center px-5 py-3">
+						<div className="text-center text-rxl font-semibold inline">
+							<h1 className="inline">{item.name} - {item.year}</h1>
 						</div>
-						<br></br>
-						<div className="flex items-center justify-center object-cover ">
+						<div className="flex items-center justify-center object-cover mt-2">
 							<Image
 								src={item.path}
 								title={item.name}
@@ -173,14 +171,12 @@ export default function RobotImages() {
 								width = {item.width}
 								height = {item.height}
 								quality={100}
-								className={"object-cover w-[50vw] h-[35vw] object-" + item.pos}
+								className={"object-cover lg:w-[50vw] lg:h-[35vw] rounded-lg object-" + item.pos}
 							/>
 						</div>
-						<br></br>
 						<p className="text-center">
 							{item.description}
 						</p>
-						<br></br>
 					</div>
 					
 				<br></br>

@@ -83,27 +83,6 @@ export default function Footer() {
                     </div>
                 </div>
             </div>
-            {/* TODO: Get contributors list and rank by most contributions */}
-            {/*
-            <div
-				id="footer-copyright"
-				className="h-[4.5vh] w-full flex items-center bg-white"
-			>
-				<div id="footer-copyright-text" className="w-full mx-[5vw]">
-					<p className="text-black text-left" my-auto>
-						Developed for{" "}
-						<Link
-							href="https://github.com/frc-emotion"
-							prefetch={false}
-						>
-							Σ-Motion
-						</Link>{" "}
-						by Nova Mondal, Jason Ballinger, & Nathan Gillespie
-					</p>
-				</div>
-			</div>
-            */
-            }
         </div>
     );
 }
