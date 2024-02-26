@@ -59,6 +59,12 @@ export default function SponsorImages2024() {
             width: 150,
             height: 100,
         },
+        {
+            name: "Kinetic CNC",
+            path: `${logoFolder}/2024/kinetic.png`,
+            width: 400,
+            height: 300
+        }
     ];
 
     return (
@@ -92,7 +98,6 @@ export default function SponsorImages2024() {
                 </h2>
                 <ul className="grid grid-cols-1 gap-x-10 md:grid-cols-2 xl:grid-cols-3">
                     <li>North County Waterjet</li>
-                    <li>Kinetic CNC</li>
                 </ul>
             </div>
         </div>
