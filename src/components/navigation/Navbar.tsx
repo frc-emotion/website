@@ -50,10 +50,10 @@ export default function Navbar({
 			title: "Outreach",
 			href: "/outreach",
 		},
-		// {
-		// 	title: "Blog",
-		// 	href: "#",
-		// },
+        {
+            title: "Robots",
+            href: "/robots",
+        },
 		{
 			title: "Contact",
 			href: "/contact",
