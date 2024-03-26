@@ -13,7 +13,7 @@ export default function SponsorImages2024() {
         },
         {
             name: "US Department of Defense",
-            path: `${logoFolder}/2024/dod.png`,
+            path: `${logoFolder}/2024/dodstem.png`,
             width: 500,
             height: 500,
         },
