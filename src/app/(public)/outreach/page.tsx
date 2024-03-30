@@ -190,6 +190,7 @@ export default function Outreach() {
                                                 8th Grade Info Night
                                             </h3>
                                             <div className="flex flex-row space-x-5 font-semibold">
+                                                <h4>3/12/2024</h4>
                                                 <h4>3/15/2022</h4>
                                                 <h4>3/16/2021</h4>
                                             </div>
@@ -290,6 +291,7 @@ export default function Outreach() {
                                         <div className="flex flex-row space-x-5 font-semibold">
                                             <h4>2018-2019</h4>
                                             <h4>2022</h4>
+                                            <h4>2024</h4>
                                         </div>
                                     </div>
                                     <div className="relative col-span-1 mt-3 h-[25vh] md:mr-5">
@@ -327,6 +329,10 @@ export default function Outreach() {
                                     <div className="col-span-1 mt-3 flex flex-col items-center justify-center rounded-lg bg-white py-10 text-black md:col-span-2">
                                         <div className="relative grid w-[85%] grid-cols-1 lg:grid-cols-2 lg:space-x-10">
                                             <ul className="list-disc">
+                                            <li>
+                                                    <b>Port Hueneme Regional</b>:
+                                                    {" 2/29/2024 - 3/3/2024"}
+                                                </li>
                                                 <li>
                                                     <b>Del Mar Regional</b>:
                                                     {" 3/5/2020 - 3/8/2020"}
