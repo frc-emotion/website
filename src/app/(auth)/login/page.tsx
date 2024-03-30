@@ -280,7 +280,7 @@ export default function Login() {
 								<div className="mt-3 flex items-center justify-center">
 									<button
 										type="submit"
-										className="w-[50%] rounded bg-neutral-800 py-2 font-bold text-white hover:bg-neutral-900"
+										className="w-[50%] rounded bg-neutral-900 py-2 font-bold text-white hover:bg-neutral-700"
 									>
 										Login
 									</button>

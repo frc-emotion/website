@@ -4,26 +4,26 @@ import Image from "next/image";
 export default function RobotImages() {
 	const logoFolder = "https://cdn.team2658.org/web-public/robots"; // last character CANNOT be a '/'
 	const robots = [
-		/*
+		
 		{
-			name: "Blud",
+			name: "Crescendo",
 			year: "2024",
-			path: `${logoFolder}/Blud.jpeg`,
+			path: `${logoFolder}/Crescendo.jpg`,
 			width: 300,
 			height: 300,
 			description: '',
-			pos: 'center'
+			pos: 'top'
 		},
 		{
 			name: "Charged Up",
 			year: "2023",
-			path: `${logoFolder}/ChargedUp.jpeg`,
+			path: `${logoFolder}/ChargedUp.jpg`,
 			width: 300,
 			height: 300,
 			description: '',
 			pos: 'center'
 		},
-		// */
+		
 		{
 			name: "Rapid React",
 			year: "2022",
