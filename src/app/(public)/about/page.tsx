@@ -98,11 +98,10 @@ export default function AboutPage() {
                 <section className="grid-cols-5 md:grid">
                     <div className="p-4">
                         <h3 className="m-1 text-center text-r2xl font-bold">
-                            Design <br /> Leads
+                            Design <br /> Lead
                         </h3>
                         <ul className="text-center text-rmd font-semibold">
-                            <li>Simeon Kim</li>
-                            <li>Kaiden Simon</li>
+                            <li>Neev Daga</li>
                         </ul>
                     </div>
                     <div className="p-4">
@@ -110,10 +109,8 @@ export default function AboutPage() {
                             Build Leads
                         </h3>
                         <ul className="text-center text-rmd font-semibold">
-                            <li>Dhruv Patel</li>
-                            <li>Bella Pineda</li>
-                            <li>Katie Schmitz</li>
-                            <li>Radhika Patil (Safety Lead)</li>
+                            <li>Roy Maldonaldo</li>
+                            <li>Radhika</li>
                         </ul>
                     </div>
                     <div className="p-4">
@@ -121,11 +118,8 @@ export default function AboutPage() {
                             Software Leads
                         </h3>
                         <ul className="text-center text-rmd font-semibold">
-                            <li>Nova Mondal</li>
-                            <li>Jason Ballinger</li>
-                            <li>Preena Maruthavelu</li>
-                            <li>Shravan Ramakrishna</li>
-                            <li>Arshan Shokoohi</li>
+                            <li>Nathan Gillespie</li>
+                            <li>Peyton Slape</li>
                         </ul>
                     </div>
                     <div className="p-4">
@@ -133,8 +127,7 @@ export default function AboutPage() {
                             Electrical Leads
                         </h3>
                         <ul className="text-center text-rmd font-semibold">
-                            <li>Ila Gowda</li>
-                            <li>Sarika Patil</li>
+                            <li>Rithik Ohri</li>
                             <li>Robert Morrison</li>
                             <li>Jaden Trinidad</li>
                         </ul>
@@ -144,7 +137,7 @@ export default function AboutPage() {
                             Marketing <br /> Leads
                         </h3>
                         <ul className="text-center text-rmd font-semibold">
-                            <li>Sachin Nayak</li>
+                            <li>Evan Lee</li>
                             <li>Shravya Hatathodi</li>
                         </ul>
                     </div>
@@ -154,22 +147,19 @@ export default function AboutPage() {
                         </h3>
                         <ul className="my-4 grid-cols-3 gap-y-6 text-center text-rlg font-semibold md:grid">
                             <li>
-                                <strong> President: </strong> Karan Thakkar
+                                <strong> President: </strong> Garrett Sayson
                             </li>
                             <li>
-                                <strong>Vice President: </strong> Meghna Rath
+                                <strong>Vice President: </strong> Aarshan Shokoohi
                             </li>
                             <li>
-                                <strong>Vice President: </strong> Garrett Sayson
+                                <strong>Vice President: </strong> Simeon Kim
                             </li>
                             <li>
-                                <strong>Treasurer: </strong> Karan Pothula
+                                <strong>Treasurer: </strong> Vedanth Kuruvadi
                             </li>
                             <li>
-                                <strong>Treasurer: </strong>Ryan Fadaiian
-                            </li>
-                            <li>
-                                <strong>Secretary: </strong> Ashley Applegate
+                                <strong>Secretary: </strong> Sophia Newton
                             </li>
                         </ul>
                     </div>
@@ -228,6 +218,20 @@ export default function AboutPage() {
             </section>
             <section className="grid grid-cols-2 gap-y-6 bg-teamYellow-400 py-8 text-black xl:grid-cols-3">
                 <h2 className="col-span-full m-4 text-center">Alumni</h2>
+                <div className="text-center">
+                    <h3 className="text-r3xl font-semibold">Garret The Carrot</h3>
+                    <h4 className="text-rlg">President, 2024-2025</h4>
+                    <h4 className="text-rlg">Vice President, 2023-2024</h4>
+                </div>
+                <div className="text-center">
+                    <h3 className="text-r3xl font-semibold">Karan Thakkar</h3>
+                    <h4 className="text-rlg">President, 2023-2024</h4>
+                    <h4 className="text-rlg">Vice President, 2022-2023</h4>
+                </div>
+                <div className="text-center">
+                    <h3 className="text-r3xl font-semibold">Meghna Rath</h3>
+                    <h4 className="text-rlg">Vice President, 2023-2024</h4>
+                </div>
                 <div className="text-center">
                     <h3 className="text-r3xl font-semibold">John Chang</h3>
                     <h4 className="text-rlg">President, 2022-2023</h4>
