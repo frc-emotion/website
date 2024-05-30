@@ -19,6 +19,317 @@ export const metadata: Metadata = {
 };
 
 export default function AboutPage() {
+    const advisorsAndMentors = [
+        {
+            name: "Katherine Rumsey",
+            title: "Advisor"
+        },
+        {
+            name: "Brian Dunlea",
+            title: "Advisor"
+        },
+        {
+            name: "Evengy Korol",
+            title: "Mentor"
+        },
+        {
+            name: "Clifford Harrison",
+            title: "Mentor"
+        },
+        {
+            name: "Stanly Kudinov",
+            title: "Mentor"
+        },
+        {
+            name: "Sherveen Shokoohi",
+            title: "Mentor"
+        },
+        {
+            name: "Michael Ballinger",
+            title: "Mentor"
+        },
+        {
+            name: "Ronnie Villagran",
+            title: "Mentor"
+        },
+        {
+            name: "Veerabhadram Devi",
+            title: "Mentor"
+        },
+        {
+            name: "Jason Ballinger",
+            title: "Mentor"
+        }
+    ];
+    const Alumni = [
+        /*
+        {
+            name: "Garrett the Carrot",
+            roles: [
+                {
+                    title: "Overlord",
+                    year: "2024-2099"
+                },
+                {
+                    title: "Carrot",
+                    year: "0000-9999"
+                }
+            ]
+        },
+        */
+        {
+            
+            name: "Karan Thakkar",
+            roles: [
+                {
+                    title: "President",
+                    year: "2023-2024"
+                },
+                {
+                    title: "Vice President",
+                    year: "2022-2023"
+                }
+            ]
+        },
+        {
+            name: "Meghna Rath",
+            roles: [
+                {
+                    title: "Vice President",
+                    year: "2023-2024"
+                }
+            ]
+        },
+        {
+            name: "John Chang",
+            roles: [
+                {
+                    title: "President",
+                    year: "2022-2023"
+                },
+                {
+                    title: "Vice President",
+                    year: "2021-2022"
+                }
+            ]
+        },
+        {
+            name: "Keshav Narasimma",
+            roles: [
+                {
+                    title: "President",
+                    year: "2021-2022"
+                },
+                {
+                    title: "Vice President",
+                    year: "2020-2021"
+                }
+            ]
+        },
+        {
+            name: "Toshko Andreev",
+            roles: [
+                {
+                    title: "President",
+                    year: "2020-2021"
+                },
+                {
+                    title: "Vice President",
+                    year: "2019-2020"
+                }
+            ]
+        },
+        {
+            name: "Krish Thakkar",
+            roles: [
+                {
+                    title: "President",
+                    year: "2020-2021"
+                },
+                {
+                    title: "Vice President",
+                    year: "2019-2020"
+                }
+            ]
+        },
+        {
+            name: "Beni Korol",
+            roles: [
+                {
+                    title: "President",
+                    year: "2019-2020"
+                },
+                {
+                    title: "Vice President",
+                    year: "2018-2019"
+                }
+            ]
+        },
+        {
+            name: "Andrew da Cunha",
+            roles: [
+                {
+                    title: "President",
+                    year: "2018-2019"
+                },
+                {
+                    title: "Vice President",
+                    year: "2017-2018"
+                }
+            ]
+        },
+        {
+            name: "Anmol Seth",
+            roles: [
+                {
+                    title: "President",
+                    year: "2017-2018"
+                },
+                {
+                    title: "Vice President",
+                    year: "2016-2017"
+                }
+            ]
+        },
+        {
+            name: "Nicolas Wiscour-Conter",
+            roles: [
+                {
+                    title: "President",
+                    year: "2016-2017"
+                },
+                {
+                    title: "Vice President",
+                    year: "2015-2016"
+                }
+            ]
+        },
+        {
+            name: "Mario Maldonado-Santos",
+            roles: [
+                {
+                    title: "President",
+                    year: "2015-2016"
+                }
+            ]
+        },
+        {
+            name: "Nikhil Shinde",
+            roles: [
+                {
+                    title: "Vice President",
+                    year: "2014-2015"
+                }
+            ]
+        },
+        {
+            name: "Yashes Srinivasan",
+            roles: [
+                {
+                    title: "President",
+                    year: "2014-2015"
+                },
+                {
+                    title: "Vice President",
+                    year: "2013-2014"
+                }
+            ]
+        },
+        {
+            name: "Nithin Dharmaraj",
+            roles: [
+                {
+                    title: "President",
+                    year: "2023-2014"
+                }
+            ]
+        },
+        {
+            name: "Aditya Zadgaonkar",
+            roles: [
+                {
+                    title: "President",
+                    year: "2012-2013"
+                }
+            ]
+        },
+        {
+            name: "Eric Hammon",
+            roles: [
+                {
+                    title: "Vice President",
+                    year: "2012-2013"
+                }
+            ]
+        },
+        {
+            name: "Karthik Jayakumar",
+            roles: [
+                {
+                    title: "President",
+                    year: "2011-2012"
+                }
+            ]
+        },
+        {
+            name: "Wassim Alsafi",
+            roles: [
+                {
+                    title: "Vice President",
+                    year: "2011-2012"
+                }
+            ]
+        },
+        {
+            name: "Paul Warren",
+            roles: [
+                {
+                    title: "President",
+                    year: "2010-2011"
+                }
+            ]
+        },
+        {
+            name: "Zachary Forster",
+            roles: [
+                {
+                    title: "President",
+                    year: "2009-2010"
+                }
+            ]
+        },
+        {
+            name: "Sahar Mesri",
+            roles: [
+                {
+                    title: "Vice President",
+                    year: "2009-2011"
+                }
+            ]
+        },
+        {
+            name: "Jay Dey",
+            roles: [
+                {
+                    title: "President",
+                    year: "2008-2009"
+                }
+            ]
+        },
+        {
+            name: "Richard Lin",
+            roles: [
+                {
+                    title: "Vice President",
+                    year: "2008-2009"
+                },
+                {
+                    title: "President",
+                    year: "2007-2008"
+                }
+            ]
+        }
+    ];
     return (
         <main className="min-h-[55vh]">
             <div className="bgAbout table h-[30rem] w-full overflow-hidden">
@@ -110,7 +421,7 @@ export default function AboutPage() {
                         </h3>
                         <ul className="text-center text-rmd font-semibold">
                             <li>Roy Maldonaldo</li>
-                            <li>Radhika</li>
+                            <li>Radhika Patil</li>
                         </ul>
                     </div>
                     <div className="p-4">
@@ -150,11 +461,13 @@ export default function AboutPage() {
                                 <strong> President: </strong> Garrett Sayson
                             </li>
                             <li>
-                                <strong>Vice President: </strong> Aarshan Shokoohi
+                                <strong>Vice President: </strong> Arshan Shokoohi
                             </li>
                             <li>
                                 <strong>Vice President: </strong> Simeon Kim
                             </li>
+                        </ul>
+                        <ul className="my-4 grid-cols-2 gap-y-6 text-center text-rlg font-semibold md:grid">
                             <li>
                                 <strong>Treasurer: </strong> Vedanth Kuruvadi
                             </li>
@@ -167,179 +480,25 @@ export default function AboutPage() {
             </section>
             <section className="width-screen grid grid-cols-2 gap-y-12 bg-black py-8 text-teamYellow-400">
                 <h2 className="col-span-2 text-center">Advisors and Mentors</h2>
-                <div>
+                {advisorsAndMentors.map((item) => (
+                    <div>
                     <h3 className="text-center text-r3xl font-bold">
-                        Katherine Rumsey
+                        {item.name}
                     </h3>
-                    <h4 className="text-center text-rlg">Advisor</h4>
+                    <h4 className="text-center text-rlg">{item.title}</h4>
                 </div>
-                <div>
-                    <h3 className="text-center text-r3xl font-bold">
-                        Brian Dunlea
-                    </h3>
-                    <h4 className="text-center text-rlg">Advisor</h4>
-                </div>
-                <div>
-                    <h3 className="text-center text-r3xl font-bold">
-                        Evengy Korol
-                    </h3>
-                    <h4 className="text-center text-rlg">Mentor</h4>
-                </div>
-                <div>
-                    <h3 className="text-center text-r3xl font-bold">
-                        Clifford Harrison
-                    </h3>
-                    <h4 className="text-center text-rlg">Mentor</h4>
-                </div>
-                <div>
-                    <h3 className="text-center text-r3xl font-bold">
-                        Stanly Kudinov
-                    </h3>
-                    <h4 className="text-center text-rlg">Mentor</h4>
-                </div>
-                <div>
-                    <h3 className="text-center text-r3xl font-bold">
-                        Sherveen Shokoohi
-                    </h3>
-                    <h4 className="text-center text-rlg">Mentor</h4>
-                </div>
-                <div>
-                    <h3 className="text-center text-r3xl font-bold">
-                        Michael Ballinger
-                    </h3>
-                    <h4 className="text-center text-rlg">Mentor</h4>
-                </div>
-                <div>
-                    <h3 className="text-center text-r3xl font-bold">
-                        Ronnie Villagran
-                    </h3>
-                    <h4 className="text-center text-rlg">Mentor</h4>
-                </div>
+                ))}
             </section>
             <section className="grid grid-cols-2 gap-y-6 bg-teamYellow-400 py-8 text-black xl:grid-cols-3">
                 <h2 className="col-span-full m-4 text-center">Alumni</h2>
+                {Alumni.map((item) => (
                 <div className="text-center">
-                    <h3 className="text-r3xl font-semibold">Garret The Carrot</h3>
-                    <h4 className="text-rlg">President, 2024-2025</h4>
-                    <h4 className="text-rlg">Vice President, 2023-2024</h4>
+                    <h3 className="text-r3xl font-semibold">{item.name}</h3>
+                    {item.roles.map((role) => (
+                        <h4 className="text-rlg">{role.title}, {role.year}</h4>                        
+                    ))}
                 </div>
-                <div className="text-center">
-                    <h3 className="text-r3xl font-semibold">Karan Thakkar</h3>
-                    <h4 className="text-rlg">President, 2023-2024</h4>
-                    <h4 className="text-rlg">Vice President, 2022-2023</h4>
-                </div>
-                <div className="text-center">
-                    <h3 className="text-r3xl font-semibold">Meghna Rath</h3>
-                    <h4 className="text-rlg">Vice President, 2023-2024</h4>
-                </div>
-                <div className="text-center">
-                    <h3 className="text-r3xl font-semibold">John Chang</h3>
-                    <h4 className="text-rlg">President, 2022-2023</h4>
-                    <h4 className="text-rlg">Vice President, 2021-2022</h4>
-                </div>
-                <div className="text-center">
-                    <h3 className="text-r3xl font-semibold">
-                        Keshav Narasimma
-                    </h3>
-                    <h4 className="text-rlg">President, 2021-2022</h4>
-                    <h4 className="text-rlg">Vice President, 2020-2021</h4>
-                </div>
-                <div className="text-center">
-                    <h3 className="text-r3xl font-semibold">Toshko Andreev</h3>
-                    <h4 className="text-rlg">President, 2020-2021</h4>
-                    <h4 className="text-rlg">Vice President, 2019-2020</h4>
-                </div>
-                <div className="text-center">
-                    <h3 className="text-r3xl font-semibold">Krish Thakkar</h3>
-                    <h4 className="text-rlg">President, 2020-2021</h4>
-                    <h4 className="text-rlg">Vice President, 2019-2020</h4>
-                </div>
-                <div className="text-center">
-                    <h3 className="text-r3xl font-semibold">Beni Korol</h3>
-                    <h4 className="text-rlg">President, 2019-2020</h4>
-                    <h4 className="text-rlg">Vice President, 2018-2019</h4>
-                </div>
-                <div className="text-center">
-                    <h3 className="text-r3xl font-semibold">Andrew da Cunha</h3>
-                    <h4 className="text-rlg">President, 2018-2019</h4>
-                    <h4 className="text-rlg">Vice President, 2017-2018</h4>
-                </div>
-                <div className="text-center">
-                    <h3 className="text-r3xl font-semibold">Anmol Seth</h3>
-                    <h4 className="text-rlg">President, 2017-2018</h4>
-                    <h4 className="text-rlg">Vice President, 2016-2017</h4>
-                </div>
-                <div className="text-center">
-                    <h3 className="text-r3xl font-semibold">
-                        Nicolas Wiscour-Conter
-                    </h3>
-                    <h4 className="text-rlg">President, 2016-2017</h4>
-                    <h4 className="text-rlg">Vice President, 2015-2016</h4>
-                </div>
-                <div className="text-center">
-                    <h3 className="text-r3xl font-semibold">
-                        Mario Maldonado-Santos
-                    </h3>
-                    <h4 className="text-rlg">President, 2015-2016</h4>
-                </div>
-                <div className="text-center">
-                    <h3 className="text-r3xl font-semibold">Nikhil Shinde</h3>
-                    <h4 className="text-rlg">Vice President, 2014-2015</h4>
-                </div>
-                <div className="text-center">
-                    <h3 className="text-r3xl font-semibold">
-                        Yashes Srinivasan
-                    </h3>
-                    <h4 className="text-rlg">President, 2014-2015</h4>
-                    <h4 className="text-rlg">Vice President, 2013-2014</h4>
-                </div>
-                <div className="text-center">
-                    <h3 className="text-r3xl font-semibold">
-                        Nithin Dharmaraj
-                    </h3>
-                    <h4 className="text-rlg">President, 2013-2014</h4>
-                </div>
-                <div className="text-center">
-                    <h3 className="text-r3xl font-semibold">
-                        Aditya Zadgaonkar
-                    </h3>
-                    <h4 className="text-rlg">President, 2012-2013</h4>
-                </div>
-                <div className="text-center">
-                    <h3 className="text-r3xl font-semibold">Eric Hammon</h3>
-                    <h4 className="text-rlg">Vice President, 2012-2013</h4>
-                </div>
-                <div className="text-center">
-                    <h3 className="text-r3xl font-semibold">
-                        Karthik Jayakumar
-                    </h3>
-                    <h4 className="text-rlg">President, 2011-2012</h4>
-                </div>
-                <div className="text-center">
-                    <h3 className="text-r3xl font-semibold">Wassim Alsafi</h3>
-                    <h4 className="text-rlg">Vice President, 2011-2012</h4>
-                </div>
-                <div className="text-center">
-                    <h3 className="text-r3xl font-semibold">Paul Warren</h3>
-                    <h4 className="text-rlg">President, 2010-2011</h4>
-                </div>
-                <div className="text-center">
-                    <h3 className="text-r3xl font-semibold">Zachary Forster</h3>
-                    <h4 className="text-rlg">President, 2009-2010</h4>
-                </div>
-                <div className="text-center">
-                    <h3 className="text-r3xl font-semibold">Sahar Mesri</h3>
-                    <h4 className="text-rlg">Vice President, 2009-2011</h4>
-                </div>
-                <div className="text-center">
-                    <h3 className="text-r3xl font-semibold">Jay Dey</h3>
-                    <h4 className="text-rlg">President, 2008-2009</h4>
-                </div>
-                <div className="text-center">
-                    <h3 className="text-r3xl font-semibold">Richard Lin</h3>
-                    <h4 className="text-rlg">Vice President, 2008-2009</h4>
-                    <h4 className="text-rlg">President, 2007-2008</h4>
-                </div>
+                ))}
             </section>
         </main>
     );
