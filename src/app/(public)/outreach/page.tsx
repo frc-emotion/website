@@ -1,3 +1,4 @@
+import OutreachEvent from "@/components/sections/outreach/OutreachEvent";
 import Image from "next/image";
 
 export const metadata = {
@@ -54,6 +55,52 @@ export default function Outreach() {
     // 	}
     // 	return true;
     // };
+
+    const UpcomingEvents = [
+        {
+            title: "Fairbotics 2024",
+            description: `
+            We will be competing June 12-14 at 
+            the San Diego Fair at the Del Mar Fairgrounds
+            for the Fairbotics 2024 offseason competiton.
+            Additionally, we are helping run the event with
+            over 30 student volunteers. 
+            `,
+            imageSrc: "",
+            links: [ 
+                {
+                    link: "",
+                    text: "No links yet!"
+                }
+            ]
+        }
+    ]
+
+    const SchoolEvents = [
+        {
+            title: "CTE Expo 2024",
+            description: `Team Σ-Motion participated
+            in PUSD's 2024 Career
+            Technical Education
+            Expo, showcasing our robot, 
+            talking to families about our team, 
+            and inspiring a new generation 
+            of FIRST students.`,
+            imageSrc: "https://cdn.team2658.org/web-public/outreach/cte-expo.jpeg",
+            links: 
+            [
+                {
+                    link: "https://www.sandiegouniontribune.com/pomerado-news/news/story/2024-05-22/poway-unified-students-share-what-they-learned-through-career-technical-education-expo#:~:text=Rancho%20Bernardo%20High%20Robotics%20Team%202658",
+                    text: "in the news"
+                },
+                {
+                    link: "https://www.instagram.com/p/C7Ds5cnL2s8/",
+                    text: "on instagram"
+                }
+            ]
+
+        }
+    ];
 
     return (
         // <div className="overflow-hidden bg-teamYellow-500 p-0">
@@ -117,6 +164,22 @@ export default function Outreach() {
 								Event Calendar
 							</button>
 						</div> */}
+                        <div id="upcoming">
+                            <h2 className="text-r2xl font-bold">
+                                Upcoming Events
+                            </h2>
+                            {UpcomingEvents.map(
+                                (event) => (
+                                    <OutreachEvent 
+                                        title={event.title}
+                                        description={event.description}
+                                        imageSrc={event.imageSrc}
+                                        links={event.links}
+                                    />
+                                )
+                            )}
+                        </div>
+
                         <div id="school">
                             {/* <button
 								className={`text-r2xl ${
@@ -136,7 +199,15 @@ export default function Outreach() {
                             {/* {true ? ( */}
                             <div id="schoolSetionContent" className="mb-5">
                                 <div className="grid-rows-auto grid">
-                                    <div className="row-span-auto grid grid-cols-1 md:grid-cols-2">
+                                    {SchoolEvents.map((event) => (
+                                        <OutreachEvent 
+                                            title={event.title}
+                                            description={event.description}
+                                            imageSrc={event.imageSrc}
+                                            links={event.links}
+                                        />
+                                    ))}
+                                    {/* <div className="row-span-auto grid grid-cols-1 md:grid-cols-2">
                                         <div className="relative col-span-1 mb-5 mt-1 flex h-[45vh] select-none overflow-hidden rounded-lg md:mr-5 -md:items-center -md:justify-center">
                                             <Image
                                                 src="https://cdn.team2658.org/web-public/outreach/cte-expo.jpeg"
@@ -149,40 +220,50 @@ export default function Outreach() {
                                             <div className="mx-8 flex flex-col justify-center -md:items-center">
                                                 <h3 className="text-r3xl font-bold">
                                                     <span className="bg-gradient-to-r from-[#00C498] to-[#19AEE7] bg-clip-text text-transparent">
-                                                        CTE Expo 2023
+                                                        CTE Expo 2024
                                                     </span>
                                                 </h3>
                                                 <p className="-md:mx-6 -md:text-center">
                                                     Team Σ-Motion participated
-                                                    in PUSD's 2023 Career
-                                                    Technical Education{" "}
-                                                    {"(CTE) "}
-                                                    Expo, showcasing our robot
-                                                    and talking to families
-                                                    about our team and FIRST.
+                                                    in PUSD's 2024 Career
+                                                    Technical Education
+                                                    Expo, showcasing our robot, 
+                                                    talking to families about our team, 
+                                                    and inspiring a new generation 
+                                                    of FIRST students.
                                                 </p>
                                                 <div className="mt-3 flex flex-row space-x-3 font-semibold">
                                                     <p>more:</p>
                                                     <a
                                                         className="underline"
-                                                        href="https://www.sandiegouniontribune.com/pomerado-news/news/story/2023-05-31/poway-unifieds-sixth-annual-cte-expo-showcases-student-projects-and-exhibits#:~:text=Robotics%20at%20Rancho%20Bernardo%20High"
-                                                        aria-label="San Diego Union Tribune article about the 2023 PUSD CTE Expo, featuring Team 2658."
+                                                        href="https://www.sandiegouniontribune.com/pomerado-news/news/story/2024-05-22/poway-unified-students-share-what-they-learned-through-career-technical-education-expo#:~:text=Rancho%20Bernardo%20High%20Robotics%20Team%202658"
+                                                        aria-label="San Diego Union Tribune article about the 2024 PUSD CTE Expo, featuring Team 2658."
                                                         target="_blank"
                                                     >
                                                         in the news
                                                     </a>
                                                     <a
                                                         className="underline"
-                                                        href="https://www.instagram.com/p/CsnKCyarjjS/"
-                                                        aria-label="Instagram/frcteam2658: 2023 CTE Expo"
+                                                        href="https://www.instagram.com/p/C7Ds5cnL2s8/"
+                                                        aria-label="Instagram/frcteam2658: 2024 CTE Expo"
                                                         target="_blank"
                                                     >
                                                         on instagram
                                                     </a>
                                                 </div>
+                                                <div className="mt-3 flex flex-row space-x-3 font-semibold">
+                                                    <p>previously:</p>
+                                                    <a 
+                                                        className="underline" 
+                                                        href="https://www.instagram.com/p/CsnKCyarjjS/"
+
+                                                    >
+                                                        CTE 2023
+                                                    </a>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
+                                    </div> */}
                                     {/* set to h-[55vh] if 2nd row is ever used on larger screens */}
                                     <div className="row-span-auto grid-rows-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 omd:grid-rows-2">
                                         <div className="col-span-1 flex flex-col items-center justify-center rounded-lg bg-white py-10 text-black md:mr-5">
