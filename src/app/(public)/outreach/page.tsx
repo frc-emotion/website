@@ -106,7 +106,7 @@ export default function Outreach() {
         {
             title: "Bobcat 2 Bronco Day",
             times: [
-                "No Clue"
+                "5/23/24"
             ]
         },
         {
