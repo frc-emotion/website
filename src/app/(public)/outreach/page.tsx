@@ -66,7 +66,8 @@ export default function Outreach() {
             Additionally, we are helping run the event with
             over 30 student volunteers. 
             `,
-            imageSrc: "",
+            imageSrc: "https://cdn.team2658.org/web-public/outreach/competitions/fairbotics.png",
+            imageFillType: "object-contain",
             links: [ 
                 {
                     link: "",
@@ -76,7 +77,7 @@ export default function Outreach() {
         }
     ]
 
-    const SchoolEvents = [
+    const MainSchoolEvents = [
         {
             title: "CTE Expo 2024",
             description: `Team Σ-Motion participated
@@ -87,6 +88,7 @@ export default function Outreach() {
             and inspiring a new generation 
             of FIRST students.`,
             imageSrc: "https://cdn.team2658.org/web-public/outreach/cte-expo.jpeg",
+            imageFillType: "object-cover",
             links: 
             [
                 {
@@ -98,7 +100,34 @@ export default function Outreach() {
                     text: "on instagram"
                 }
             ]
-
+        }
+    ];
+    const SchoolEvents = [
+        {
+            title: "Bobcat 2 Bronco Day",
+            times: [
+                "No Clue"
+            ]
+        },
+        {
+            title: "8th Grade Info Night",
+            times: [
+                "3/12/2024",
+                "3/15/2022",
+                "3/16/2021"
+            ]
+        },
+        {
+            title: "WWES Science Night",
+            times: [
+                "2014-2016"
+            ]
+        },
+        {
+            title: "RBHS Robotics Open House",
+            times: [
+                "6/7/2021"
+            ]
         }
     ];
 
@@ -174,6 +203,7 @@ export default function Outreach() {
                                         title={event.title}
                                         description={event.description}
                                         imageSrc={event.imageSrc}
+                                        imageFillType={event.imageFillType}
                                         links={event.links}
                                     />
                                 )
@@ -199,11 +229,12 @@ export default function Outreach() {
                             {/* {true ? ( */}
                             <div id="schoolSetionContent" className="mb-5">
                                 <div className="grid-rows-auto grid">
-                                    {SchoolEvents.map((event) => (
+                                    {MainSchoolEvents.map((event) => (
                                         <OutreachEvent 
                                             title={event.title}
                                             description={event.description}
                                             imageSrc={event.imageSrc}
+                                            imageFillType={event.imageFillType}
                                             links={event.links}
                                         />
                                     ))}
@@ -263,40 +294,19 @@ export default function Outreach() {
                                                 </div>
                                             </div>
                                         </div>
-                                    </div> */}
+                                    </div>
                                     {/* set to h-[55vh] if 2nd row is ever used on larger screens */}
                                     <div className="row-span-auto grid-rows-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 omd:grid-rows-2">
-                                        <div className="col-span-1 flex flex-col items-center justify-center rounded-lg bg-white py-10 text-black md:mr-5">
-                                            <h3 className="mx-8 text-center text-r2xl font-bold">
-                                                8th Grade Info Night
-                                            </h3>
-                                            <div className="flex flex-row space-x-5 font-semibold">
-                                                <h4>3/12/2024</h4>
-                                                <h4>3/15/2022</h4>
-                                                <h4>3/16/2021</h4>
+                                        {SchoolEvents.map((event) => (
+                                            <div className="col-span-1 flex flex-col items-center mt-3 justify-center rounded-lg bg-white py-10 text-black md:mr-5">
+                                                <h3 className="mx-8 text-center text-r2xl font-bold">
+                                                    {event.title}
+                                                </h3>
+                                                <div className="flex flex-row space-x-5 font-semibold">
+                                                    {event.times.map((time) => (<h4>{time}</h4>))}
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div className="col-span-1 flex flex-col items-center justify-center rounded-lg bg-black py-10 text-white lg:mr-5 -md:mt-5">
-                                            <h3 className="mx-8 text-center text-r2xl font-bold">
-                                                WWES Science Night
-                                            </h3>
-                                            <div className="flex flex-row space-x-5 font-semibold">
-                                                <h4>2014-2016</h4>
-                                            </div>
-                                        </div>
-                                        {/* removed omd:mr-5 */}
-                                        <div className="col-span-1 flex flex-col items-center justify-center rounded-lg bg-white py-10 text-black -lg:mt-3 omd:col-span-2">
-                                            <h3 className="mx-8 text-center text-r2xl font-bold olg:mx-[5.5rem]">
-                                                RBHS Robotics Open House
-                                            </h3>
-                                            <div className="flex flex-row space-x-5 font-semibold">
-                                                <h4>6/7/2021</h4>
-                                            </div>
-                                        </div>
-                                        {/* use view all when there is more to view. remember to change omd:grid-rows-2 to md:grid-rows-2 if this is re-eneabled */}
-                                        {/* <div className="lg:col-span-3 mt-5 bg-white rounded-lg">
-												view all
-											</div> */}
+                                        ))}
                                     </div>
                                 </div>
                             </div>

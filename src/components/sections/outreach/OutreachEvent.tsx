@@ -4,6 +4,7 @@ interface OutreachProps {
     title : string, 
     description : string, 
     imageSrc : string,
+    imageFillType : string,
     links: {link : string, text : string}[]
 }
 
@@ -15,7 +16,7 @@ export default function OutreachEvent(props : OutreachProps) {
                     src={props.imageSrc}
                     alt=""
                     fill={true}
-                    className="object-cover"
+                    className={`${props.imageFillType}`}
                 />
             </div>
             <div className="mb-5 mt-1 flex flex-col justify-center -md:items-center bg-black rounded-lg mr-0">
