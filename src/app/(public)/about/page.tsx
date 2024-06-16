@@ -11,7 +11,7 @@ import {
     FaWrench,
 } from "react-icons/fa";
 import { FiBatteryCharging } from "react-icons/fi";
-
+import Leadership from "./Leadership.json";
 export const metadata: Metadata = {
     title: "About Us | FRC Team 2658",
     description:
@@ -19,6 +19,7 @@ export const metadata: Metadata = {
 };
 
 export default function AboutPage() {
+
     return (
         <main className="min-h-[55vh]">
             <div className="bgAbout table h-[30rem] w-full overflow-hidden">
@@ -96,80 +97,40 @@ export default function AboutPage() {
             <section className="bg-teamYellow-400 py-8">
                 <h2 className="text-center">Student Leadership</h2>
                 <section className="grid-cols-5 md:grid">
-                    <div className="p-4">
-                        <h3 className="m-1 text-center text-r2xl font-bold">
-                            Design <br /> Leads
-                        </h3>
-                        <ul className="text-center text-rmd font-semibold">
-                            <li>Simeon Kim</li>
-                            <li>Kaiden Simon</li>
-                        </ul>
-                    </div>
-                    <div className="p-4">
-                        <h3 className="m-1 text-center text-r2xl font-bold">
-                            Build Leads
-                        </h3>
-                        <ul className="text-center text-rmd font-semibold">
-                            <li>Dhruv Patel</li>
-                            <li>Bella Pineda</li>
-                            <li>Katie Schmitz</li>
-                            <li>Radhika Patil (Safety Lead)</li>
-                        </ul>
-                    </div>
-                    <div className="p-4">
-                        <h3 className="m-1 text-center text-r2xl font-bold">
-                            Software Leads
-                        </h3>
-                        <ul className="text-center text-rmd font-semibold">
-                            <li>Nova Mondal</li>
-                            <li>Jason Ballinger</li>
-                            <li>Preena Maruthavelu</li>
-                            <li>Shravan Ramakrishna</li>
-                            <li>Arshan Shokoohi</li>
-                        </ul>
-                    </div>
-                    <div className="p-4">
-                        <h3 className="m-1 text-center text-r2xl font-bold">
-                            Electrical Leads
-                        </h3>
-                        <ul className="text-center text-rmd font-semibold">
-                            <li>Ila Gowda</li>
-                            <li>Sarika Patil</li>
-                            <li>Robert Morrison</li>
-                            <li>Jaden Trinidad</li>
-                        </ul>
-                    </div>
-                    <div className="p-4">
-                        <h3 className="m-1 text-center text-r2xl font-bold">
-                            Marketing <br /> Leads
-                        </h3>
-                        <ul className="text-center text-rmd font-semibold">
-                            <li>Sachin Nayak</li>
-                            <li>Shravya Hatathodi</li>
-                        </ul>
-                    </div>
+                    {Object.entries(Leadership.Leads).map(([key, value]) => (
+                        <div key={key} className="p-4">
+                            <h3 className="m-1 text-center text-r2xl font-bold">
+                                {key} {value.length > 1 ? "Leads" : "Lead"}
+                            </h3>
+                            <ul className="text-center text-rmd font-semibold">
+                                {value.map((lead) => (
+                                    <li key={lead}>{lead}</li>
+                                ))}
+                            </ul>
+                        </div>
+                    ))}
+
                     <div className="col-span-5 p-4">
                         <h3 className="m-1 text-center text-r2xl font-bold">
                             Execs
                         </h3>
                         <ul className="my-4 grid-cols-3 gap-y-6 text-center text-rlg font-semibold md:grid">
                             <li>
-                                <strong> President: </strong> Karan Thakkar
+                                <strong> President: </strong> Garrett Sayson
                             </li>
                             <li>
-                                <strong>Vice President: </strong> Meghna Rath
+                                <strong>Vice President: </strong> Arshan Shokoohi
                             </li>
                             <li>
-                                <strong>Vice President: </strong> Garrett Sayson
+                                <strong>Vice President: </strong> Simeon Kim
+                            </li>
+                        </ul>
+                        <ul className="my-4 grid-cols-2 gap-y-6 text-center text-rlg font-semibold md:grid">
+                            <li>
+                                <strong>Treasurer: </strong> Vedanth Kuruvadi
                             </li>
                             <li>
-                                <strong>Treasurer: </strong> Karan Pothula
-                            </li>
-                            <li>
-                                <strong>Treasurer: </strong>Ryan Fadaiian
-                            </li>
-                            <li>
-                                <strong>Secretary: </strong> Ashley Applegate
+                                <strong>Secretary: </strong> Sophia Newton
                             </li>
                         </ul>
                     </div>
@@ -177,165 +138,34 @@ export default function AboutPage() {
             </section>
             <section className="width-screen grid grid-cols-2 gap-y-12 bg-black py-8 text-teamYellow-400">
                 <h2 className="col-span-2 text-center">Advisors and Mentors</h2>
-                <div>
-                    <h3 className="text-center text-r3xl font-bold">
-                        Katherine Rumsey
-                    </h3>
-                    <h4 className="text-center text-rlg">Advisor</h4>
-                </div>
-                <div>
-                    <h3 className="text-center text-r3xl font-bold">
-                        Brian Dunlea
-                    </h3>
-                    <h4 className="text-center text-rlg">Advisor</h4>
-                </div>
-                <div>
-                    <h3 className="text-center text-r3xl font-bold">
-                        Evengy Korol
-                    </h3>
-                    <h4 className="text-center text-rlg">Mentor</h4>
-                </div>
-                <div>
-                    <h3 className="text-center text-r3xl font-bold">
-                        Clifford Harrison
-                    </h3>
-                    <h4 className="text-center text-rlg">Mentor</h4>
-                </div>
-                <div>
-                    <h3 className="text-center text-r3xl font-bold">
-                        Stanly Kudinov
-                    </h3>
-                    <h4 className="text-center text-rlg">Mentor</h4>
-                </div>
-                <div>
-                    <h3 className="text-center text-r3xl font-bold">
-                        Sherveen Shokoohi
-                    </h3>
-                    <h4 className="text-center text-rlg">Mentor</h4>
-                </div>
-                <div>
-                    <h3 className="text-center text-r3xl font-bold">
-                        Michael Ballinger
-                    </h3>
-                    <h4 className="text-center text-rlg">Mentor</h4>
-                </div>
-                <div>
-                    <h3 className="text-center text-r3xl font-bold">
-                        Ronnie Villagran
-                    </h3>
-                    <h4 className="text-center text-rlg">Mentor</h4>
-                </div>
+                {Leadership.Advisors.map((advisor) => (
+                    <div key={advisor}>
+                        <h3 className="text-center text-r3xl font-bold">
+                            {advisor}
+                        </h3>
+                        <h4 className="text-center text-rlg">Advisor</h4>
+                    </div>
+                ))}
+                {Leadership.Mentors.map((mentor) => (
+                    <div key={mentor}>
+                        <h3 className="text-center text-r3xl font-bold">
+                            {mentor}
+                        </h3>
+                        <h4 className="text-center text-rlg">Mentors</h4>
+                    </div>
+                ))}
+
             </section>
             <section className="grid grid-cols-2 gap-y-6 bg-teamYellow-400 py-8 text-black xl:grid-cols-3">
                 <h2 className="col-span-full m-4 text-center">Alumni</h2>
-                <div className="text-center">
-                    <h3 className="text-r3xl font-semibold">John Chang</h3>
-                    <h4 className="text-rlg">President, 2022-2023</h4>
-                    <h4 className="text-rlg">Vice President, 2021-2022</h4>
-                </div>
-                <div className="text-center">
-                    <h3 className="text-r3xl font-semibold">
-                        Keshav Narasimma
-                    </h3>
-                    <h4 className="text-rlg">President, 2021-2022</h4>
-                    <h4 className="text-rlg">Vice President, 2020-2021</h4>
-                </div>
-                <div className="text-center">
-                    <h3 className="text-r3xl font-semibold">Toshko Andreev</h3>
-                    <h4 className="text-rlg">President, 2020-2021</h4>
-                    <h4 className="text-rlg">Vice President, 2019-2020</h4>
-                </div>
-                <div className="text-center">
-                    <h3 className="text-r3xl font-semibold">Krish Thakkar</h3>
-                    <h4 className="text-rlg">President, 2020-2021</h4>
-                    <h4 className="text-rlg">Vice President, 2019-2020</h4>
-                </div>
-                <div className="text-center">
-                    <h3 className="text-r3xl font-semibold">Beni Korol</h3>
-                    <h4 className="text-rlg">President, 2019-2020</h4>
-                    <h4 className="text-rlg">Vice President, 2018-2019</h4>
-                </div>
-                <div className="text-center">
-                    <h3 className="text-r3xl font-semibold">Andrew da Cunha</h3>
-                    <h4 className="text-rlg">President, 2018-2019</h4>
-                    <h4 className="text-rlg">Vice President, 2017-2018</h4>
-                </div>
-                <div className="text-center">
-                    <h3 className="text-r3xl font-semibold">Anmol Seth</h3>
-                    <h4 className="text-rlg">President, 2017-2018</h4>
-                    <h4 className="text-rlg">Vice President, 2016-2017</h4>
-                </div>
-                <div className="text-center">
-                    <h3 className="text-r3xl font-semibold">
-                        Nicolas Wiscour-Conter
-                    </h3>
-                    <h4 className="text-rlg">President, 2016-2017</h4>
-                    <h4 className="text-rlg">Vice President, 2015-2016</h4>
-                </div>
-                <div className="text-center">
-                    <h3 className="text-r3xl font-semibold">
-                        Mario Maldonado-Santos
-                    </h3>
-                    <h4 className="text-rlg">President, 2015-2016</h4>
-                </div>
-                <div className="text-center">
-                    <h3 className="text-r3xl font-semibold">Nikhil Shinde</h3>
-                    <h4 className="text-rlg">Vice President, 2014-2015</h4>
-                </div>
-                <div className="text-center">
-                    <h3 className="text-r3xl font-semibold">
-                        Yashes Srinivasan
-                    </h3>
-                    <h4 className="text-rlg">President, 2014-2015</h4>
-                    <h4 className="text-rlg">Vice President, 2013-2014</h4>
-                </div>
-                <div className="text-center">
-                    <h3 className="text-r3xl font-semibold">
-                        Nithin Dharmaraj
-                    </h3>
-                    <h4 className="text-rlg">President, 2013-2014</h4>
-                </div>
-                <div className="text-center">
-                    <h3 className="text-r3xl font-semibold">
-                        Aditya Zadgaonkar
-                    </h3>
-                    <h4 className="text-rlg">President, 2012-2013</h4>
-                </div>
-                <div className="text-center">
-                    <h3 className="text-r3xl font-semibold">Eric Hammon</h3>
-                    <h4 className="text-rlg">Vice President, 2012-2013</h4>
-                </div>
-                <div className="text-center">
-                    <h3 className="text-r3xl font-semibold">
-                        Karthik Jayakumar
-                    </h3>
-                    <h4 className="text-rlg">President, 2011-2012</h4>
-                </div>
-                <div className="text-center">
-                    <h3 className="text-r3xl font-semibold">Wassim Alsafi</h3>
-                    <h4 className="text-rlg">Vice President, 2011-2012</h4>
-                </div>
-                <div className="text-center">
-                    <h3 className="text-r3xl font-semibold">Paul Warren</h3>
-                    <h4 className="text-rlg">President, 2010-2011</h4>
-                </div>
-                <div className="text-center">
-                    <h3 className="text-r3xl font-semibold">Zachary Forster</h3>
-                    <h4 className="text-rlg">President, 2009-2010</h4>
-                </div>
-                <div className="text-center">
-                    <h3 className="text-r3xl font-semibold">Sahar Mesri</h3>
-                    <h4 className="text-rlg">Vice President, 2009-2011</h4>
-                </div>
-                <div className="text-center">
-                    <h3 className="text-r3xl font-semibold">Jay Dey</h3>
-                    <h4 className="text-rlg">President, 2008-2009</h4>
-                </div>
-                <div className="text-center">
-                    <h3 className="text-r3xl font-semibold">Richard Lin</h3>
-                    <h4 className="text-rlg">Vice President, 2008-2009</h4>
-                    <h4 className="text-rlg">President, 2007-2008</h4>
-                </div>
+                {Object.entries(Leadership.Alumni).map(([person, roles]) => (
+                    <div key={person} className="text-center">
+                        <h3 className="text-r3xl font-semibold">{person}</h3>
+                        {roles.map((role) => (
+                            <h4 key={role[0]} className="text-rlg">{role[0]}, {role[1]}</h4>
+                        ))}
+                    </div>
+                ))}
             </section>
         </main>
     );

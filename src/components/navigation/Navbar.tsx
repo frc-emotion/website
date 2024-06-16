@@ -57,7 +57,11 @@ export default function Navbar({
 		{
 			title: "Contact",
 			href: "/contact",
-		},
+		}
+		// {
+		// 	title: "Donate",
+		// 	href: "/donate"
+		// }
 	];
 	const moreMenuOne = [
 		{

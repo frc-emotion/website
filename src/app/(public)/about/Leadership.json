@@ -1,0 +1,113 @@
+{
+    "Advisors": [
+        "Katherine Rumsey",
+        "Brian Dunlea"
+    ],
+    "Mentors": [
+        "Evengy Korol",
+        "Clifford Harrison",
+        "Stanly Kudinov",
+        "Sherveen Shokoohi",
+        "Michael Ballinger",
+        "Sharon Kim",
+        "Shana Bunker",
+        "Veerabhadram Devi",
+        "Jason Ballinger"
+    ],
+    "Alumni": {
+        "Karan Thakkar": [
+            ["President", "2023-2024"],
+            ["Vice President", "2022-2023"]
+        ],
+        "Meghna Rath": [
+            ["Vice President", "2023-2024"]
+        ],
+        "John Chang": [
+            ["President", "2022-2023"],
+            ["Vice President", "2021-2022"]
+        ],
+        "Keshav Narasimma": [
+            ["President", "2021-2022"],
+            ["Vice President", "2020-2021"]
+        ],
+        "Toshko Andreev": [
+            ["President", "2020-2021"],
+            ["Vice President", "2019-2020"]
+        ],
+        "Krish Thakkar": [
+            ["President", "2020-2021"],
+            ["Vice President", "2019-2020"]
+        ],
+        "Beni Korol": [
+            ["President", "2019-2020"],
+            ["Vice President", "2018-2019"]
+        ],
+        "Andrew da Cunha": [
+            ["President", "2018-2019"],
+            ["Vice President", "2017-2018"]
+        ],
+        "Anmol Seth": [
+            ["President", "2017-2018"],
+            ["Vice President", "2016-2017"]
+        ],
+        "Nicolas Wiscour-Conter": [
+            ["President", "2016-2017"],
+            ["Vice President", "2015-2016"]
+        ],
+        "Mario Maldonado-Santos": [
+            ["President", "2015-2016"]
+        ],
+        "Nikhil Shinde": [
+            ["Vice President", "2014-2015"]
+        ],
+        "Yashes Srinivasan": [
+            ["President", "2014-2015"],
+            ["Vice President", "2013-2014"]
+        ],
+        "Nithin Dharmaraj": [
+            ["President", "2023-2014"]
+        ],
+        "Aditya Zadgaonkar": [
+            ["President", "2012-2013"]
+        ],
+        "Eric Hammon": [
+            ["Vice President", "2012-2013"]
+        ],
+        "Karthik Jayakumar": [
+            ["President", "2011-2012"]
+        ],
+        "Wassim Alsafi": [
+            ["Vice President", "2011-2012"]
+        ],
+        "Paul Warren": [
+            ["President", "2010-2011"]
+        ],
+        "Zachary Forster": [
+            ["President", "2009-2010"]
+        ],
+        "Sahar Mesri": [
+            ["Vice President", "2009-2011"]
+        ],
+        "Jay Dey": [
+            ["President", "2008-2009"]
+        ],
+        "Richard Lin": [
+            ["Vice President", "2008-2009"],
+            ["President", "2007-2008"]
+        ]
+    },
+    "Leads": {
+        "Electrical": ["Jaden Trinidad", "Rithik Ohri", "Robert Morrison"],
+        "Build": ["Roy Maldonaldo", "Radhika Patil"],
+        "Software": ["Peyton Slape", "Nathan Gillespie"],
+        "Marketing": ["Shravya Hatathodi", "Evan Lee"],
+        "Design": ["Neev Daga"]
+    },
+    "Executive": {
+        "President": ["Garrett Sayson"],
+        "Vice President": ["Arshan Shokoohi", "Simeon Kim"],
+        "Treasurer": ["Vedanth Kuruvadi"],
+        "Secretary": ["Sophia Newton"]
+        
+    }
+}
