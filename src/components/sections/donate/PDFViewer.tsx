@@ -24,11 +24,7 @@ export default function PDFViewer() {
           
           <button className="bg-red-800 ml-16 outline-dashed outline-2 outline-offset-2"></button>
         </div>
-
-        {/* <Document className="" file="Sponsor.pdf" onLoadSuccess={onDocumentLoadSuccess}>
-          <Page pageNumber={pageNumber} />
-        </Document> */}
-      <div className="flex flex-col justify-around items-center bg-gray-600">
+      <div className="flex flex-col justify-around items-center">
 
       <Document
       className="flex flex-row justify-around items-center mb-8"
@@ -38,14 +34,10 @@ export default function PDFViewer() {
       <div className="relative overflow-y-auto overflow-x-hidden max-h-[720px] rounded-xl">
         {numPages &&
           Array.from({ length: numPages }, (_, index) => index + 1).map(
-            (pageNumber) => <Page pageNumber={pageNumber} />
+            (pageNumber) => <Page key={pageNumber} pageNumber={pageNumber} />
           )}
       </div>
       </Document>
-
-          <div className='absolute h-16 bg-red-500'>
-            <h1>hsadhajs</h1> 
-          </div>
     </div>
     
     
