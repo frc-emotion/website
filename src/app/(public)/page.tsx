@@ -32,14 +32,14 @@ export default function Home() {
                                 to giving students an experience that will help
                                 them in our ever-evolving world. We are a 100%
                                 student-run team, so students get the amazing
-                                opportunity to learn from their older peers and
+                                opportunity to learn from their peers and
                                 teammates. We show students what it's like to
                                 work on a project as a team, and how fun it is
                                 when the robot you built is the one that wins.
                                 Since its establishment in 2007 by Jeff Bush and
                                 Richard Lin, the Σ-Motion team has designed and
-                                built over 10 robots which it used in the FIRST
-                                Competitions around the country.
+                                built over 12 robots which have been used in FIRST
+                                Robotics Competitions around the country.
                             </p>
                             <h2 className="text-r3xl font-semibold mt-10">
                                 Mission Statement
@@ -53,9 +53,9 @@ export default function Home() {
                                 showcase the intrigue and excitement of
                                 robotics, while creating an enjoyable and
                                 inclusive environment that strives for
-                                excellence. For 14 years we have attended and
-                                sponsored community events to inspire others in
-                                STEAM.
+                                excellence. For {new Date().getFullYear() - 2008 + " "}
+                                years we have attended and sponsored community 
+                                events to inspire others in STEAM.
                             </p>
                             <div className="mt-10">
                                 <Link
