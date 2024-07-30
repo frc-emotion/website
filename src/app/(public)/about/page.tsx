@@ -114,24 +114,39 @@ export default function AboutPage() {
                         <h3 className="m-1 text-center text-r2xl font-bold">
                             Execs
                         </h3>
+                        
                         <ul className="my-4 grid-cols-3 gap-y-6 text-center text-rlg font-semibold md:grid">
-                            <li>
-                                <strong> President: </strong> Garrett Sayson
-                            </li>
-                            <li>
-                                <strong>Vice President: </strong> Arshan Shokoohi
-                            </li>
-                            <li>
-                                <strong>Vice President: </strong> Simeon Kim
-                            </li>
+                            {Leadership.Executive.President.map(
+                                president => (
+                                    <li>
+                                        <strong> President: </strong> {president}
+                                    </li>
+                                )
+                            )}
+                        
+                            {Leadership.Executive["Vice President"].map(
+                                vp => (
+                                    <li>
+                                        <strong> Vice President: </strong> {vp}
+                                    </li>
+                                )
+                            )}
                         </ul>
                         <ul className="my-4 grid-cols-2 gap-y-6 text-center text-rlg font-semibold md:grid">
-                            <li>
-                                <strong>Treasurer: </strong> Vedanth Kuruvadi
-                            </li>
-                            <li>
-                                <strong>Secretary: </strong> Sophia Newton
-                            </li>
+                            {Leadership.Executive.Treasurer.map(
+                                treasurer => (
+                                    <li>
+                                        <strong> Treasurer: </strong> {treasurer}
+                                    </li>
+                                )
+                            )}
+                            {Leadership.Executive.Secretary.map(
+                                secretary => (
+                                    <li>
+                                        <strong> Secretary: </strong> {secretary}
+                                    </li>
+                                )
+                            )}
                         </ul>
                     </div>
                 </section>
@@ -151,7 +166,7 @@ export default function AboutPage() {
                         <h3 className="text-center text-r3xl font-bold">
                             {mentor}
                         </h3>
-                        <h4 className="text-center text-rlg">Mentors</h4>
+                        <h4 className="text-center text-rlg">Mentor</h4>
                     </div>
                 ))}
 
