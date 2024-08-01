@@ -118,7 +118,7 @@ export default function AboutPage() {
                         <ul className="my-4 grid-cols-3 gap-y-6 text-center text-rlg font-semibold md:grid">
                             {Leadership.Executive.President.map(
                                 president => (
-                                    <li>
+                                    <li key={president}>
                                         <strong> President: </strong> {president}
                                     </li>
                                 )
@@ -126,7 +126,7 @@ export default function AboutPage() {
                         
                             {Leadership.Executive["Vice President"].map(
                                 vp => (
-                                    <li>
+                                    <li key={vp}>
                                         <strong> Vice President: </strong> {vp}
                                     </li>
                                 )
@@ -135,14 +135,14 @@ export default function AboutPage() {
                         <ul className="my-4 grid-cols-2 gap-y-6 text-center text-rlg font-semibold md:grid">
                             {Leadership.Executive.Treasurer.map(
                                 treasurer => (
-                                    <li>
+                                    <li key={treasurer}>
                                         <strong> Treasurer: </strong> {treasurer}
                                     </li>
                                 )
                             )}
                             {Leadership.Executive.Secretary.map(
                                 secretary => (
-                                    <li>
+                                    <li key={secretary}>
                                         <strong> Secretary: </strong> {secretary}
                                     </li>
                                 )
