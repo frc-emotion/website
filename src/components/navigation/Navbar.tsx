@@ -55,13 +55,14 @@ export default function Navbar({
             href: "/robots",
         },
 		{
+			title: "Donate",
+			href: "/donate",
+		},
+		{
 			title: "Contact",
 			href: "/contact",
 		}
-		// {
-		// 	title: "Donate",
-		// 	href: "/donate"
-		// }
+		
 	];
 	const moreMenuOne = [
 		{
