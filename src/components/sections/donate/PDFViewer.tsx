@@ -1,23 +1,32 @@
 "use client";
 
+export type PromiseWithResolvers<T> = {
+  promise: Promise<T>;
+  resolve: (value: T | PromiseLike<T>) => void;
+  reject: (reason?: any) => void;
+};
+
+export function polyfillPromiseWithResolvers() {
+  if (!Promise.withResolvers) {
+    Promise.withResolvers = function <T>(): PromiseWithResolvers<T> {
+      let resolve: (value: T | PromiseLike<T>) => void;
+      let reject: (reason?: any) => void;
+
+      const promise = new Promise<T>((res, rej) => {
+        resolve = res;
+        reject = rej;
+      });
+
+      return { promise, resolve: resolve!, reject: reject! };
+    };
+  }
+}
+
 import { Document, Page, pdfjs } from "react-pdf";
 import { FiChevronLeft, FiChevronRight, FiZoomIn, FiZoomOut } from "react-icons/fi";
 import "react-pdf/dist/esm/Page/TextLayer.css";
 import "react-pdf/dist/esm/Page/AnnotationLayer.css";
 import { useEffect, useState } from "react";
-
-if (typeof Promise.withResolvers === 'undefined') {
-  if (window)
-      // @ts-expect-error This does not exist outside of polyfill which this is doing
-      window.Promise.withResolvers = function () {
-          let resolve, reject;
-          const promise = new Promise((res, rej) => {
-              resolve = res;
-              reject = rej;
-          });
-          return { promise, resolve, reject };
-      };
-}
 
 pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.mjs`;
 
