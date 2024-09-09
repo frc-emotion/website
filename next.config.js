@@ -12,6 +12,13 @@ const nextConfig = {
 	sassOptions: {
 		includePaths: [require("path").join(__dirname, "styles")],
 	},
+	experimental: {
+		turbo: {
+			resolveAlias: {
+				canvas: './empty-module.ts'
+			}
+		}
+	}
 };
 
 module.exports = nextConfig;
