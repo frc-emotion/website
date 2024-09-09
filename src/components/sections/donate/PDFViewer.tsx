@@ -1,8 +1,4 @@
 "use client";
-import { polyfillPromiseWithResolvers } from "./polyfilsResolver";
-import 'core-js/full/promise/with-resolvers.js';
-
-polyfillPromiseWithResolvers();
 
 import { Document, Page, pdfjs } from "react-pdf";
 import { FiChevronLeft, FiChevronRight, FiZoomIn, FiZoomOut } from "react-icons/fi";
