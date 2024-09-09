@@ -1,5 +1,4 @@
 "use client";
-
 import { Document, Page, pdfjs } from "react-pdf";
 import { FiChevronLeft, FiChevronRight, FiZoomIn, FiZoomOut } from "react-icons/fi";
 import "react-pdf/dist/esm/Page/TextLayer.css";
