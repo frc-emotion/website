@@ -1,5 +1,6 @@
 "use client";
 import { polyfillPromiseWithResolvers } from "./polyfilsResolver";
+import 'core-js/full/promise/with-resolvers.js';
 
 polyfillPromiseWithResolvers();
 
