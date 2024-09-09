@@ -89,7 +89,7 @@ export default function PDFViewer() {
             <button
               className="p-2 bg-blue-500 text-white rounded-full disabled:bg-gray-300 transition-all duration-300 hover:bg-blue-600 transform hover:scale-105"
               onClick={goToNextPage}
-              disabled={pageNumber >= numPages}
+              disabled={pageNumber >= (numPages ?? 1)}
             >
               <FiChevronRight size={20} />
             </button>

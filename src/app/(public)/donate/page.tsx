@@ -7,7 +7,7 @@ export const metadata = {
     description: "Donate to Σ-Motion and support our team",
 };
 
-export default function Home({ children }: { children: React.ReactNode }) {
+export default function Home() {
     return (
         <div>
             <div className="relative select-none h-clampLarge overflow-hidden bg-black">
