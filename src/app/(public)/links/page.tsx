@@ -7,10 +7,10 @@ export const metadata = {
 
 const links = [
     {
-        name: "Interest Form",
-        link: "https://docs.google.com/forms/d/e/1FAIpQLSdeAv6RPrDfZHfol_WFMEc6UXGIZf-ChArEThqTn09OMADEvg/viewform?usp=sf_link",
+        name: "REQUIRED Club Application Forms",
+        link: "https://docs.google.com/document/d/1QXXVcJwAnVjUmRR4Vpz7R9o9IhBTbwL76rZT19EVULg/edit?usp=sharing",
         emoji: "📝",
-        description: "1st Meeting: Sept. 11th 3:45pm @ RBHS LPR"
+        description: "Due by Sept. 18, 2024"
     },
     {
         name: "Instagram",
