@@ -7,7 +7,7 @@ export const metadata = {
 
 const links = [
     {
-        name: "REQUIRED Club Application Forms",
+        name: "Club Application Forms",
         link: "https://docs.google.com/document/d/1QXXVcJwAnVjUmRR4Vpz7R9o9IhBTbwL76rZT19EVULg/edit?usp=sharing",
         emoji: "📝",
         description: "Due by Sept. 18, 2024"
