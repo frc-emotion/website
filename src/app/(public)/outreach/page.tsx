@@ -119,16 +119,23 @@ export default function Outreach() {
                     text: "on instagram"
                 }
             ]
+        },
+        {
+            title: "Bobcat 2 Bronco Day 2024",
+            description: `Get a description of Bobcat 2 Bronco Day (5/23/24) and put here. Also find an image to use`,
+            imageSrc: "https://cdn.team2658.org/web-public/outreach/cte-expo.jpeg",
+            imageFillType: "object-cover",
+            links: 
+            [
+                {
+                    link: "https://team2658.org",
+                    text: "Find instagram link"
+                }
+            ]
         }
     ];
 
     const SchoolEvents : Event[] = [
-        {
-            title: "Bobcat 2 Bronco Day",
-            times: [
-                "5/23/24"
-            ]
-        },
         {
             title: "8th Grade Info Night",
             times: [
