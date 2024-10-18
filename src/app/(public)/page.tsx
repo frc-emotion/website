@@ -70,11 +70,17 @@ export default function Home() {
                     </div>
                     <div className="mt-10 2xl:mt-0 col-span-1 2xl:col-span-2 flex w-full h-full items-center justify-center">
                         <Image
-                            src="https://cdn.team2658.org/web-public/about.jpeg"
+                        //    src="https://cdn.team2658.org/web-public/about.jpeg"
+                        //    className="w-[90vw] sm:w-[80vw] 2xl:w-[60vw] select-none rounded-lg"
+                         //   width={6000}
+                          //  height={4000}
+                           // alt="2658's 2023 robot, 'Trident'"
+                        
+                            src="/robotBATB24.jpg"
                             className="w-[90vw] sm:w-[80vw] 2xl:w-[60vw] select-none rounded-lg"
-                            width={6000}
-                            height={4000}
-                            alt="2658's 2023 robot, 'Trident'"
+                            width={3024}
+                            height={1856}
+                            alt="2658's 2024 robot, 'Crescendo'"
                         />
                     </div>
                 </div>
