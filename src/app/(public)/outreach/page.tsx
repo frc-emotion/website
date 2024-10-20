@@ -151,7 +151,7 @@ export default function Outreach() {
                                                         BATB 2024
                                                 </h3>
                                                 <p className="-md:mx-6 -md:text-center">
-                                                Our team, featuring many new members and a newly formed drive team, faced several challenges but persevered to reach the semifinals in a competition of 34 teams. Despite the setbacks we faced at Battle at the Border, we performed well and showcased our resilience and teamwork.
+                                                Our team, featuring many new members and a newly formed drive team, competed in Battle at the Border, a competition with 34 robots. We enjoyed our time and were able to showcase our ability by reaching the semi-finals.
                                                 </p>
                                                 <div className="mt-3 flex flex-row space-x-3 font-semibold">
                                                     <p>more:</p>
@@ -169,7 +169,7 @@ export default function Outreach() {
                                                         aria-label="Battle at the Border overview video."
                                                         target="_blank"
                                                     >
-                                                        insta
+                                                        instagram
                                                     </a>
                                                 </div>
                                             </div>
@@ -201,7 +201,7 @@ export default function Outreach() {
                                                         aria-label="Fairbotics"
                                                         target="_blank"
                                                     >
-                                                        insta
+                                                        instagram
                                                     </a>
                                                 </div>
                                             </div>
