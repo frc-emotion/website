@@ -22,7 +22,7 @@
         background-size: cover;
         /*background-image: url("https://cdn.team2658.org/web-public/lvr.jpg");*/
         background-image: url("/teamPhotoBATB24.JPG");
-        background-position: 40%;
+        background-position: 40%; /*40*/
         background-repeat: no-repeat;
     }
 }

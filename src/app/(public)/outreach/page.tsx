@@ -130,13 +130,119 @@ export default function Outreach() {
 							>
 								School Events
 							</button> */}
+                            {/* {true ? ( */}
+                            <h2 className="text-r2xl font-bold">
+                                Recent Events
+                            </h2>
+                            <div id="recentEventsContent" className='mb-5'>
+                                <div className="grid-rows-auto grid">
+                                    <div className="row-span-auto grid grid-cols-1 md:grid-cols-2">
+                                        <div className="relative col-span-1 mb-5 mt-1 flex h-[45vh] select-none overflow-hidden rounded-lg md:mr-5">
+                                            <Image
+                                                src="https://cdn.team2658.org/web-public/outreach/competitions/celebratingBATB24.JPG"
+                                                alt="Battle At The Border 2024"
+                                                fill={true}
+                                                className='object-cover'
+                                            />
+                                        </div>
+                                        <div className="col-span-1 mb-5 grid rounded-lg bg-black py-10 text-white -md:place-items-center">
+                                        <div className="mx-8 flex flex-col justify-center -md:items-center">
+                                                <h3 className="text-r3xl font-bold text-white">
+                                                        BATB 2024
+                                                </h3>
+                                                <p className="-md:mx-6 -md:text-center">
+                                                Our team, featuring many new members and a newly formed drive team, faced several challenges but persevered to reach the semifinals in a competition of 34 teams. Despite the setbacks we faced at Battle at the Border, we performed well and showcased our resilience and teamwork.
+                                                </p>
+                                                <div className="mt-3 flex flex-row space-x-3 font-semibold">
+                                                    <p>more:</p>
+                                                    <a
+                                                        className="underline"
+                                                        href="https://www.thebluealliance.com/event/2024cabb"
+                                                        aria-label="Battle at the Border qualification matches and standings."
+                                                        target="_blank"
+                                                    >
+                                                        standings
+                                                    </a>
+                                                    <a
+                                                        className="underline"
+                                                        href="https://www.instagram.com/p/DBF5MvPRD5H/"
+                                                        aria-label="Battle at the Border overview video."
+                                                        target="_blank"
+                                                    >
+                                                        insta
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="row-span-auto grid grid-cols-1 md:grid-cols-2">
+        
+                                        <div className="col-span-1 mb-5 grid rounded-lg bg-white py-10 text-white -md:place-items-center md:mr-5">
+                                        <div className="mx-8 flex flex-col justify-center -md:items-center text-black">
+                                                <h3 className="text-r3xl font-bold text-black">
+                                                        Fairbotics 2024
+                                                </h3>
+                                                <p className="-md:mx-6 -md:text-center">
+                                                The Pacific Showdown was a smaller off-season FRC competition held at the Del Mar Fair, where our team competed alongside 14 other teams under new leadership. We secured 7th place and advanced to the semi-finals. With a team of around 30 members, we helped construct the majority of the competition field and provided substantial assistance during teardown. Additionally, a few of our mentors volunteered in various roles, including as referees.
+                                                </p>
+                                                <div className="mt-3 flex flex-row space-x-3 font-semibold">
+                                                    <p>more:</p>
+                                                    <a
+                                                        className="underline"
+                                                        href="https://www.thebluealliance.com/event/2024cafb"
+                                                        aria-label="Scores for Fairbotics 2024."
+                                                        target="_blank"
+                                                    >
+                                                        standings
+                                                    </a>
+                                                    <a
+                                                        className="underline"
+                                                        href="https://www.instagram.com/p/C8SlhxqS5JP/"
+                                                        aria-label="Fairbotics"
+                                                        target="_blank"
+                                                    >
+                                                        insta
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div className="relative col-span-1 mb-5 mt-1 flex h-[45vh] select-none overflow-hidden rounded-lg">
+                                            <Image
+                                                src="https://cdn.team2658.org/web-public/outreach/robotFairbotics.JPG"
+                                                alt="Fairbotics 2024"
+                                                fill={true}
+                                                className='object-cover'
+                                            />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                             <h2 className="text-r2xl font-bold">
                                 School Events
                             </h2>
-                            {/* {true ? ( */}
                             <div id="schoolSetionContent" className="mb-5">
                                 <div className="grid-rows-auto grid">
-                                    <div className="row-span-auto grid grid-cols-1 md:grid-cols-2">
+                                <div className="row-span-auto grid grid-cols-1 md:grid-cols-2">
+                                        <div className="relative col-span-1 mb-5 mt-1 flex h-[45vh] select-none overflow-hidden rounded-lg md:mr-5">
+                                            <Image
+                                                src="https://cdn.team2658.org/web-public/outreach/bobcatDay.jpg"
+                                                alt="Battle At The Border 2024"
+                                                fill={true}
+                                                className='object-cover'
+                                            />
+                                        </div>
+                                        <div className="col-span-1 mb-5 grid rounded-lg bg-black py-10 text-white -md:place-items-center">
+                                        <div className="mx-8 flex flex-col justify-center -md:items-center">
+                                                <h3 className="text-r3xl font-bold text-white">
+                                                        Bobcat Day 2024
+                                                </h3>
+                                                <p className="-md:mx-6 -md:text-center">
+                                                Bobcat Day hosted 8th graders from Bernardo Heights Middle School, with RB clubs showcasing their activities. Our robot was the main attraction, and we proudly represented our club, performing high-level demonstrations for the students.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    {/*<div className="row-span-auto grid grid-cols-1 md:grid-cols-2">
                                         <div className="relative col-span-1 mb-5 mt-1 flex h-[45vh] select-none overflow-hidden rounded-lg md:mr-5 -md:items-center -md:justify-center">
                                             <Image
                                                 src="https://cdn.team2658.org/web-public/outreach/cte-expo.jpeg"
@@ -182,8 +288,35 @@ export default function Outreach() {
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
+                                    </div>*/}
                                     {/* set to h-[55vh] if 2nd row is ever used on larger screens */}
+                                    <div className="row-span-auto grid-rows-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 omd:grid-rows-2 mb-2">
+                                            <div className="relative col-span-1 h-[25vh] md:mr-5 rounded-lg">
+                                                <Image
+                                                    src="https://cdn.team2658.org/web-public/outreach/cte-expo.jpeg"
+                                                    alt=""
+                                                    fill={true}
+                                                    className="object-cover"
+                                                />
+                                            </div>   
+                                            <div className="col-span-1 flex flex-col items-center justify-center rounded-lg bg-white py-10 text-black lg:mr-5 -md:mt-3">
+                                                <h3 className="mx-8 text-center text-r2xl font-bold olg:mx-[5.5rem]">
+                                                    CTE Expo
+                                                </h3>
+                                                <div className="flex flex-row space-x-5 font-semibold">
+                                                    <h4>2023, 2024</h4>
+                                                </div>
+
+                                            </div>
+                                            <div className="relative col-span-1 h-[25vh] md:mr-5 rounded-lg">
+                                                <Image
+                                                    src="https://cdn.team2658.org/web-public/outreach/posterCTE24.jpg"
+                                                    alt=""
+                                                    fill={true}
+                                                    className="object-cover"
+                                                />
+                                            </div>
+                                    </div>
                                     <div className="row-span-auto grid-rows-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 omd:grid-rows-2">
                                         <div className="col-span-1 flex flex-col items-center justify-center rounded-lg bg-white py-10 text-black md:mr-5">
                                             <h3 className="mx-8 text-center text-r2xl font-bold">
