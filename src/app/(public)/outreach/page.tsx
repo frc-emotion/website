@@ -304,7 +304,7 @@ export default function Outreach() {
                                                     CTE Expo
                                                 </h3>
                                                 <div className="flex flex-row space-x-5 font-semibold">
-                                                    <h4>2023, 2024</h4>
+                                                    <h4>2023-2024</h4>
                                                 </div>
 
                                             </div>
