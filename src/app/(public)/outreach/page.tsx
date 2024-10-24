@@ -225,7 +225,7 @@ export default function Outreach() {
                                 <div className="row-span-auto grid grid-cols-1 md:grid-cols-2">
                                         <div className="relative col-span-1 mb-5 mt-1 flex h-[45vh] select-none overflow-hidden rounded-lg md:mr-5">
                                             <Image
-                                                src="https://cdn.team2658.org/web-public/outreach/bobcatDay.jpg"
+                                                src="https://cdn.team2658.org/web-public/outreach/bobcatSpylios.jpg"
                                                 alt="Battle At The Border 2024"
                                                 fill={true}
                                                 className='object-cover'
