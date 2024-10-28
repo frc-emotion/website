@@ -145,7 +145,12 @@ export default function Outreach() {
                                                 className='object-cover'
                                             />
                                         </div>
-                                        <div className="col-span-1 mb-5 grid rounded-lg bg-black py-10 text-white -md:place-items-center">
+                                        <div className="col-span-1 mb-5 grid rounded-lg py-10 text-white -md:place-items-center"
+                                        //style={{ background: 'linear-gradient(to right, #212121 0%, #4d4d4d 100%)' }}
+                                        style={{ background: 'linear-gradient(0deg, rgba(26,26,26,1) 0%, rgba(44,44,44,1) 50%, rgba(26,26,26,1) 100%)' }}
+
+                                        >
+
                                         <div className="mx-8 flex flex-col justify-center -md:items-center">
                                                 <h3 className="text-r3xl font-bold text-white">
                                                         BATB 2024
@@ -177,9 +182,10 @@ export default function Outreach() {
                                     </div>
                                     <div className="row-span-auto grid grid-cols-1 md:grid-cols-2">
         
-                                        <div className="col-span-1 mb-5 grid rounded-lg bg-white py-10 text-white -md:place-items-center md:mr-5">
-                                        <div className="mx-8 flex flex-col justify-center -md:items-center text-black">
-                                                <h3 className="text-r3xl font-bold text-black">
+                                        <div className="col-span-1 mb-5 grid rounded-lg py-10 text-white -md:place-items-center md:mr-5"
+                                        style={{ background: 'linear-gradient(0deg, rgba(26,26,26,1) 0%, rgba(44,44,44,1) 50%, rgba(26,26,26,1) 100%)' }}>
+                                        <div className="mx-8 flex flex-col justify-center -md:items-center text-white">
+                                                <h3 className="text-r3xl font-bold">
                                                         Fairbotics 2024
                                                 </h3>
                                                 <p className="-md:mx-6 -md:text-center">
@@ -231,7 +237,8 @@ export default function Outreach() {
                                                 className='object-cover'
                                             />
                                         </div>
-                                        <div className="col-span-1 mb-5 grid rounded-lg bg-black py-10 text-white -md:place-items-center">
+                                        <div className="col-span-1 mb-5 grid rounded-lg py-10 text-white -md:place-items-center"
+                                        style={{ background: 'linear-gradient(0deg, rgba(26,26,26,1) 0%, rgba(44,44,44,1) 50%, rgba(26,26,26,1) 100%)' }}>
                                         <div className="mx-8 flex flex-col justify-center -md:items-center">
                                                 <h3 className="text-r3xl font-bold text-white">
                                                         Bobcat Day 2024
@@ -242,53 +249,7 @@ export default function Outreach() {
                                             </div>
                                         </div>
                                     </div>
-                                    {/*<div className="row-span-auto grid grid-cols-1 md:grid-cols-2">
-                                        <div className="relative col-span-1 mb-5 mt-1 flex h-[45vh] select-none overflow-hidden rounded-lg md:mr-5 -md:items-center -md:justify-center">
-                                            <Image
-                                                src="https://cdn.team2658.org/web-public/outreach/cte-expo.jpeg"
-                                                alt=""
-                                                fill={true}
-                                                className="object-cover"
-                                            />
-                                        </div>
-                                        <div className="col-span-1 mb-5 grid rounded-lg bg-black py-10 text-white -md:place-items-center">
-                                            <div className="mx-8 flex flex-col justify-center -md:items-center">
-                                                <h3 className="text-r3xl font-bold">
-                                                    <span className="bg-gradient-to-r from-[#00C498] to-[#19AEE7] bg-clip-text text-transparent">
-                                                        CTE Expo 2023
-                                                    </span>
-                                                </h3>
-                                                <p className="-md:mx-6 -md:text-center">
-                                                    Team Σ-Motion participated
-                                                    in PUSD's 2023 Career
-                                                    Technical Education{" "}
-                                                    {"(CTE) "}
-                                                    Expo, showcasing our robot
-                                                    and talking to families
-                                                    about our team and FIRST.
-                                                </p>
-                                                <div className="mt-3 flex flex-row space-x-3 font-semibold">
-                                                    <p>more:</p>
-                                                    <a
-                                                        className="underline"
-                                                        href="https://www.sandiegouniontribune.com/pomerado-news/news/story/2023-05-31/poway-unifieds-sixth-annual-cte-expo-showcases-student-projects-and-exhibits#:~:text=Robotics%20at%20Rancho%20Bernardo%20High"
-                                                        aria-label="San Diego Union Tribune article about the 2023 PUSD CTE Expo, featuring Team 2658."
-                                                        target="_blank"
-                                                    >
-                                                        in the news
-                                                    </a>
-                                                    <a
-                                                        className="underline"
-                                                        href="https://www.instagram.com/p/CsnKCyarjjS/"
-                                                        aria-label="Instagram/frcteam2658: 2023 CTE Expo"
-                                                        target="_blank"
-                                                    >
-                                                        on instagram
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>*/}
+                                    
                                     {/* set to h-[55vh] if 2nd row is ever used on larger screens */}
                                     <div className="row-span-auto grid-rows-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 omd:grid-rows-2 mb-2">
                                             <div className="relative col-span-1 h-[25vh] md:mr-5 rounded-lg">
@@ -299,7 +260,8 @@ export default function Outreach() {
                                                     className="object-cover"
                                                 />
                                             </div>   
-                                            <div className="col-span-1 flex flex-col items-center justify-center rounded-lg bg-white py-10 text-black lg:mr-5 -md:mt-3">
+                                            <div className="col-span-1 flex flex-col items-center justify-center rounded-lg py-10 text-white lg:mr-5 -md:mt-3"
+                                            style={{ background: 'linear-gradient(0deg, rgba(26,26,26,1) 0%, rgba(44,44,44,1) 50%, rgba(26,26,26,1) 100%)' }}>
                                                 <h3 className="mx-8 text-center text-r2xl font-bold olg:mx-[5.5rem]">
                                                     CTE Expo
                                                 </h3>
@@ -308,7 +270,7 @@ export default function Outreach() {
                                                 </div>
 
                                             </div>
-                                            <div className="relative col-span-1 h-[25vh] md:mr-5 rounded-lg">
+                                            <div className="relative col-span-1 h-[25vh] md:mr-5 rounded-lg lg:mr-5 -md:mt-3">
                                                 <Image
                                                     src="https://cdn.team2658.org/web-public/outreach/posterCTE24.jpg"
                                                     alt=""
@@ -318,7 +280,8 @@ export default function Outreach() {
                                             </div>
                                     </div>
                                     <div className="row-span-auto grid-rows-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 omd:grid-rows-2">
-                                        <div className="col-span-1 flex flex-col items-center justify-center rounded-lg bg-white py-10 text-black md:mr-5">
+                                        <div className="col-span-1 flex flex-col items-center justify-center rounded-lg py-10 text-white md:mr-5"
+                                        style={{ background: 'linear-gradient(0deg, rgba(26,26,26,1) 0%, rgba(44,44,44,1) 50%, rgba(26,26,26,1) 100%)' }}>
                                             <h3 className="mx-8 text-center text-r2xl font-bold">
                                                 8th Grade Info Night
                                             </h3>
@@ -328,7 +291,8 @@ export default function Outreach() {
                                                 <h4>3/16/2021</h4>
                                             </div>
                                         </div>
-                                        <div className="col-span-1 flex flex-col items-center justify-center rounded-lg bg-black py-10 text-white lg:mr-5 -md:mt-5">
+                                        <div className="col-span-1 flex flex-col items-center justify-center rounded-lg py-10 text-white lg:mr-5 -md:mt-5"
+                                        style={{ background: 'linear-gradient(0deg, rgba(26,26,26,1) 0%, rgba(44,44,44,1) 50%, rgba(26,26,26,1) 100%)' }}>
                                             <h3 className="mx-8 text-center text-r2xl font-bold">
                                                 WWES Science Night
                                             </h3>
@@ -337,7 +301,8 @@ export default function Outreach() {
                                             </div>
                                         </div>
                                         {/* removed omd:mr-5 */}
-                                        <div className="col-span-1 flex flex-col items-center justify-center rounded-lg bg-white py-10 text-black -lg:mt-3 omd:col-span-2">
+                                        <div className="col-span-1 flex flex-col items-center justify-center rounded-lg py-10 text-white -lg:mt-3 omd:col-span-2"
+                                        style={{ background: 'linear-gradient(0deg, rgba(26,26,26,1) 0%, rgba(44,44,44,1) 50%, rgba(26,26,26,1) 100%)' }}>
                                             <h3 className="mx-8 text-center text-r2xl font-bold olg:mx-[5.5rem]">
                                                 RBHS Robotics Open House
                                             </h3>
@@ -383,7 +348,8 @@ export default function Outreach() {
                                             className="rounded-lg object-cover"
                                         />
                                     </div>
-                                    <div className="col-span-1 flex flex-col items-center justify-center rounded-lg bg-black py-10 text-white lg:mr-5 -md:mt-3">
+                                    <div className="col-span-1 flex flex-col items-center justify-center rounded-lg py-10 text-white lg:mr-5 -md:mt-3"
+                                    style={{ background: 'linear-gradient(0deg, rgba(26,26,26,1) 0%, rgba(44,44,44,1) 50%, rgba(26,26,26,1) 100%)' }}>
                                         <h3 className="mx-8 text-center text-r2xl font-bold olg:mx-[5.5rem]">
                                             San Diego Regional
                                         </h3>
@@ -400,7 +366,8 @@ export default function Outreach() {
                                             className="rounded-lg object-cover object-bottom"
                                         />
                                     </div>
-                                    <div className="col-span-1 mt-3 flex flex-col items-center justify-center rounded-lg bg-white py-10 text-black lg:mr-5">
+                                    <div className="col-span-1 mt-3 flex flex-col items-center justify-center rounded-lg py-10 text-white lg:mr-5"
+                                    style={{ background: 'linear-gradient(0deg, rgba(26,26,26,1) 0%, rgba(44,44,44,1) 50%, rgba(26,26,26,1) 100%)' }}>
                                         <h3 className="mx-8 text-center text-r2xl font-bold olg:mx-[5.5rem]">
                                             Las Vegas Regional
                                         </h3>
@@ -417,7 +384,8 @@ export default function Outreach() {
                                             className="rounded-lg object-cover"
                                         />
                                     </div>
-                                    <div className="col-span-1 mt-3 flex flex-col items-center justify-center rounded-lg bg-white py-10 text-black">
+                                    <div className="col-span-1 mt-3 flex flex-col items-center justify-center rounded-lg py-10 text-white"
+                                    style={{ background: 'linear-gradient(0deg, rgba(26,26,26,1) 0%, rgba(44,44,44,1) 50%, rgba(26,26,26,1) 100%)' }}>
                                         <h3 className="mx-8 text-center text-r2xl font-bold olg:mx-[5.5rem]">
                                             Aerospace Valley Regional
                                         </h3>
@@ -435,7 +403,8 @@ export default function Outreach() {
                                             className="rounded-lg object-cover object-bottom"
                                         />
                                     </div>
-                                    <div className="col-span-1 mt-3 flex flex-col items-center justify-center rounded-lg bg-black py-10 text-white lg:mr-5">
+                                    <div className="col-span-1 mt-3 flex flex-col items-center justify-center rounded-lg py-10 text-white lg:mr-5"
+                                    style={{ background: 'linear-gradient(0deg, rgba(26,26,26,1) 0%, rgba(44,44,44,1) 50%, rgba(26,26,26,1) 100%)' }}>
                                         <h3 className="mx-8 text-center text-r2xl font-bold olg:mx-[5.5rem]">
                                             Battle at the Border
                                         </h3>
@@ -451,7 +420,8 @@ export default function Outreach() {
                                             className="rounded-lg object-cover"
                                         />
                                     </div>
-                                    <div className="col-span-1 mt-3 flex flex-col items-center justify-center rounded-lg bg-white py-10 text-black lg:mr-5">
+                                    <div className="col-span-1 mt-3 flex flex-col items-center justify-center rounded-lg py-10 text-white lg:mr-5"
+                                    style={{ background: 'linear-gradient(0deg, rgba(26,26,26,1) 0%, rgba(44,44,44,1) 50%, rgba(26,26,26,1) 100%)' }}>
                                         <h3 className="mx-8 text-center text-r2xl font-bold olg:mx-[5.5rem]">
                                             Beach Blitz
                                         </h3>
@@ -459,7 +429,8 @@ export default function Outreach() {
                                             <h4>2021-Present</h4>
                                         </div>
                                     </div>
-                                    <div className="col-span-1 mt-3 flex flex-col items-center justify-center rounded-lg bg-white py-10 text-black md:col-span-2">
+                                    <div className="col-span-1 mt-3 flex flex-col items-center justify-center rounded-lg py-10 text-white md:col-span-2"
+                                    style={{ background: 'linear-gradient(0deg, rgba(26,26,26,1) 0%, rgba(44,44,44,1) 50%, rgba(26,26,26,1) 100%)' }}>
                                         <div className="relative grid w-[85%] grid-cols-1 lg:grid-cols-2 lg:space-x-10">
                                             <ul className="list-disc">
                                             <li>
@@ -546,7 +517,8 @@ export default function Outreach() {
                                                 className="object-cover"
                                             />
                                         </div>
-                                        <div className="col-span-1 mb-5 grid rounded-lg bg-black py-10 text-white md:ml-2.5 -md:place-items-center">
+                                        <div className="col-span-1 mb-5 grid rounded-lg py-10 text-white md:ml-2.5 -md:place-items-center"
+                                        style={{ background: 'linear-gradient(0deg, rgba(26,26,26,1) 0%, rgba(44,44,44,1) 50%, rgba(26,26,26,1) 100%)' }}>
                                             <div className="mx-8 flex flex-col justify-center -md:items-center">
                                                 <h3 className="text-center text-r3xl font-bold">
                                                     Escondido Street Fair
@@ -557,7 +529,8 @@ export default function Outreach() {
                                                 </p>
                                             </div>
                                         </div>
-                                        <div className="col-span-1 flex items-center justify-center rounded-lg bg-white py-10 text-black md:col-span-2">
+                                        <div className="col-span-1 flex items-center justify-center rounded-lg py-10 text-white md:col-span-2"
+                                        style={{ background: 'linear-gradient(0deg, rgba(26,26,26,1) 0%, rgba(44,44,44,1) 50%, rgba(26,26,26,1) 100%)' }}>
                                             <div className="relative mx-10 grid grid-cols-1 lg:grid-cols-2 lg:space-x-10">
                                                 <ul className="list-disc">
                                                     <li>
@@ -638,7 +611,8 @@ export default function Outreach() {
                                                 className="rounded-lg object-cover object-[50%_40%]"
                                             />
                                         </div>
-                                        <div className="col-span-1 grid rounded-lg bg-black py-10 text-white md:mr-2.5 -md:place-items-center">
+                                        <div className="col-span-1 grid rounded-lg py-10 text-white md:mr-2.5 -md:place-items-center"
+                                        style={{ background: 'linear-gradient(0deg, rgba(26,26,26,1) 0%, rgba(44,44,44,1) 50%, rgba(26,26,26,1) 100%)' }}>
                                             <div className="mx-8 flex flex-col justify-center -md:items-center">
                                                 <h3 className="text-center text-r3xl font-bold">
                                                     Dynabots
@@ -664,7 +638,8 @@ export default function Outreach() {
                                                 </div>
                                             </div>
                                         </div>
-                                        <div className="col-span-1 grid rounded-lg bg-black py-10 text-white md:ml-2.5 -md:mt-3 -md:place-items-center">
+                                        <div className="col-span-1 grid rounded-lg py-10 text-white md:ml-2.5 -md:mt-3 -md:place-items-center"
+                                        style={{ background: 'linear-gradient(0deg, rgba(26,26,26,1) 0%, rgba(44,44,44,1) 50%, rgba(26,26,26,1) 100%)' }}>
                                             <div className="mx-8 flex flex-col justify-center -md:items-center">
                                                 <h3 className="text-center text-r3xl font-bold">
                                                     Keep It Simple 2
@@ -704,7 +679,8 @@ export default function Outreach() {
                             <h2 className="text-r2xl font-bold">FLL Teams</h2>
                             {/* {true ? ( */}
                             <div id="FLL-content" className="mb-5 mt-2">
-                                <div className="flex items-center justify-center rounded-lg bg-white py-10 text-black md:col-span-2">
+                                <div className="flex items-center justify-center rounded-lg py-10 text-white md:col-span-2"
+                                style={{ background: 'linear-gradient(0deg, rgba(26,26,26,1) 0%, rgba(44,44,44,1) 50%, rgba(26,26,26,1) 100%)' }}>
                                     <div className="relative mx-10 grid grid-cols-1 lg:grid-cols-2 lg:space-x-10">
                                         <ul className="list-disc">
                                             <li>
@@ -764,7 +740,8 @@ export default function Outreach() {
                             <div id="miscContent" className="mb-5 mt-2">
                                 <div className="grid-rows-auto grid">
                                     <div className="grid grid-cols-1 md:grid-cols-2">
-                                        <div className="col-span-2 flex items-center justify-center rounded-lg bg-white py-10 text-black md:mr-2.5 -md:mb-5">
+                                        <div className="col-span-2 flex items-center justify-center rounded-lg py-10 text-white md:mr-2.5 -md:mb-5"
+                                        style={{ background: 'linear-gradient(0deg, rgba(26,26,26,1) 0%, rgba(44,44,44,1) 50%, rgba(26,26,26,1) 100%)' }}>
                                             <div className="relative mx-10">
                                                 <ul className="list-disc">
                                                     <li>
