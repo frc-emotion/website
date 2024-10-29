@@ -602,8 +602,8 @@ export default function Outreach() {
                             {/* {true ? ( */}
                             <div id="ftc-content" className="mb-5 mt-2">
                                 <div className="grid-rows-auto grid">
-                                    <div className="row-span-auto grid grid-cols-1 md:grid-cols-2">
-                                        <div className="relative col-span-1 mb-5 h-[35vh] md:col-span-2">
+                                    <div className="row-span-auto grid grid-cols-1 md:grid-cols-3">
+                                        <div className="relative col-span-1 mb-5 h-[35vh] md:col-span-3">
                                             <Image
                                                 src="https://cdn.team2658.org/web-public/outreach/outreach-19.jpeg"
                                                 alt=""
@@ -638,7 +638,8 @@ export default function Outreach() {
                                                 </div>
                                             </div>
                                         </div>
-                                        <div className="col-span-1 grid rounded-lg py-10 text-white md:ml-2.5 -md:mt-3 -md:place-items-center"
+            
+                                        <div className="col-span-1 grid rounded-lg py-10 text-white md:ml-2.5 md:mr-2.5 -md:mt-3 -md:place-items-center"
                                         style={{ background: 'linear-gradient(0deg, rgba(26,26,26,1) 0%, rgba(44,44,44,1) 50%, rgba(26,26,26,1) 100%)' }}>
                                             <div className="mx-8 flex flex-col justify-center -md:items-center">
                                                 <h3 className="text-center text-r3xl font-bold">
@@ -650,6 +651,26 @@ export default function Outreach() {
                                                     <p>more:</p>
                                                     <a
                                                         href="https://ftc-events.firstinspires.org/team/20355"
+                                                        target="_blank"
+                                                        className="underline"
+                                                    >
+                                                        Stats
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div className="col-span-1 grid rounded-lg py-10 text-white md:ml-2.5 -md:mt-3 -md:place-items-center"
+                                        style={{ background: 'linear-gradient(0deg, rgba(26,26,26,1) 0%, rgba(44,44,44,1) 50%, rgba(26,26,26,1) 100%)' }}>
+                                            <div className="mx-8 flex flex-col justify-center -md:items-center">
+                                                <h3 className="text-center text-r3xl font-bold">
+                                                    Mech-A-Mind
+                                                    <br />
+                                                    #23673
+                                                </h3>
+                                                <div className="mt-3 flex flex-row items-center justify-center space-x-3 font-semibold">
+                                                    <p>more:</p>
+                                                    <a
+                                                        href="https://ftc-events.firstinspires.org/team/23673"
                                                         target="_blank"
                                                         className="underline"
                                                     >
