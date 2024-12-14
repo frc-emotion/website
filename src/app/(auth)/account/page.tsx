@@ -1,11 +1,10 @@
-"use client";
+'use client';
 
-import Login from "../login/page";
+import AccountPage from "@/components/AccountPage";
+import useAuth from "@/hooks/useAuth";
 
-export default function AccountPage() {
-	return (
-		<>
-			<Login />
-		</>
-	);
+export default function AccountPageRoute() {
+    useAuth(true); // Protect this page
+
+    return <AccountPage />;
 }
