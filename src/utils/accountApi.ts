@@ -3,7 +3,7 @@ import axios from 'axios';
 import api from './api';
 
 const accountApi = axios.create({
-    baseURL: 'https://staging.team2658.org/api/account',
+    baseURL: 'https://api.team2658.org/api/account',
     headers: {
         'Content-Type': 'application/json',
     },

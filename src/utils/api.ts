@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const api = axios.create({
-    baseURL: 'https://staging.team2658.org/api/auth',
+    baseURL: 'https://api.team2658.org/api/auth',
     headers: {
         'Content-Type': 'application/json',
     },
