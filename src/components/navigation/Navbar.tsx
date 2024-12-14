@@ -27,14 +27,11 @@ import { MdElectricalServices, MdDesignServices } from "react-icons/md";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { cookies } from "next/dist/client/components/headers";
-import { User } from "@/app/(auth)/login/page";
 
 export default function Navbar({
 	auth,
-	user,
 }: {
 	auth: boolean;
-	user: User | null;
 }) {
 	const router = useRouter();
 	const mainMenuItems = [
@@ -337,7 +334,7 @@ export default function Navbar({
 									href="/login"
 									className="text-r2xl font-semibold hover:underline"
 								>
-									{user?.firstname ?? "Login"}
+									Login
 								</Link>
 							</div>
 						</div>
@@ -462,7 +459,7 @@ export default function Navbar({
 				{/* lg:flex space-x-8 text-rmd font-semibold */}
 				<div className="hidden space-x-8 text-rmd font-semibold lg:flex">
 					<Link href="/login" className="hover:underline">
-						{user?.firstname ?? "Login"}
+						Login
 					</Link>
 				</div>
 			</nav>
