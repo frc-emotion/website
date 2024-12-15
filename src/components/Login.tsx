@@ -87,9 +87,10 @@ export default function Login() {
                             </div>
                         </form>
                         <div className="mt-4 text-center">
-                            <Link href="/register" className="text-blue-500 hover:underline">
-                                Don't have an account? Register here.
-                            </Link>
+                            {/* <Link href="/register" className="text-blue-500 hover:underline">
+                                Don't have an account? Register on the app.
+                            </Link> */}
+                            Don't have an account? Register on the app.
                         </div>
                     </div>
                 </div>
