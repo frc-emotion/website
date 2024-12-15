@@ -1,7 +1,7 @@
 import "./index.css";
 
 const privacyPolicy = `
-Team
+
 Last Updated: December 14, 2024
 
 1. Introduction
