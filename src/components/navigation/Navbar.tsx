@@ -29,9 +29,9 @@ import { useRouter } from "next/navigation";
 import { cookies } from "next/dist/client/components/headers";
 
 export default function Navbar({
-	auth,
+	// auth,
 }: {
-	auth: boolean;
+	// auth: boolean;
 }) {
 	const router = useRouter();
 	const mainMenuItems = [
