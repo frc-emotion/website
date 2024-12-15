@@ -10,6 +10,7 @@ export default function Login() {
     const [password, setPassword] = useState("");
     const { login } = useContext(AuthContext);
     const [loading, setLoading] = useState(false);
+    const [showPopup, setShowPopup] = useState(false);
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
@@ -18,8 +19,12 @@ export default function Login() {
         setLoading(false);
     };
 
+    const handleClosePopup = () => {
+        setShowPopup(false);
+    };
+
     return (
-        <main className="h-screen bg-teamYellow-500">
+        <main className="h-screen bg-teamYellow-500 relative">
             <div className="flex h-full w-full items-center justify-center">
                 <div className="rounded-lg bg-white px-[100px] shadow-2xl -hlg:px-[15%]">
                     <div className="my-10">
@@ -87,14 +92,51 @@ export default function Login() {
                             </div>
                         </form>
                         <div className="mt-4 text-center">
-                            {/* <Link href="/register" className="text-blue-500 hover:underline">
-                                Don't have an account? Register on the app.
-                            </Link> */}
                             Don't have an account? Register on the app.
+                        </div>
+
+                        {/* Trigger for Popup */}
+                        <div className="mt-4 text-center">
+                            <button
+                                onClick={() => setShowPopup(true)}
+                                className="text-blue-500 hover:underline font-semibold"
+                            >
+                                Request Account Deletion Info
+                            </button>
                         </div>
                     </div>
                 </div>
             </div>
+
+            {showPopup && (
+                <div className="fixed inset-0 z-50 flex mt-0 items-center justify-center bg-black bg-opacity-50">
+                    <div className="bg-white rounded-md p-6 max-w-md w-full relative">
+                        <button
+                            className="absolute top-2 right-2 text-gray-600 hover:text-black"
+                            onClick={handleClosePopup}
+                        >
+                            X
+                        </button>
+                        <h2 className="text-lg font-bold mb-4">
+                            Request Account and Data Deletion
+                        </h2>
+                        <p className="mb-2">
+                            As a user of the <strong>Nautilus App</strong>, you have the right to request deletion of your account and associated data.
+                        </p>
+                        <p className="mb-2">
+                            <strong>To request deletion:</strong><br />
+                            Login to your account and click the 'Delete Account' button on the account page.
+                        </p>
+                        <p className="mb-2">
+                            By submitting a deletion request, all personal information associated with your account (including your email, profile details) will be permanently removed from our servers. Certain non-personally identifiable data may be retained for a limited period as required by law, compliance or telemetry purposes.
+                        </p>
+                        <p className="mb-2">
+                            Please note: Account deletion is irreversible. Once completed, your data cannot be recovered.
+                        </p>
+                        
+                    </div>
+                </div>
+            )}
         </main>
     );
 }
