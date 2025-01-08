@@ -3,7 +3,8 @@ import axios from 'axios';
 import api from './api';
 
 const accountApi = axios.create({
-    baseURL: 'https://api.team2658.org/api/account',
+    //baseURL: 'https://api.team2658.org/api/account',
+    baseURL:'http://localhost:7001/api/account',
     headers: {
         'Content-Type': 'application/json',
     },

@@ -18,7 +18,7 @@ function submitForm(e: FormEvent<HTMLFormElement>, formData: formData) {
         const request = new XMLHttpRequest();
         request.open(
             "POST",
-            "https://discord.com/api/webhooks/1124596501084119040/Gw_GrayHKeEunQzNe58isLQeLlgyRNt2It-sN6_03L8rWSu_kHQ2A8eyKeYhdhG7hO1M"
+            "https://discord.com/api/webhooks/1326397927249154120/nNAKlC_iXRBogIxVX_LlorqUr-8SrUpshedrAevX_HPrmMS28utQwtK4uUTj4K_zuPyj"
         );
         request.setRequestHeader("Content-type", "application/json");
         const subject = formData.subject ? formData.subject : "None provided";
