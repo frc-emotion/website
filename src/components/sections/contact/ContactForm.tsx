@@ -1,5 +1,14 @@
 "use client";
+// import api from "@/utils/api";
 import "./index.scss";
+import axios from 'axios';
+
+const api = axios.create({
+    baseURL: 'https://api.team2658.org/api/notifications',
+    headers: {
+        'Content-Type': 'application/json',
+    },
+});
 
 import { FormEvent, useRef, useState } from "react";
 
@@ -12,62 +21,26 @@ type formData = {
 };
 
 function submitForm(e: FormEvent<HTMLFormElement>, formData: formData) {
+    
     e.preventDefault();
     console.log("Form submitted");
-    try {
-        const request = new XMLHttpRequest();
-        request.open(
-            "POST",
-            "https://discord.com/api/webhooks/1326397927249154120/nNAKlC_iXRBogIxVX_LlorqUr-8SrUpshedrAevX_HPrmMS28utQwtK4uUTj4K_zuPyj"
-        );
-        request.setRequestHeader("Content-type", "application/json");
-        const subject = formData.subject ? formData.subject : "None provided";
-        const fieldsArr = [
-            {
-                name: "Name",
-                value: formData.name,
-            },
-            {
-                name: "Email",
-                value: formData.email,
-            },
-            {
-                name: "Message",
-                value: formData.message,
-            },
-        ];
-
-        if (formData.company.trim()) {
-            fieldsArr.splice(1, 0, {
-                name: "Company",
-                value: formData.company,
-            });
+    const subForm = async (data: { name: string; email: string; message: string; company: string; }) => {
+        try {
+            const response = await api.post('/webhook', data);
+            console.log(response.status)
+            if (response.status === 200) {
+            } else {
+                // Handle unexpected status codes
+                alert(response.data.message || 'Submission failed.');
+            }
+        } catch (error: any) {
+            console.error('Submission error:', error);
+            alert(error.response?.data?.message || 'Submission failed.');
         }
-
-        const params = {
-            username: "team2658.org",
-            avatar_url:
-                "https://avatars.githubusercontent.com/u/36017746?s=400&u=e55b83cf74c03119a931a08fb43d566f9087cfa0&v=4",
-            content: "New form submission🚨🚨🚨🚨🚨🚨🚨",
-            embeds: [
-                {
-                    title: "Subject: " + subject,
-                    description:
-                        "Submitted on " +
-                        new Date().toDateString() +
-                        " at " +
-                        new Date().toLocaleTimeString(),
-                    color: 15985179,
-                    fields: fieldsArr,
-                },
-            ],
-        };
-        request.send(JSON.stringify(params));
-        console.log("submitted");
-    } catch (err) {
-        console.log(err);
-    }
+    };
+    subForm(formData);
 }
+    
 
 export default function ContactForm() {
     const [name, setName] = useState("");
