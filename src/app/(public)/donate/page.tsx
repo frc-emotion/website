@@ -1,6 +1,8 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import PDFViewer from '@/components/sections/donate/PDFViewer';
 import Image from "next/image";
+
+import { useQueryParams } from "@/context/QueryParametersContext";
 
 export const metadata = {
     title: "Donate | FRC Team 2658",
@@ -8,6 +10,9 @@ export const metadata = {
 };
 
 export default function Home() {
+    const queryParams = useQueryParams();
+    const intialPage = queryParams.page || "1";
+    const page = parseInt(intialPage);
     return (
         <div>
             <div className="relative select-none h-clampLarge overflow-hidden bg-black">
@@ -22,7 +27,7 @@ export default function Home() {
                 </h1>
             </div>
             <div className="flex justify-center w-full sm:w-3/4 lg:w-1/2 mx-auto p-4 bg-teamYellow-500 rounded-xl">
-                <PDFViewer />
+                <PDFViewer page={page} />
             </div>
         </div>
     );

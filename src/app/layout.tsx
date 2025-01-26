@@ -1,5 +1,6 @@
 import { Inter } from "next/font/google";
 import "@/styles/globals.css";
+import { QueryParamsProvider } from "@/context/QueryParametersContext";
 
 export const metadata = {
     title: "FRC Team 2658",
@@ -21,7 +22,8 @@ export default function RootLayout({
     return (
         <html lang="en">
             {/* <body className={`${font.variable} font-sans bg-black`}> */}
-            <body>{children}</body>
+            {/* <body>{children}</body> */}
+            <QueryParamsProvider>{children}</QueryParamsProvider>
         </html>
     );
 }

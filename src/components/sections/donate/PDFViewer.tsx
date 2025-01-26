@@ -9,9 +9,9 @@ pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/l
 
 let filename = "Sponsorship Packet 2024-25.pdf";
 
-export default function PDFViewer() {
+export default function PDFViewer({ page = 1 } : {page?: number}) {
   const [numPages, setNumPages] = useState<number>();
-  const [pageNumber, setPageNumber] = useState<number>(1);
+  const [pageNumber, setPageNumber] = useState<number>(page);
   const [scale, setScale] = useState<number>(1.0);
 
   // Dynamically set scale based on screen size (mobile vs. desktop)

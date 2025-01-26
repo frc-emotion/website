@@ -30,7 +30,6 @@ function submitForm(e: FormEvent<HTMLFormElement>, formData: formData) {
             console.log(response.status)
             if (response.status === 200) {
             } else {
-                // Handle unexpected status codes
                 alert(response.data.message || 'Submission failed.');
             }
         } catch (error: any) {
