@@ -21,7 +21,7 @@ export default function CalendarPage() {
         </h1>
       </div>
 
-      <div className="flex justify-center w-full sm:w-3/4 lg:w-1/2 mx-auto p-4 bg-teamYellow-500 rounded-xl my-[60px]">
+      <div className="flex justify-center p-4 bg-teamYellow-500 rounded-xl my-[60px] mx-[20px]">
         <Calendar />
       </div>
     </div>
