@@ -58,8 +58,11 @@ export default function Navbar({
 		{
 			title: "Contact",
 			href: "/contact",
+		},
+		{
+			title: "Calendar",
+			href: "/calendar",
 		}
-		
 	];
 	const moreMenuOne = [
 		{

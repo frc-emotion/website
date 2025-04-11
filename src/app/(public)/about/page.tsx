@@ -27,7 +27,7 @@ export default function AboutPage() {
                     About Us
                 </h1>
             </div>
-            <section className="bg-teamYellow-400">
+            <section className="bg-teamYellow-400 py-8">
                 <h2 className="bg-teamYellow-400 text-center font-bold">
                     Team Structure
                 </h2>
