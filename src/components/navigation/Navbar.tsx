@@ -47,6 +47,10 @@ export default function Navbar({
 			title: "Outreach",
 			href: "/outreach",
 		},
+		{
+			title: "Upcoming",
+			href: "/upcoming",
+		},
         {
             title: "Robots",
             href: "/robots",
@@ -59,8 +63,8 @@ export default function Navbar({
 			title: "Contact",
 			href: "/contact",
 		}
-		
 	];
+	
 	const moreMenuOne = [
 		{
 			title: "Member Home",

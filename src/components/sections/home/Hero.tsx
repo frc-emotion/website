@@ -22,11 +22,11 @@ export default function Hero() {
             >
                 <div className="relative h-full w-full">
                     <Image
-                        src="https://cdn.team2658.org/web-public/head.jpeg"
+                        src="https://raw.githubusercontent.com/CrookedTwig4/Pictures/refs/heads/main/DSC03354.JPG"
                         //src='https://cdn.team2658.org/web-public/outreach/competitions/pitTestingBATB24.jpg'
                         fill={true}
                         alt=""
-                        className="rounded-lg object-cover object-top"
+                        className="rounded-lg object-cover object-center"
                         priority={true}
                     />
                 </div>
