@@ -32,6 +32,7 @@
     },
     "devDependencies": {
         "@netlify/next": "^1.4.9",
+        "@netlify/plugin-nextjs": "^5.11.4",
         "@tailwindcss/forms": "^0.5.3",
         "prettier": "^3.0.0",
         "prettier-plugin-tailwindcss": "^0.3.0",
