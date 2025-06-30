@@ -7,7 +7,7 @@ const nextConfig = {
 		},
 	reactStrictMode: true,
 	images: {
-		domains: ["cdn.team2658.org"],
+		domains: ["cdn.team2658.org", "cdn.jsdelivr.net"],
 	},
 	sassOptions: {
 		includePaths: [require("path").join(__dirname, "styles")],

@@ -15,7 +15,8 @@ export default function Robot() {
 		<main className="bg-black w-full">
 			<div className="relative h-clampLarge overflow-hidden">
 				<Image
-					src="https://cdn.team2658.org/web-public/trident.jpeg"
+					// src="https://cdn.team2658.org/web-public/trident.jpeg"
+					src="https://cdn.jsdelivr.net/gh/frc-emotion/images@main/trident.jpeg"
 					alt="2023 Robot, Trident"
 					fill={true}
 					className="absolute object-cover blur-sm brightness-50"

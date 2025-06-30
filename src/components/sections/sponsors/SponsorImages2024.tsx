@@ -2,7 +2,8 @@ import "@/styles/globals.css";
 import Image from "next/image";
 
 export default function SponsorImages2024() {
-    const logoFolder = "https://cdn.team2658.org/web-public/sponsors"; // last character CANNOT be a '/'
+    // const logoFolder = "https://cdn.team2658.org/web-public/sponsors"; // last character CANNOT be a '/'
+    const logoFolder = "https://cdn.jsdelivr.net/gh/frc-emotion/images@main/sponsors"; // last character CANNOT be a '/'
     const sponsors = [
         // width and height both in pixels
         {

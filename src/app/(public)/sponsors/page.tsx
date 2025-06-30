@@ -17,7 +17,8 @@ export default function Sponsor() {
         <main className="bg-black">
             <div className="relative overflow-hidden h-clampLarge">
                 <Image
-                    src="https://cdn.team2658.org/web-public/trident.jpeg"
+                    // src="https://cdn.team2658.org/web-public/trident.jpeg"
+                    src="https://cdn.jsdelivr.net/gh/frc-emotion/images@main/trident.jpeg"
                     alt="2023 Robot, Trident"
                     fill={true}
                     className="object-cover absolute brightness-50 blur-sm"

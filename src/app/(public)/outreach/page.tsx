@@ -63,7 +63,8 @@ export default function Outreach() {
                 className="relative select-none h-clampLarge overflow-hidden bg-black"
             >
                 <Image
-                    src="https://cdn.team2658.org/web-public/outreach/head.jpeg"
+                    // src="https://cdn.team2658.org/web-public/outreach/head.jpeg"
+                    src="https://cdn.jsdelivr.net/gh/frc-emotion/images@main/outreach/head.jpeg"
                     fill={true}
                     alt=""
                     className="object-cover brightness-50 blur-sm absolute"
@@ -139,7 +140,8 @@ export default function Outreach() {
                                     <div className="row-span-auto grid grid-cols-1 md:grid-cols-2">
                                         <div className="relative col-span-1 mb-5 mt-1 flex h-[45vh] select-none overflow-hidden rounded-lg md:mr-5">
                                             <Image
-                                                src="https://cdn.team2658.org/web-public/outreach/competitions/celebratingBATB24.JPG"
+                                                // src="https://cdn.team2658.org/web-public/outreach/competitions/celebratingBATB24.JPG"
+                                                src="https://cdn.jsdelivr.net/gh/frc-emotion/images@main/outreach/competitions/celebratingBATB24.JPG"
                                                 alt="Battle At The Border 2024"
                                                 fill={true}
                                                 className='object-cover'
@@ -214,7 +216,8 @@ export default function Outreach() {
                                         </div>
                                         <div className="relative col-span-1 mb-5 mt-1 flex h-[45vh] select-none overflow-hidden rounded-lg">
                                             <Image
-                                                src="https://cdn.team2658.org/web-public/outreach/robotFairbotics.JPG"
+                                                // src="https://cdn.team2658.org/web-public/outreach/robotFairbotics.JPG"
+                                                src="https://cdn.jsdelivr.net/gh/frc-emotion/images@main/outreach/robotFairbotics.JPG"
                                                 alt="Fairbotics 2024"
                                                 fill={true}
                                                 className='object-cover'
@@ -231,7 +234,8 @@ export default function Outreach() {
                                 <div className="row-span-auto grid grid-cols-1 md:grid-cols-2">
                                         <div className="relative col-span-1 mb-5 mt-1 flex h-[45vh] select-none overflow-hidden rounded-lg md:mr-5">
                                             <Image
-                                                src="https://cdn.team2658.org/web-public/outreach/bobcatSpylios.jpg"
+                                                // src="https://cdn.team2658.org/web-public/outreach/bobcatSpylios.jpg"
+                                                src="https://cdn.jsdelivr.net/gh/frc-emotion/images@main/outreach/bobcatSpylios.jpg"
                                                 alt="Battle At The Border 2024"
                                                 fill={true}
                                                 className='object-cover'
@@ -254,7 +258,8 @@ export default function Outreach() {
                                     <div className="row-span-auto grid-rows-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 omd:grid-rows-2 mb-2">
                                             <div className="relative col-span-1 h-[25vh] md:mr-5 rounded-lg">
                                                 <Image
-                                                    src="https://cdn.team2658.org/web-public/outreach/cte-expo.jpeg"
+                                                    // src="https://cdn.team2658.org/web-public/outreach/cte-expo.jpeg"
+                                                    src="https://cdn.jsdelivr.net/gh/frc-emotion/images@main/outreach/cte-expo.jpeg"
                                                     alt=""
                                                     fill={true}
                                                     className="object-cover"
@@ -272,7 +277,8 @@ export default function Outreach() {
                                             </div>
                                             <div className="relative col-span-1 h-[25vh] md:mr-5 rounded-lg lg:mr-5 -md:mt-3">
                                                 <Image
-                                                    src="https://cdn.team2658.org/web-public/outreach/posterCTE24.jpg"
+                                                    // src="https://cdn.team2658.org/web-public/outreach/posterCTE24.jpg"
+                                                    src="https://cdn.jsdelivr.net/gh/frc-emotion/images@main/outreach/posterCTE24.jpg"
                                                     alt=""
                                                     fill={true}
                                                     className="object-cover"
@@ -342,7 +348,8 @@ export default function Outreach() {
                                 <div className="grid-rows-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 omd:grid-rows-2">
                                     <div className="relative col-span-1 h-[25vh] md:mr-5">
                                         <Image
-                                            src="https://cdn.team2658.org/web-public/outreach/competitions/sdr.jpeg"
+                                            // src="https://cdn.team2658.org/web-public/outreach/competitions/sdr.jpeg"
+                                            src="https://cdn.jsdelivr.net/gh/frc-emotion/images@main/outreach/competitions/sdr.jpeg"
                                             alt=""
                                             fill={true}
                                             className="rounded-lg object-cover"
@@ -360,7 +367,8 @@ export default function Outreach() {
                                     </div>
                                     <div className="relative col-span-1 h-[25vh] -lg:mt-3 omd:mr-5">
                                         <Image
-                                            src="https://cdn.team2658.org/web-public/outreach/competitions/lvr.jpeg"
+                                            // src="https://cdn.team2658.org/web-public/outreach/competitions/lvr.jpeg"
+                                            src="https://cdn.jsdelivr.net/gh/frc-emotion/images@main/outreach/competitions/lvr.jpeg"
                                             alt=""
                                             fill={true}
                                             className="rounded-lg object-cover object-bottom"
@@ -378,7 +386,8 @@ export default function Outreach() {
                                     </div>
                                     <div className="relative col-span-1 mt-3 h-[25vh] md:mr-5">
                                         <Image
-                                            src="https://cdn.team2658.org/web-public/outreach/competitions/avr.jpeg"
+                                            // src="https://cdn.team2658.org/web-public/outreach/competitions/avr.jpeg"
+                                            src="https://cdn.jsdelivr.net/gh/frc-emotion/images@main/outreach/competitions/avr.jpeg"
                                             alt=""
                                             fill={true}
                                             className="rounded-lg object-cover"
@@ -397,7 +406,8 @@ export default function Outreach() {
                                     </div>
                                     <div className="relative col-span-1 mt-3 h-[25vh] md:mr-5">
                                         <Image
-                                            src="https://cdn.team2658.org/web-public/outreach/competitions/batb.jpeg"
+                                            // src="https://cdn.team2658.org/web-public/outreach/competitions/batb.jpeg"
+                                            src="https://cdn.jsdelivr.net/gh/frc-emotion/images@main/outreach/competitions/batb.jpeg"
                                             alt=""
                                             fill={true}
                                             className="rounded-lg object-cover object-bottom"
@@ -414,7 +424,8 @@ export default function Outreach() {
                                     </div>
                                     <div className="relative col-span-1 mt-3 h-[25vh] omd:mr-5">
                                         <Image
-                                            src="https://cdn.team2658.org/web-public/outreach/competitions/blitz.jpeg"
+                                            // src="https://cdn.team2658.org/web-public/outreach/competitions/blitz.jpeg"
+                                            src="https://cdn.jsdelivr.net/gh/frc-emotion/images@main/outreach/competitions/blitz.jpeg"
                                             alt=""
                                             fill={true}
                                             className="rounded-lg object-cover"
@@ -511,7 +522,8 @@ export default function Outreach() {
                                     <div className="row-span-auto grid grid-cols-1 md:grid-cols-2">
                                         <div className="relative col-span-1 mb-5 mt-1 flex h-[35vh] select-none overflow-hidden rounded-lg md:mr-2.5 -md:items-center -md:justify-center">
                                             <Image
-                                                src="https://cdn.team2658.org/web-public/outreach/escondidofair.jpeg"
+                                                // src="https://cdn.team2658.org/web-public/outreach/escondidofair.jpeg"
+                                                src="https://cdn.jsdelivr.net/gh/frc-emotion/images@main/outreach/escondidofair.jpeg"
                                                 alt=""
                                                 fill={true}
                                                 className="object-cover"
@@ -605,7 +617,8 @@ export default function Outreach() {
                                     <div className="row-span-auto grid grid-cols-1 md:grid-cols-3">
                                         <div className="relative col-span-1 mb-5 h-[35vh] md:col-span-3">
                                             <Image
-                                                src="https://cdn.team2658.org/web-public/outreach/outreach-19.jpeg"
+                                                // src="https://cdn.team2658.org/web-public/outreach/outreach-19.jpeg"
+                                                src="https://cdn.jsdelivr.net/gh/frc-emotion/images@main/outreach/outreach-19.jpeg"
                                                 alt=""
                                                 fill={true}
                                                 className="rounded-lg object-cover object-[50%_40%]"

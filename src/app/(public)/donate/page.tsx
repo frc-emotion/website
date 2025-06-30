@@ -20,7 +20,8 @@ export default function DonatePage({ searchParams }: DonatePageProps) {
       {/* Hero Section */}
       <div className="relative select-none h-clampLarge overflow-hidden bg-black">
         <Image
-          src="https://cdn.team2658.org/web-public/trident.jpeg"
+          // src="https://cdn.team2658.org/web-public/trident.jpeg"
+          src="https://cdn.jsdelivr.net/gh/frc-emotion/images@main/trident.jpeg"
           alt="2023 Robot, Trident"
           fill={true}
           className="object-cover brightness-50 blur-sm absolute"

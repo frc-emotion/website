@@ -76,7 +76,8 @@ export default function Home() {
                           //  height={4000}
                            // alt="2658's 2023 robot, 'Trident'"
                         
-                            src="https://cdn.team2658.org/web-public/outreach/competitions/robotBATB24.JPG"
+                            // src="https://cdn.team2658.org/web-public/outreach/competitions/robotBATB24.JPG"
+                            src = "https://cdn.jsdelivr.net/gh/frc-emotion/images@main/outreach/competitions/robotBATB24.JPG"
                             className="w-[90vw] sm:w-[80vw] 2xl:w-[60vw] select-none rounded-lg"
                             width={3024}
                             height={1856}
