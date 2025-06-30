@@ -22,7 +22,8 @@ export default function Hero() {
             >
                 <div className="relative h-full w-full">
                     <Image
-                        src="https://cdn.team2658.org/web-public/head.jpeg"
+                        // src="https://cdn.team2658.org/web-public/head.jpeg"
+                        src="https://cdn.jsdelivr.net/gh/frc-emotion/images@main/head.jpeg"
                         //src='https://cdn.team2658.org/web-public/outreach/competitions/pitTestingBATB24.jpg'
                         fill={true}
                         alt=""
