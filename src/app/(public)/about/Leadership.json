@@ -1,7 +1,7 @@
 {
     "Advisors": [
-        "Katherine Rumsey",
-        "Brian Dunlea"
+        "Justin Couvrette"
+        
     ],
     "Mentors": [
         "Evengy Korol",
@@ -15,6 +15,10 @@
         "Rahul Salvi"
     ],
     "Alumni": {
+         "Garrett Sayson": [
+            ["President", "2024-2025"],
+            ["Vice President", "2023-2024"]
+        ],
         "Karan Thakkar": [
             ["President", "2023-2024"],
             ["Vice President", "2022-2023"]
@@ -97,16 +101,16 @@
         ]
     },
     "Leads": {
-        "Electrical": ["Jaden Trinidad", "Rithik Ohri", "Robert Morrison"],
-        "Build": ["Roy Maldonaldo", "Radhika Patil"],
-        "Software": ["Peyton Slape", "Nathan Gillespie"],
-        "Marketing": ["Shravya Hatathodi", "Evan Lee"],
-        "Design": ["Neev Daga"]
+        "Electrical": ["Rithik Ohri", "Andre Fishman"],
+        "Build": ["Arjun Rastogi", "Hariom Parekh", "Ethan Huynh", "Leopoldo Ortega Velazquez"],
+        "Software": ["Aaran Chahal", "Mugilan Rajaraman"],
+        "Marketing": ["Evan Lee", "Shuban Jaiswal"],
+        "Design": ["Daniel Zubin", "Dana Park"]
     },
     "Executive": {
-        "President": ["Garrett Sayson"],
-        "Vice President": ["Arshan Shokoohi", "Simeon Kim"],
-        "Treasurer": ["Vedanth Kuruvadi"],
+        "President": ["Arshan Shokoohi", "Simeon Kim"],
+        "Vice President": ["Neev Daga","Radhika Patil"],
+        "Treasurer": ["Vedanth Kuruvadi", "Sanjan Prabu"],
         "Secretary": ["Sophia Newton"]
         
     }
