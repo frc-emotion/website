@@ -95,62 +95,67 @@ export default function AboutPage() {
                 </Grid3x2>
             </section>
             <section className="bg-teamYellow-400 py-8">
-                <h2 className="text-center">Student Leadership</h2>
-                <section className="grid-cols-5 md:grid">
-                    {Object.entries(Leadership.Leads).map(([key, value]) => (
-                        <div key={key} className="p-4">
-                            <h3 className="m-1 text-center text-r2xl font-bold">
-                                {key} {value.length > 1 ? "Leads" : "Lead"}
-                            </h3>
-                            <ul className="text-center text-rmd font-semibold">
-                                {value.map((lead) => (
-                                    <li key={lead}>{lead}</li>
-                                ))}
-                            </ul>
-                        </div>
-                    ))}
+  <h2 className="text-center">Student Leadership</h2>
 
-                    <div className="col-span-5 p-4">
-                        <h3 className="m-1 text-center text-r2xl font-bold">
-                            Execs
-                        </h3>
-                        
-                        <ul className="my-4 grid-cols-3 gap-y-6 text-center text-rlg font-semibold md:grid">
-                            {Leadership.Executive.President.map(
-                                president => (
-                                    <li key={president}>
-                                        <strong> President: </strong> {president}
-                                    </li>
-                                )
-                            )}
-                        
-                            {Leadership.Executive["Vice President"].map(
-                                vp => (
-                                    <li key={vp}>
-                                        <strong> Vice President: </strong> {vp}
-                                    </li>
-                                )
-                            )}
-                        </ul>
-                        <ul className="my-4 grid-cols-2 gap-y-6 text-center text-rlg font-semibold md:grid">
-                            {Leadership.Executive.Treasurer.map(
-                                treasurer => (
-                                    <li key={treasurer}>
-                                        <strong> Treasurer: </strong> {treasurer}
-                                    </li>
-                                )
-                            )}
-                            {Leadership.Executive.Secretary.map(
-                                secretary => (
-                                    <li key={secretary}>
-                                        <strong> Secretary: </strong> {secretary}
-                                    </li>
-                                )
-                            )}
-                        </ul>
-                    </div>
-                </section>
-            </section>
+  {/* ---- Leads Section ---- */}
+  <section className="flex justify-center gap-x-10 overflow-x-auto px-6">
+    {Object.entries(Leadership.Leads).map(([key, value]) => (
+      <div key={key} className="p-4 min-w-[150px]">
+        <h3 className="m-1 text-center text-r2xl font-bold">
+          {key} {value.length > 1 ? "Leads" : "Lead"}
+        </h3>
+        <ul className="text-center text-rmd font-semibold">
+          {value.map((lead) => (
+            <li key={lead}>{lead}</li>
+          ))}
+        </ul>
+      </div>
+    ))}
+  </section>
+
+  {/* ---- Execs Section ---- */}
+  <section className="max-w-6xl mx-auto px-6 mt-16">
+    <h3 className="text-center text-r2xl font-bold mb-12">Execs</h3>
+
+    {/* Row 1: Presidents + VPs evenly spaced */}
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-y-8 justify-items-center mb-16">
+      {Leadership.Executive.President.map((president) => (
+        <div key={president} className="text-center text-rlg font-semibold">
+          <strong>President:</strong> {president}
+        </div>
+      ))}
+
+      {Leadership.Executive["Vice President"].map((vp) => (
+        <div key={vp} className="text-center text-rlg font-semibold">
+          <strong>Vice President:</strong> {vp}
+        </div>
+      ))}
+    </div>
+
+    {/* Row 2: Treasurers, centered with spacing */}
+    <div className="flex justify-center gap-x-24 mb-16">
+      {Leadership.Executive.Treasurer.map((treasurer) => (
+        <div key={treasurer} className="text-center text-rlg font-semibold">
+          <strong>Treasurer:</strong> {treasurer}
+        </div>
+      ))}
+    </div>
+
+    {/* Row 3: Secretary centered */}
+    <div className="flex justify-center">
+      {Leadership.Executive.Secretary.map((secretary) => (
+        <div key={secretary} className="text-center text-rlg font-semibold">
+          <strong>Secretary:</strong> {secretary}
+        </div>
+      ))}
+    </div>
+  </section>
+</section>
+
+            <h2 className="bg-teamYellow-400 text-center font-bold">
+                Advisors, Mentors, and Alumni
+            </h2>
+
             <section className="width-screen grid grid-cols-2 gap-y-12 bg-black py-8 text-teamYellow-400">
                 <h2 className="col-span-2 text-center">Advisors and Mentors</h2>
                 {Leadership.Advisors.map((advisor) => (

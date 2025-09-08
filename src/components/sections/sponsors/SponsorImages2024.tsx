@@ -64,7 +64,9 @@ export default function SponsorImages2024() {
             name: "Kinetic CNC",
             path: `${logoFolder}/2024/kinetic.png`,
             width: 400,
-            height: 300
+            height: 300,
+            // Special styling for this logo to reduce its container impact
+            className: "object-contain scale-75" // Scales down the logo by 25%
         }
     ];
 
@@ -76,10 +78,12 @@ export default function SponsorImages2024() {
             <div className="text-left  text-[56px] font-semibold">
                 <h1>2024</h1>
             </div>
-            <div className="grid grid-cols-1 gap-10 md:grid-cols-2 xl:grid-cols-3">
+            <div className="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3"> {/* Reduced gap from 10 to 6 */}
                 {sponsors.map((item) => (
                     <div
-                        className="flex w-full select-none items-center justify-center"
+                        className={`flex w-full select-none items-center justify-center ${
+                            item.name === "Kinetic CNC" ? "h-48" : "" // Fixed height container for Kinetic CNC
+                        }`}
                         key={"sponsor-" + item.name}
                     >
                         <Image
@@ -89,18 +93,19 @@ export default function SponsorImages2024() {
                             width={item.width}
                             height={item.height}
                             quality={10} //dont need high quality for logos and this makes it load faster
+                            className={item.className || "object-contain"} // Apply special styling if available
                         />
                     </div>
                 ))}
             </div>
-            <div className="pt-10">
+            {/* <div className="pt-10">
                 <h2 className="text-[42px] font-semibold">
                     Additional Sponsors
                 </h2>
                 <ul className="grid grid-cols-1 gap-x-10 md:grid-cols-2 xl:grid-cols-3">
                     <li>North County Waterjet</li>
                 </ul>
-            </div>
+            </div> */}
         </div>
     );
-} //
+}

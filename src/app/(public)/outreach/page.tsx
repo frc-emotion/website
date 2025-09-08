@@ -137,7 +137,93 @@ export default function Outreach() {
                             </h2>
                             <div id="recentEventsContent" className='mb-5'>
                                 <div className="grid-rows-auto grid">
-                                    <div className="row-span-auto grid grid-cols-1 md:grid-cols-2">
+                                        <div className="row-span-auto grid grid-cols-1 md:grid-cols-2">
+                                            <div className="relative col-span-1 mb-5 mt-1 flex h-[45vh] select-none overflow-hidden rounded-lg md:mr-5">
+                                                <Image
+                                                    // src="https://cdn.team2658.org/web-public/outreach/competitions/celebratingBATB24.JPG"
+                                                    src="https://cdn.jsdelivr.net/gh/frc-emotion/images@main/robots/leviathan.jpg"
+                                                    alt="Battle At The Border 2024"
+                                                    fill={true}
+                                                    className='object-cover'
+                                                />
+                                            </div>
+                                            <div className="col-span-1 mb-5 grid rounded-lg py-10 text-white -md:place-items-center"
+                                            //style={{ background: 'linear-gradient(to right, #212121 0%, #4d4d4d 100%)' }}
+                                            style={{ background: 'linear-gradient(0deg, rgba(26,26,26,1) 0%, rgba(44,44,44,1) 50%, rgba(26,26,26,1) 100%)' }}
+
+                                            >
+
+                                            <div className="mx-8 flex flex-col justify-center -md:items-center">
+                                                    <h3 className="text-r3xl font-bold text-white">
+                                                           Port Hueneme 2025
+                                                    </h3>
+                                                    <p className="-md:mx-6 -md:text-center">
+                                                   Building on the experience gained from the San Diego Regional competition, our team participated in the Port Hueneme Regional, an official FRC event where we competed against 50 other teams. We applied the lessons we learned to refine our robot's performance, which helped us improve our overall consistency throughout the matches. This experience allowed us to showcase our unique innovations and adapt to the demands of the competition.
+                                                    </p>
+                                                    <div className="mt-3 flex flex-row space-x-3 font-semibold">
+                                                        <p>more:</p>
+                                                        <a
+                                                            className="underline"
+                                                            href="https://www.thebluealliance.com/event/2025casds"
+                                                            aria-label="Port Hueneme qualification matches and standings."
+                                                            target="_blank"
+                                                        >
+                                                            standings
+                                                        </a>
+                                                        <a
+                                                            className="underline"
+                                                            href="https://www.instagram.com/p/DBF5MvPRD5H/"  //not added yet old link
+                                                            aria-label="Port Hueneme overview video."
+                                                            target="_blank"
+                                                        >
+                                                            instagram
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div className="row-span-auto grid grid-cols-1 md:grid-cols-2">
+                                        <div className="col-span-1 mb-5 grid rounded-lg py-10 text-white -md:place-items-center md:mr-5"
+                                        style={{ background: 'linear-gradient(0deg, rgba(26,26,26,1) 0%, rgba(44,44,44,1) 50%, rgba(26,26,26,1) 100%)' }}>
+                                        <div className="mx-8 flex flex-col justify-center -md:items-center text-white">
+                                                <h3 className="text-r3xl font-bold">
+                                                        San Diego Regionals 2025
+                                                </h3>
+                                                <p className="-md:mx-6 -md:text-center">
+                                               Our team participated in the San Diego Regional competition, an official FRC event held at LionTree Arena at UCSD. We were one of 51 teams competing. We became more consistent by adding unique innovations to handle the demands of the competition. This allowed us to showcase our robot's abilities in a highly competitive environment.
+                                                </p>
+                                                <div className="mt-3 flex flex-row space-x-3 font-semibold">
+                                                    <p>more:</p>
+                                                    <a
+                                                        className="underline"
+                                                        href="https://www.thebluealliance.com/event/2025casd"
+                                                        aria-label="San Diego Regionals 2025 qualification matches and standings."
+                                                        target="_blank"
+                                                    >
+                                                        standings
+                                                    </a>
+                                                    <a
+                                                        className="underline"
+                                                        href="https://www.instagram.com/p/C8SlhxqS5JP/" // not added yet old link
+                                                        aria-label="SDR 2025 "
+                                                        target="_blank"
+                                                    >
+                                                        instagram
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div className="relative col-span-1 mb-5 mt-1 flex h-[45vh] select-none overflow-hidden rounded-lg">
+                                            <Image
+                                                // src="https://cdn.team2658.org/web-public/outreach/robotFairbotics.JPG"
+                                                src="https://cdn.jsdelivr.net/gh/frc-emotion/images@main/outreach/competitions/sdr2025.jpg"
+                                                alt="San Diego Regionals 2025"
+                                                fill={true}
+                                                className='object-cover object-center'
+                                            />
+                                        </div>
+                                    </div>
+                                     {/* <div className="row-span-auto grid grid-cols-1 md:grid-cols-2">
                                         <div className="relative col-span-1 mb-5 mt-1 flex h-[45vh] select-none overflow-hidden rounded-lg md:mr-5">
                                             <Image
                                                 // src="https://cdn.team2658.org/web-public/outreach/competitions/celebratingBATB24.JPG"
@@ -181,8 +267,8 @@ export default function Outreach() {
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div className="row-span-auto grid grid-cols-1 md:grid-cols-2">
+                                    {/* </div>  */}
+                                   {/* <div className="row-span-auto grid grid-cols-1 md:grid-cols-2">
         
                                         <div className="col-span-1 mb-5 grid rounded-lg py-10 text-white -md:place-items-center md:mr-5"
                                         style={{ background: 'linear-gradient(0deg, rgba(26,26,26,1) 0%, rgba(44,44,44,1) 50%, rgba(26,26,26,1) 100%)' }}>
@@ -223,7 +309,7 @@ export default function Outreach() {
                                                 className='object-cover'
                                             />
                                         </div>
-                                    </div>
+                                    </div>  */}
                                 </div>
                             </div>
                             <h2 className="text-r2xl font-bold">
@@ -245,7 +331,7 @@ export default function Outreach() {
                                         style={{ background: 'linear-gradient(0deg, rgba(26,26,26,1) 0%, rgba(44,44,44,1) 50%, rgba(26,26,26,1) 100%)' }}>
                                         <div className="mx-8 flex flex-col justify-center -md:items-center">
                                                 <h3 className="text-r3xl font-bold text-white">
-                                                        Bobcat Day 2024
+                                                        Bobcat Day 2025
                                                 </h3>
                                                 <p className="-md:mx-6 -md:text-center">
                                                 Bobcat Day hosted 8th graders from Bernardo Heights Middle School, with RB clubs showcasing their activities. Our robot was the main attraction, and we proudly represented our club, performing high-level demonstrations for the students.
@@ -253,7 +339,7 @@ export default function Outreach() {
                                             </div>
                                         </div>
                                     </div>
-                                    
+
                                     {/* set to h-[55vh] if 2nd row is ever used on larger screens */}
                                     <div className="row-span-auto grid-rows-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 omd:grid-rows-2 mb-2">
                                             <div className="relative col-span-1 h-[25vh] md:mr-5 rounded-lg">
@@ -446,7 +532,7 @@ export default function Outreach() {
                                             <ul className="list-disc">
                                             <li>
                                                     <b>Port Hueneme Regional</b>:
-                                                    {" 2/29/2024 - 3/3/2024"}
+                                                    {" 2/29/2025 - 3/3/2025"}
                                                 </li>
                                                 <li>
                                                     <b>Del Mar Regional</b>:
