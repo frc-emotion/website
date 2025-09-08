@@ -152,9 +152,9 @@ export default function AboutPage() {
   </section>
 </section>
 
-            <h2 className="bg-teamYellow-400 text-center font-bold">
+            {/* <h2 className="bg-teamYellow-400 text-center font-bold">
                 Advisors, Mentors, and Alumni
-            </h2>
+            </h2> */}
 
             <section className="width-screen grid grid-cols-2 gap-y-12 bg-black py-8 text-teamYellow-400">
                 <h2 className="col-span-2 text-center">Advisors and Mentors</h2>
