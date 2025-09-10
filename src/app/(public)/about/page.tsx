@@ -101,8 +101,8 @@ export default function AboutPage() {
   <section className="flex justify-center gap-x-10 overflow-x-auto px-6">
     {Object.entries(Leadership.Leads).map(([key, value]) => (
       <div key={key} className="p-4 min-w-[150px]">
-        <h3 className="m-1 text-center text-r2xl font-bold">
-          {key} {value.length > 1 ? "Leads" : "Lead"}
+        <h3 className="m-1 text-center text-r3xl font-bold">
+          {key} 
         </h3>
         <ul className="text-center text-rmd font-semibold">
           {value.map((lead) => (
@@ -114,26 +114,28 @@ export default function AboutPage() {
   </section>
 
   {/* ---- Execs Section ---- */}
-  <section className="max-w-6xl mx-auto px-6 mt-16">
-    <h3 className="text-center text-r2xl font-bold mb-12">Execs</h3>
+  <section className="max-w-6xl mx-auto px-6 mt-2">
+    <h2 className="text-center text-r3xl font-bold mb-6">Execs</h2>
 
     {/* Row 1: Presidents + VPs evenly spaced */}
-    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-y-8 justify-items-center mb-16">
-      {Leadership.Executive.President.map((president) => (
-        <div key={president} className="text-center text-rlg font-semibold">
-          <strong>President:</strong> {president}
-        </div>
-      ))}
+<div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-x-16 gap-y-6 text-center mb-12">
+    {Leadership.Executive.President.map((president) => (
+      <div key={president} className="text-center text-rlg font-semibold">
+        <strong>President:</strong>
+        <div>{president}</div>
+      </div>
+    ))}
 
-      {Leadership.Executive["Vice President"].map((vp) => (
-        <div key={vp} className="text-center text-rlg font-semibold">
-          <strong>Vice President:</strong> {vp}
-        </div>
-      ))}
-    </div>
+    {Leadership.Executive["Vice President"].map((vp) => (
+      <div key={vp} className="text-center text-rlg font-semibold">
+        <strong>Vice President:</strong>
+        <div>{vp}</div>
+      </div>
+    ))}
+  </div>
 
     {/* Row 2: Treasurers, centered with spacing */}
-    <div className="flex justify-center gap-x-24 mb-16">
+    <div className="flex justify-center gap-x-24 mb-14">
       {Leadership.Executive.Treasurer.map((treasurer) => (
         <div key={treasurer} className="text-center text-rlg font-semibold">
           <strong>Treasurer:</strong> {treasurer}

@@ -2,44 +2,68 @@ import "@/styles/globals.css";
 import Image from "next/image";
 
 export default function SponsorImages2025() {
-    const logoFolder = "https://cdn.jsdelivr.net/gh/frc-emotion/images@main/sponsors";   // folder containing sponsor logos
+    const logoFolder = "https://cdn.jsdelivr.net/gh/frc-emotion/images@main";   // folder containing sponsor logos
     // batteriesplus is imported above, no need to redeclare
     const sponsors = [
         {
             name: "Incose",
             width: 450,
             height: 500,
-            path: `${logoFolder}/2025/INCOSE.png`,
+            path: `${logoFolder}/sponsors/2025/INCOSE.png`,
         },
         {
             name: "RBHS Community Foundation",
-            width: 250,
+            width: 400,
             height: 500,
-            path: `${logoFolder}/2025/RBCommunityFoundation.png`,
+            path: `${logoFolder}/RB.png`,
         },
         {
             name: "Xometry",
             width: 450,
             height: 500,
-            path: `${logoFolder}/2025/Xometry.png`,
+            path: `${logoFolder}/sponsors/2025/Xometry.png`,
         },
         {
             name: "Bailey Foundation",
             width: 450,
             height: 500,
-            path: `${logoFolder}/2025/baileyfoundation.png`,
+            path: `${logoFolder}/sponsors/2025/baileyfoundation.png`,
         },
         {
             name: "Batteries Plus",
-            width: 450,
+            width: 350,
             height: 500,
-            path: `${logoFolder}/2025/batteries_secondary.png`,
+            path: `${logoFolder}/sponsors/2025/battery.png`,
         },
          {
             name: "RBHS ",
-            path: `${logoFolder}/2023/rbhs.png`,
+            path: `${logoFolder}/sponsors/2023/rbhs.png`,
+            width: 250,
+            height: 200,
+        },
+            {
+            name: "Qualcomm",
+            path: `${logoFolder}/sponsors/2023/qualcomm-updated.png`,
             width: 250,
             height: 100,
+        },
+            {
+            name: "Kinetic CNC",
+            path: `${logoFolder}/sponsors/2024/kinetic.png`,
+            width: 400,
+            height: 300,
+        },
+            {
+            name: "Instant Imprints",
+            path: `${logoFolder}/sponsors/2024/imprints.png`,
+            width: 250,
+            height: 100,
+        },
+        {
+            name: "Solidworks",
+            path: `${logoFolder}/sponsors/2024/solidworks.png`,
+            width: 300,
+            height: 300,
         },
 
     ]
