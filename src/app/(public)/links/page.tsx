@@ -20,7 +20,7 @@ const links = [
     },
     {
         name: "Club Application Forms",
-        link: "https://docs.google.com/document/d/1QXXVcJwAnVjUmRR4Vpz7R9o9IhBTbwL76rZT19EVULg/edit?usp=sharing",
+        link: "https://forms.gle/fevkLeCxBf77txYM6",
         emoji: "📝",
         description: ""
     },

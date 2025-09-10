@@ -170,14 +170,6 @@ export default function Outreach() {
                                                         >
                                                             standings
                                                         </a>
-                                                        <a
-                                                            className="underline"
-                                                            href="https://www.instagram.com/p/DBF5MvPRD5H/"  //not added yet old link
-                                                            aria-label="Port Hueneme overview video."
-                                                            target="_blank"
-                                                        >
-                                                            instagram
-                                                        </a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -201,15 +193,7 @@ export default function Outreach() {
                                                         target="_blank"
                                                     >
                                                         standings
-                                                    </a>
-                                                    <a
-                                                        className="underline"
-                                                        href="https://www.instagram.com/p/C8SlhxqS5JP/" // not added yet old link
-                                                        aria-label="SDR 2025 "
-                                                        target="_blank"
-                                                    >
-                                                        instagram
-                                                    </a>
+                                                    </a>                                                   
                                                 </div>
                                             </div>
                                         </div>
