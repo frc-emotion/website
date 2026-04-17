@@ -138,6 +138,39 @@ export default function Outreach() {
                             <div id="recentEventsContent" className='mb-5'>
                                 <div className="grid-rows-auto grid">
                                         <div className="row-span-auto grid grid-cols-1 md:grid-cols-2">
+                                            <div className="relative col-span-1 mb-5 mt-1 flex h-[45vh] select-none overflow-hidden rounded-lg md:mr-5">
+                                                <Image
+                                                    src="https://cdn.jsdelivr.net/gh/frc-emotion/images@main/outreach/competitions/OrangeCountyEvent2026.JPG"
+                                                    alt="Orange County Event 2026"
+                                                    fill={true}
+                                                    className='object-cover object-center'
+                                                />
+                                            </div>
+                                            <div className="col-span-1 mb-5 grid rounded-lg py-10 text-white -md:place-items-center"
+                                            style={{ background: 'linear-gradient(0deg, rgba(26,26,26,1) 0%, rgba(44,44,44,1) 50%, rgba(26,26,26,1) 100%)' }}
+                                            >
+                                                <div className="mx-8 flex flex-col justify-center -md:items-center">
+                                                    <h3 className="text-r3xl font-bold text-white">
+                                                           Orange County Event 2026
+                                                    </h3>
+                                                    <p className="-md:mx-6 -md:text-center">
+                                                        Following our victory in San Diego, our team traveled to the Orange County Regional to compete alongside top-tier teams. We utilized this event to test updated mechanisms and to further refine our drive team's coordination. Despite facing some tough matchups, our resilience, pit repairs, and clever defense demonstrated the strength of our engineering processes and teamwork.
+                                                    </p>
+                                                    <div className="mt-3 flex flex-row space-x-3 font-semibold">
+                                                        <p>more:</p>
+                                                        <a
+                                                            className="underline"
+                                                            href="https://www.thebluealliance.com/event/2026caoec"
+                                                            aria-label="Orange County Regional qualification matches and standings."
+                                                            target="_blank"
+                                                        >
+                                                            standings
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div className="row-span-auto grid grid-cols-1 md:grid-cols-2">
                                         <div className="col-span-1 mb-5 grid rounded-lg py-10 text-white -md:place-items-center md:mr-5"
                                         style={{ background: 'linear-gradient(0deg, rgba(26,26,26,1) 0%, rgba(44,44,44,1) 50%, rgba(26,26,26,1) 100%)' }}>
                                         <div className="mx-8 flex flex-col justify-center -md:items-center text-white">
