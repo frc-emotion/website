@@ -102,7 +102,7 @@
     },
     "Leads": {
         "Electrical": ["Rithik Ohri", "Andre Fishman"],
-        "Build": ["Arjun Rastogi", "Hariom Parekh", "Ethan Huynh", "Leopoldo Ortega Velazquez","Dana Park"],
+        "Build": ["Ethan Huynh", "Leopoldo Ortega Velazquez"],
         "Software": ["Aaran Chahal", "Mugilan Rajaraman"],
         "Marketing": ["Evan Lee", "Shuban Jaiswal"],
         "Design": ["Daniel Zubin"]
