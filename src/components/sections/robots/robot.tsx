@@ -16,7 +16,7 @@ export default function RobotImages() {
 			pos: 'top'
 		},
 		{
-			name: "Leviathan",
+			name: "Reefscape",
 			year: "2025",
 			path: `${logoFolder}/leviathan.jpg`,
 			width: 300,
