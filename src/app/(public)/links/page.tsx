@@ -14,13 +14,13 @@ const links = [
     },
     {
         name: "Team App (IOS/Apple)",
-        link: "https://apps.apple.com/app/6446333310",
+        link: "https://apps.apple.com/app/nautilus-frc-2658/id6755620912",
         emoji: "📱",
         description: "Our new team app for managing attendance and scouting at competitions!"
     },
     {
         name: "Team App (Android)",
-        link: "https://play.google.com/store/apps/details?id=org.team2658.nautilus",
+        link: "https://github.com/frc-emotion/nautilus-frontend/releases/download/v3.0.6/nautilus-3.0.6.apk",
         emoji: "📱",
         description: "Our new team app for managing attendance and scouting at competitions!"
     },
