@@ -118,7 +118,7 @@ export default function AboutPage() {
     <h2 className="text-center text-r3xl font-bold mb-6">Execs</h2>
 
     {/* Row 1: Presidents + VPs evenly spaced */}
-<div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-x-16 gap-y-6 text-center mb-12">
+<div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-x-16 gap-y-6 text-center mb-12">
     {Leadership.Executive.President.map((president) => (
       <div key={president} className="text-center text-rlg font-semibold">
         <strong>President:</strong>

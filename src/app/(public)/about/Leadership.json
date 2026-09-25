@@ -103,16 +103,16 @@
         ]
     },
     "Leads": {
-        "Electrical": ["Rithik Ohri", "Andre Fishman"],
-        "Build": ["Ethan Huynh", "Leopoldo Ortega Velazquez"],
-        "Software": ["Aaran Chahal", "Mugilan Rajaraman"],
-        "Marketing": ["Evan Lee", "Shuban Jaiswal"],
-        "Design": ["Daniel Zubin"]
+        "Electrical": ["Andrew Wang", "Rithik Ohri", "Hunter Miodek"],
+        "Build": ["Lewis Pacheco", "Leopoldo Ortega", "Chetan Patil"],
+        "Software": ["Andy Xu", "Mugilan Rajaraman"],
+        "Marketing": ["Pryya Surarujiroj", "Matthew Zhao"],
+        "Design": ["Daniel Zubin", "Ryan Zoch"]
     },
     "Executive": {
-        "President": ["Arshan Shokoohi", "Simeon Kim"],
-        "Vice President": ["Neev Daga","Radhika Patil"],
-        "Treasurer": ["Vedanth Kuruvadi", "Sanjan Prabu"],
+        "President": ["Neev Daga","Radhika Patil"],
+        "Vice President": ["Aaran Chahal"],
+        "Treasurer": ["Vedanth Kuruvadi"],
         "Secretary": ["Sophia Newton"]
         
     }
