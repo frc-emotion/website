@@ -30,7 +30,7 @@ export default function Sponsor() {
                 </h1>
             </div>
             <SponsorImages2026 />
-             <SponsorImages2025 />
+            <SponsorImages2025 />
             <SponsorImages2024 />
             <SponsorImages2023 />
             <SponsorImages2022 />
