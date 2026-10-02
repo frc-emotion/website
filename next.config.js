@@ -7,6 +7,10 @@ const nextConfig = {
 		},
 	reactStrictMode: true,
 	images: {
+		remotePatterns: [
+			{
+				protocol: "https",
+				hostname: "**",}],
 		domains: ["cdn.team2658.org", "cdn.jsdelivr.net"],
 	},
 	sassOptions: {

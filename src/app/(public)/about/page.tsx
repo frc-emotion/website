@@ -134,20 +134,16 @@ export default function AboutPage() {
     ))}
   </div>
 
-    {/* Row 2: Treasurers, centered with spacing */}
+    {/* Row 2: Treasurers, and Secretaries centered with spacing */}
     <div className="flex justify-center gap-x-24 mb-14">
       {Leadership.Executive.Treasurer.map((treasurer) => (
         <div key={treasurer} className="text-center text-rlg font-semibold">
-          <strong>Treasurer:</strong> {treasurer}
+          <strong>Treasurer:</strong><br></br>{treasurer}
         </div>
       ))}
-    </div>
-
-    {/* Row 3: Secretary centered */}
-    <div className="flex justify-center">
       {Leadership.Executive.Secretary.map((secretary) => (
         <div key={secretary} className="text-center text-rlg font-semibold">
-          <strong>Secretary:</strong> {secretary}
+          <strong>Secretary:</strong><br></br> {secretary}
         </div>
       ))}
     </div>
