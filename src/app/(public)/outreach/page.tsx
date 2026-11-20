@@ -137,6 +137,73 @@ export default function Outreach() {
                             </h2>
                             <div id="recentEventsContent" className='mb-5'>
                                 <div className="grid-rows-auto grid">
+                                    <div className="row-span-auto grid grid-cols-1 md:grid-cols-2">
+                                            <div className="relative col-span-1 mb-5 mt-1 flex h-[45vh] select-none overflow-hidden rounded-lg md:mr-5">
+                                                <Image
+                                                    src="https://cdn.jsdelivr.net/gh/frc-emotion/images@main/outreach/competitions/BeachBlitz2026.jpg"
+                                                    alt="Beach Blitz 2026"
+                                                    fill={true}
+                                                    className='object-cover object-center'
+                                                />
+                                            </div>
+                                            <div className="col-span-1 mb-5 grid rounded-lg py-10 text-white -md:place-items-center"
+                                            style={{ background: 'linear-gradient(0deg, rgba(26,26,26,1) 0%, rgba(44,44,44,1) 50%, rgba(26,26,26,1) 100%)' }}
+                                            >
+                                                <div className="mx-8 flex flex-col justify-center -md:items-center">
+                                                    <h3 className="text-r3xl font-bold text-white">
+                                                           Beach Blitz 2026
+                                                    </h3>
+                                                    <p className="-md:mx-6 -md:text-center">
+                                                        Our team participated in the Beach Blitz, an off-season FRC competition where our team competed against 41 other teams. We used this event to hone our team's skills and test new strategies, refining our team's abilities and teamwork. Despite tough matchups, our team showcased strong resilience and cooperation.
+                                                    </p>
+                                                    <div className="mt-3 flex flex-row space-x-3 font-semibold">
+                                                        <p>more:</p>
+                                                        <a
+                                                            className="underline"
+                                                            href="https://www.thebluealliance.com/event/2026cabl"
+                                                            aria-label="Beach Blitz 2026 matches and standings."
+                                                            target="_blank"
+                                                        >
+                                                            standings
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                    </div>
+
+                                    <div className="row-span-auto grid grid-cols-1 md:grid-cols-2">
+                                        <div className="col-span-1 mb-5 grid rounded-lg py-10 text-white -md:place-items-center md:mr-5"
+                                        style={{ background: 'linear-gradient(0deg, rgba(26,26,26,1) 0%, rgba(44,44,44,1) 50%, rgba(26,26,26,1) 100%)' }}>
+                                        <div className="mx-8 flex flex-col justify-center -md:items-center text-white">
+                                                <h3 className="text-r3xl font-bold">
+                                                        Stay Classy Classic 2026
+                                                </h3>
+                                                <p className="-md:mx-6 -md:text-center">
+                                                  Our team competed in the Stay Classy Classic, an off-season FRC event with 34 competing teams. We used this event to test new ideas and strategies, and allowing us to refine our robot's performance. Our team demonstrated strong collaboration and adaptability, landing our alliance a third place finish in the playoff matches.
+                                                </p>
+                                                <div className="mt-3 flex flex-row space-x-3 font-semibold">
+                                                    <p>more:</p>
+                                                    <a
+                                                        className="underline"
+                                                        href="https://www.thebluealliance.com/event/2026casan1"
+                                                        aria-label="Stay Classy Classic 2026 matches and standings."
+                                                        target="_blank"
+                                                    >
+                                                        standings
+                                                    </a>                                                   
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div className="relative col-span-1 mb-5 mt-1 flex h-[45vh] select-none overflow-hidden rounded-lg">
+                                            <Image
+                                                src="https://cdn.jsdelivr.net/gh/frc-emotion/images@main/outreach/competitions/Stay Classy Classic2026.jpg"
+                                                alt="Stay Classy Classic 2026"
+                                                fill={true}
+                                                className='object-cover object-center'
+                                            />
+                                        </div>
+                                    </div>
+                                       
                                         <div className="row-span-auto grid grid-cols-1 md:grid-cols-2">
                                             <div className="relative col-span-1 mb-5 mt-1 flex h-[45vh] select-none overflow-hidden rounded-lg md:mr-5">
                                                 <Image
@@ -170,6 +237,8 @@ export default function Outreach() {
                                                 </div>
                                             </div>
                                         </div>
+
+
                                         <div className="row-span-auto grid grid-cols-1 md:grid-cols-2">
                                         <div className="col-span-1 mb-5 grid rounded-lg py-10 text-white -md:place-items-center md:mr-5"
                                         style={{ background: 'linear-gradient(0deg, rgba(26,26,26,1) 0%, rgba(44,44,44,1) 50%, rgba(26,26,26,1) 100%)' }}>
